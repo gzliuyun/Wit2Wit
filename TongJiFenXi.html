@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>wit2wit</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
+	<style type="text/css">
+      div ul{
+        list-style:none;
+        padding-left:0;
+      }
+      .fakeimg {
+        background: #aaa;
+      }
+			.MyTop{position:fixed; right:0; bottom:10%}
+    </style>
+</head>
+
+<body>
+<header></header>
+<div class="container" style="width: 1370px !important;">
+  <div class="row">
+    <div class="col-xs-2 col-xl-2" >
+      <ul >
+        <li><h3>订单管理</h3></li>
+        <li><a href="JiaoYiJiLu_SYZ.html">交易记录</a></li>
+        <li><a href="TongJiFenXi.html">统计分析</a></li>
+        <li><a href="CuXiaoGuanLi.html">促销管理</a></li>
+				<li><a href="ZaiXianBangZhu.html">在线帮助</a></li>
+        <li><hr/></li>
+      </ul>
+    </div>
+
+    <div class="col-xs-10 col-xl-10">
+      <div class="panel panel-info">
+      	<div class="panel-heading">今日流量</div>
+      		<div style="width: 60%; margin-left: 150px;">
+      		   <table class="table">
+      		   	<tr>
+								<th> </th>
+								<th>浏览量(PV)</th>
+								<th>访客数(UV)</th>
+								<th>平均访问时长	</th>
+							</tr>
+      		   	<tr>
+								<td>今日</td>
+								<td><strong>32,822</strong></td>
+								<td><strong>4,853</strong></td>
+								<td><strong>00:08:47</strong></td>
+							</tr>
+							<tr>
+								<td>昨日</td>
+								<td>84,595</td>
+								<td>8,183</td>
+								<td>00:20:20</td>
+							</tr>
+							<tr>
+								<td>预计今日</td>
+								<td>86,785 <span class="glyphicon glyphicon-arrow-up"></span></td>
+								<td>8,978 <span class="glyphicon glyphicon-arrow-up"></span></td>
+								<td>--</td>
+							</tr>
+      		   </table>
+					</div>
+      </div>
+			
+			
+			<div class="panel panel-info">
+				<div class="panel-heading">近期订单统计</div>
+					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
+					   <canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="panel panel-info">
+				 <div class="panel-heading">订单类别</div>
+					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
+						<canvas id="myPieChart"></canvas>
+				</div>
+			</div>	
+			<div class="panel panel-info">
+				 <div class="panel-heading">近期天气情况</div>
+					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
+						<canvas id="ResTianQiChart"></canvas>
+				</div>
+			</div>	
+    </div>
+  </div>
+</div>
+<br/>
+ <div class="text-right MyTop" id="MyTop">
+ 	 <a href = '#top'><img src="top32.png" style="margin-right: 30px;"></a>
+ </div> 
+<footer></footer>
+				<script>
+					$(function(){
+						$("header").load("common.html #witowit_header");
+						$("footer").load("common.html #witowit_footer");
+					})
+				</script>
+				<script  type="text/javascript">
+					var res_label=[];
+					var tem=[];
+					var tem1=[];
+					var tem2=[];
+				    $.ajax({
+				        type: 'GET',
+				        url: 'https://www.tianqiapi.com/api/',
+				        data: 'version=v1',
+				        dataType: 'JSON',
+				        error: function () {
+				            alert('网络错误');
+				        },
+				        success: function (res) {
+										for(var i=0;i<res.data.length;i++){
+											res_label.push(res.data[i].date.substr(5));
+											tem.push(Number(res.data[i].tem.slice(0,2))) ;
+											tem1.push(Number(res.data[i].tem1.slice(0,2))) ;
+											tem2.push(Number(res.data[i].tem2.slice(0,2))) ;
+										}
+						console.log(res_label)
+						console.log(tem)
+						console.log(tem1)
+						console.log(tem2)
+						var data = {
+												labels: res_label,
+												datasets: [
+													{
+														label: "平均温度",
+														fill: false,
+														lineTension: 0.1,
+														datasetFill : true,
+														backgroundColor: "#0066CC",
+														borderColor: "#0099CC",
+														borderCapStyle: 'butt',
+														borderDash: [],
+														borderDashOffset: 0.0,
+														borderJoinStyle: 'miter',
+														pointBorderColor: "#0099CC",
+														pointBackgroundColor: "#fff",
+														pointBorderWidth: 1,
+														pointHoverRadius: 5,
+														pointHoverBackgroundColor: "#0099CC",
+														pointHoverBorderColor: "rgba(220,220,220,1)",
+														pointHoverBorderWidth: 2,
+														pointRadius: 1,
+														pointHitRadius: 10,
+														data: tem
+													},   
+													{
+														label: "最高温度",
+														fill: false,
+														lineTension: 0.1,
+														backgroundColor: "#993366",
+														borderColor: "#996699",
+														borderCapStyle: 'butt',
+														borderDash: [],
+														borderDashOffset: 0.0,
+														borderJoinStyle: 'miter',
+														pointBorderColor: "#996699",
+														pointBackgroundColor: "#fff",
+														pointBorderWidth: 1,
+														pointHoverRadius: 5,
+														pointHoverBackgroundColor: "#996699",
+														pointHoverBorderColor: "#996699",
+														pointHoverBorderWidth: 2,
+														pointRadius: 1,
+														pointHitRadius: 10,
+														data: tem1
+													},
+													{
+														label: "最低温度",
+														fill: false,
+														lineTension: 0.1,
+														backgroundColor: "#FFFF66",
+														borderColor: "#FFCC33",
+														borderCapStyle: 'butt',
+														borderDash: [],
+														borderDashOffset: 0.0,
+														borderJoinStyle: 'miter',
+														pointBorderColor: "#FFCC33",
+														pointBackgroundColor: "#fff",
+														pointBorderWidth: 1,
+														pointHoverRadius: 5,
+														pointHoverBackgroundColor: "#FFCC33",
+														pointHoverBorderColor: "#FFCC33",
+														pointHoverBorderWidth: 2,
+														pointRadius: 1,
+														pointHitRadius: 10,
+														data: tem2
+													}
+												]
+						          };
+						      var ctx = document.getElementById("ResTianQiChart").getContext("2d");
+						      var myBarChart = new Chart(ctx, {
+						                                          type: 'line',
+						                                          data: data,
+						                                  });
+										
+										
+				        }
+				    });
+				</script>
+
+
+				<script type="text/javascript">
+				// 设置参数
+				var data = {
+			            labels: ["January", "February", "March", "April", "May", "June", "July"],
+			            datasets: [
+			            {
+			            label: "待收货",
+									fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(75,192,192,0.4)",
+			            borderColor: "rgba(75,192,192,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(75,192,192,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [65, 59, 80, 81, 56, 55, 40]
+			            },   
+			            {
+			            label: "待发货",
+			            fill: false,
+			            lineTension: 0.1,
+			            backgroundColor: "rgba(240,128,128,0.4)",
+			            borderColor: "rgba(240,128,128,1)",
+			            borderCapStyle: 'butt',
+			            borderDash: [],
+			            borderDashOffset: 0.0,
+			            borderJoinStyle: 'miter',
+			            pointBorderColor: "rgba(240,128,128,1)",
+			            pointBackgroundColor: "#fff",
+			            pointBorderWidth: 1,
+			            pointHoverRadius: 5,
+			            pointHoverBackgroundColor: "rgba(240,128,128,1)",
+			            pointHoverBorderColor: "rgba(220,220,220,1)",
+			            pointHoverBorderWidth: 2,
+			            pointRadius: 1,
+			            pointHitRadius: 10,
+			            data: [28, 48, 40, 19, 86, 27, 90]
+			            },
+						{
+						label: "待付款",
+						fill: false,
+						lineTension: 0.1,
+						backgroundColor: "rgba(154,205,50,0.4)",
+						borderColor: "rgba(154,205,50,1)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(154,205,50,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(154,205,50,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						pointHoverBorderWidth: 2,
+						pointRadius: 1,
+						pointHitRadius: 10,
+						data: [15, 19, 18, 11, 16, 25, 10]
+						}
+			            ]
+			            };
+			        var ctx = document.getElementById("myChart").getContext("2d");
+			        var myBarChart = new Chart(ctx, {
+			                                            type: 'line',
+			                                            data: data,
+			                                    });
+			</script>
+			<script type="text/javascript">
+				// 设置参数
+				var data = {
+			            labels: ["财税管理", "企业股权", "人际交往", "健身", "思维"],
+			      datasets: [	                  
+						{
+						fill: false,
+						lineTension: 0.1,
+						backgroundColor: ["#949FB1","#4D5360","#FDB45C","#46BFBD","#F7464A"],
+						borderColor: "rgba(0,0,0,0)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(154,205,50,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(154,205,50,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						pointHoverBorderWidth: 2,
+						pointRadius: 1,
+						pointHitRadius: 10,
+						data: [15, 19, 18, 11, 16]
+						}
+							]
+							};
+			
+			        var ctx = document.getElementById("myPieChart").getContext("2d");
+			        var myBarChart = new Chart(ctx, {
+			                                            type: 'pie',
+			                                            data: data,
+			                                    });
+			</script>
+		<script type="text/javascript">			
+			$(function(){
+					var data = {　　　　　　
+										key: "UMTBZ-VXFL4-ORWUQ-DWZOB-O5JZO-6NBS4"　//替换成自己的key　　
+								}
+								var url = "https://apis.map.qq.com/ws/location/v1/ip";
+								data.output = "jsonp";
+						$.ajax({
+								type: "get",
+								dataType: 'jsonp',
+								data: data,
+								jsonp: "callback",
+								jsonpCallback: "QQmap",
+								url: url,
+								success: function(data) {
+										//业务处理
+										console.log(data.result.ad_info)
+										$("#area").text(data.result.ad_info.city);
+								},
+								error: function(err) {
+										//业务处理
+								}						
+						});
+			})
+		</script>
+</body>
+</html>
