@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <div>
+            欢迎您：{{ user.username }}
+            <a href="{% url 'user:logout' %}">退出</a>
+			<label>您的购物车中有{{cart_count}}件商品</label>
+        </div>
+    {% else %}
+        <div>
+            <a href="{% url 'user:login' %}">登录</a>
+            <a href="{% url 'user:register' %}">注册</a>
+        </div>
+    {% endif %}
+    <hr/>
+	<p>这里我放上了搜索框</p>
+	<form method="get" action="/query">
+		<input type="text" name="q" placeholder="搜索商品">
+		<input type="submit" name="" value="搜索">
+	</form>
+	<hr/>
+    <div>
+		<ul>
+            {% for type in types %}
+			    <li><a href="#category0{{ forloop.counter }}" class="{{ type.logo }}">{{ type.name }}</a></li>
+            {% endfor %}
+		</ul>
+		<div>
+            {% for banner in goods_banners  %}
+                <ul>
+                    <li><a href="{% url 'goods:detail' banner.sku.id %}"><img src="{{ banner.image.url }}" alt="轮播图"></a></li>
+                </ul>
+            {% endfor %}
+		</div>
+		<div>
+            {% for banner in promotion_banners %}
+			    <a href="{{ banner.url }}"><img src="{{ banner.image.url }}"></a>
+            {% endfor %}
+		</div>
+	</div>
+
+    {% for type in types %}
+	<div>
+		<div>
+			<h3 id="category0{{ forloop.counter }}">{{ type.name }}</h3>
+			<div>
+                {% for banner in type.title_banners %}
+				    <a href="{% url 'goods:detail' banner.sku.id  %}">{{ banner.sku.name }}</a>
+				{% endfor %}
+			</div>
+			<a href="{% url 'goods:list' type.id 1 %}" id="view_more">查看更多 ></a>
+		</div>
+		<div>
+			<div><img src="{{ type.image.url }}"></div>
+			<ul>
+                {% for banner in type.image_banners %}
+				<li>
+					<h4><a href="{% url 'goods:detail' banner.sku.id  %}">{{ banner.sku.name }}</a></h4>
+					<a href="{% url 'goods:detail' banner.sku.id  %}"><img src="{{ banner.sku.image.url }}"></a>
+					<div>¥ {{ banner.sku.price }}</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+    {% endfor %}
+</body>
+</html>

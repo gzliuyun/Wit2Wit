@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/user.js' %}"></script>
+</head>
+<body>
+
+<div>
+    <div>
+        <h3>用户中心</h3>
+        <ul>
+            <li><a href="{% url 'user:user' %}">个人信息</a></li>
+            <li><a href="{% url 'user:order' 1 %}">全部订单</a></li>
+            <li><a href="{% url 'user:address' %}">收货地址</a></li>
+        </ul>
+    </div>
+    假设这是右侧区域
+    <hr/>
+    假设这里放用户信息
+    <div>
+        <ul>
+            <li><span>用户名：</span>{{ user.username }}</li>
+            <li><span>联系方式：</span>{{ user.mobile }}</li>
+        </ul>
+    </div>
+    <hr/>
+    假设这里放收货地址
+    <form method="post" action="address">
+        {% csrf_token %}
+        <div>
+            {% if address_list %}
+            {% for address in address_list %}
+            <p>地址：{{ address.addr }} （{{ address.receiver }} 收） 电话：{{ address.phone }} 邮编：{{ address.zip_code }}
+                {{address.is_default}} <input
+                        type="button" onclick="delete_address({{ address.id }})" value="删除地址"/><input
+                        type="button" onclick="default_address({{ address.id }})" value="设为默认地址"/><input
+                        type="button" onclick="update_address({{ address.id }})" value="修改地址"/>
+            </p>
+
+            {% endfor %}
+            {% else %}
+            无默认地址
+            {% endif %}
+        </div>
+    </form>
+    <hr/>
+    假设这里可以添加收货地址
+    <div>
+        <form method="post" action="address">
+            {% csrf_token %}
+            <div>
+                <label>收件人：</label>
+                <input type="text" id="receiver" name="receiver">
+            </div>
+            <div>
+                <label>详细地址：</label>
+                <textarea id="addr" name="addr"></textarea>
+            </div>
+            <div>
+                <label>邮编：</label>
+                <input type="text" id="zip_code" name="zip_code">
+            </div>
+            <div>
+                <label>手机：</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <input type="hidden" id="mode" name="mode" value="1">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</div>
+</body>
+</html>

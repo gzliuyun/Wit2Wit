@@ -1,0 +1,6 @@
+# 为表中的哪些字段建立索引
+{{ object.name }} # 商品名称
+{{ object.desc }} # 商品简介
+{{ object.goods.detail }} # 商品详情
+
+# 在终端中使用该命令生成索引文件 python manage.py rebuild_index
