@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+<body>
+<div>
+    <p>全部商品 {{ cart_count }} 件</p>
+    <form method="post" action="{% url 'order:confirm_order' %}">
+        {% csrf_token %}
+        <p>如果新增了店铺表，商品有店铺的话，应该每个店铺有一个for循环</p>
+        <p>这里以后放上<a href="#">店铺名称</a></p>
+        <table border="1" cellspacing="0">
+            <tr>
+                <th></th>
+                <th colspan="2">商品名称</th>
+                <th>商品规格</th>
+                <th>商品价格</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+            {% for sku in skus %}
+            <tr>
+                <td><input type="checkbox" name="sku_ids" value="{{ sku.id }}" checked="checked"></td>
+                <td><a href="{% url 'goods:detail' sku.id %}"><img src="{{ sku.image.url }}"></a></td>
+                <td>{{ sku.name }}<br>{{ sku.price }}元/{{ sku.unite }}</td>
+                <td>{{ sku.unite }}</td>
+                <td>{{ sku.price }}元</td>
+                <td><input type="text" sku_id="{{ sku.id }}" value="{{ sku.count }}" readonly></td>
+                <td>{{ sku.amount }}元</td>
+                <td><a href="javascript:;" name="del">删除</a></td>
+            </tr>
+            {% endfor %}
+            <tr style="border:0px">
+                <td><input type="checkbox" name="check_all" checked="checked"></td>
+                <td colspan="4">全选</td>
+                <td colspan="2">合计(不含运费)： ¥ {{ cart_price }} <br>已选商品 {{ cart_count }}件</td>
+                <td><input type="submit" value="结算"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+    //全选，全不选
+    $('input[name="check_all"]').click(function() {
+        is_checked = $(this).prop('checked')
+        $('input[name="sku_ids"]').attr('checked',is_checked)
+
+    }
+    )
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+<body>
+<p>这里假设有个下拉菜单</p>
+<div>
+    <h1>全部商品分类</h1>
+    <ul>
+        {% for type in types %}
+        <li><a href="{% url 'goods:list' type.id 1 %}" class="{{ type.logo }}">{{ type.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<hr/>
+<p>这里就是一个小导航</p>
+<div>
+    <a href="#">全部分类</a>
+    <span>></span>
+    <a href="{% url 'goods:list' sku.type.id 1 %}">{{ sku.type.name }}</a>
+    <span>></span>
+    <a href="#">商品详情</a>
+</div>
+<hr/>
+<div>
+    <p>这里是商品的图片，记得限制一下图片的大小</p>
+    <div><img width="200px" height="200px" src="{{ sku.image.url }}"></div>
+    <hr/>
+    <div>
+        <h3>商品名称：{{ sku.name }}</h3>
+        <p>商品简述：{{ sku.desc }}</p>
+        <div>
+            商品价格：¥ <span id="goods_price">{{ sku.price }}</span>
+            <span>单位：{{ sku.unite }}</span>
+        </div>
+        <div>
+            <label>想买的数量：</label>
+            <input id="goods_num" type="text" value="1"/>
+            <p>商品数量这里可以放一个那种加减号的控件</p>
+        </div>
+        <div>
+            <label>其他规格:</label>
+            {% if same_spu_skus %}
+            <ul>
+                {% for sku in same_spu_skus %}
+                <li><a href="{% url 'goods:detail' sku.id %}">{{ sku.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <label>无</label>
+            {% endif %}
+        </div>
+
+        <div>总价：<span id="total_price"></span>元</div>
+        <div>
+            {% csrf_token %}
+            <a href="javascript:;">立即购买</a>
+            <a href="javascript:;" sku_id="{{ sku.id }}" id="add_cart">加入购物车</a>
+        </div>
+    </div>
+</div>
+<hr/>
+<div>
+    <div>
+        <p>同类商品推荐</p>
+        <ul>
+            {% for sku in new_skus %}
+            <li>
+                <a href="{% url 'goods:detail' sku.id %}"><img width="200px" height="200px"
+                                                               src="{{ sku.image.url }}"></a>
+                <p><a href="{% url 'goods:detail' sku.id %}">{{ sku.name }}</a></p>
+                <p>￥{{ sku.price }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <p>商品的介绍</p>
+        <p>{{ sku.goods.detail|safe }}</p>
+    </div>
+    <hr/>
+    <div>
+        <p>商品的评论</p>
+        {% if sku_orders %}
+        {% for order in sku_orders %}
+        <p>评论时间：{{ order.update_time }}&nbsp;&nbsp;用户名:{{ order.order.user.username }}</p>
+        <p>评论内容:{{ order.comment }}</p>
+        {% endfor %}
+        {% else %}
+        <label>暂无评论</label>
+        {% endif %}
+    </div>
+</div>
+<script type="text/javascript">
+    update_goods_amount()
+    // 计算商品的总价格
+    function update_goods_amount() {
+        // 获取商品的单价和数量
+        price = $('#goods_price').text()
+        //alert(price)
+        count = $('#goods_num').val()
+        //alert(count)
+        // 计算商品的总价
+        price = parseFloat(price)
+        count = parseInt(count)
+        amount = price*count
+        // 设置商品的总价
+        $('#total_price').text(amount.toFixed(2))
+    }
+
+    // 手动输入商品的数量
+    $('#goods_num').blur(function () {
+        // 获取用户输入的数目
+        count = $(this).val()
+        // 校验count是否合法
+        if (isNaN(count) || count.trim().length==0 || parseInt(count) <=0){
+            count = 1
+        }
+        // 重新设置商品的数目
+        $(this).val(parseInt(count))
+        // 更新商品的总价
+        update_goods_amount()
+    })
+
+    $('#add_cart').click(function(){
+        // 获取商品id和商品数量
+        sku_id = $(this).attr('sku_id') // attr prop
+        count = $('#goods_num').val()
+        csrf = $('input[name="csrfmiddlewaretoken"]').val()
+        // 组织参数
+        params = {'sku_id':sku_id, 'count':count, 'csrfmiddlewaretoken':csrf}
+        // 发起ajax post请求，访问/cart/add, 传递参数:sku_id count
+        $.post('/cart/addcart', params, function (msg) {
+            alert(msg.msg)
+        })
+    })
+
+</script>
+</body>
+</html>

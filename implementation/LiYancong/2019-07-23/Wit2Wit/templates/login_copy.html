@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="mobile" value="{{ mobile }}" placeholder="请输入手机号/用户名">
+    <input type="password" name="pwd" placeholder="请输入密码">
+    <div>
+        <input type="checkbox" name="remember" {{ checked }}>
+        <label>记住用户名</label>
+    </div>
+    <input type="submit" name="" value="登录">
+    {{ msg }}
+</form>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>学技能，就上慧师搜网</title>
+		{% load staticfiles %}
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style-log-reg.css' %}">
+        <script type="text/javascript" src="{% static 'js/user.js' %}"></script>
+		<!-- <link rel="stylesheet" href="css/main-blue-light.css"> -->
+		<!-- <link rel="stylesheet" href="css/main-v2.css"> -->
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+	</head>
+	<body>
+		<header>
+			<div id="header" class="text-center">
+				<h1><small>学技能，上慧师搜网———汇聚全球一技之长者，使访问者人人受益</small></h1>
+			</div>
+		</header>
+		<section>
+			<div id="sec-container" class="container">
+				<div class="sec-reg sec-log">
+					<div class="log-tab clearfix">
+						<a href="{% url 'user:login' %}">登录帐号</a>
+						<a class="active" href="#">注册帐号</a>
+					</div>
+					<div class="log-main">
+						<form id="reg-form" method="post" action="/user/register">
+							{% csrf_token %}
+							<div class="form-group">
+								<label class="control-label" for="reg-mobile">手机号码</label>
+								<div class="">
+									<input type="number" id="reg-mobile" name="mobile" required="required" class="form-control input-lg"
+									 data-url="" placeholder="填写你常用的手机号码作为登录帐号">
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="form-group ">
+								<label class="control-label " for="reg-password">密码</label>
+								<div class="controls">
+									<input type="password" id="reg-password" name="pwd" required="required" class="form-control input-lg"
+									 placeholder="5-20位英文、数字、符号，区分大小写">
+									<p class="help-block"></p>
+								</div>
+							</div>
+							<div class="form-group ">
+								<label class="control-label " for="sms-code">短信验证码</label>
+								<div class="cd-row clearfix">
+									<div class="col-xs-6">
+										<input type="text" maxlength="6" class="form-control input-lg" id="sms-code" required="required" name="code" placeholder="填写短信验证码"
+										 data-url="">
+										<p class="help-block"> </p>
+									</div>
+									<div class="col-xs-6">
+										<a href="javascript:;" class="btn btn-default sms-send-btn" data-sms-url="">
+											<span id="js-time-left"></span>
+											<span id="js-fetch-btn-text">获取验证码</span>
+										</a>
+									</div>
+								</div>
+							</div>
+                            <input type="checkbox" name="allow" id="allow" checked style="display:none">
+							<div class="form-group ">
+								<div class="">
+									<button type="submit" id="reg-btn" data-submiting-text="正在提交..." class="btn btn-primary btn-lg btn-block">注册</button>
+								</div>
+                            </div>
+						</form>
+					</div>
+				</div>
+		</section>
+		<footer class="footer-copyright">
+			<div class="container">
+				<div class="">
+					Powered By
+					<a href="">慧师搜网</a>
+					京ICP备XXXXXXXX号
+				</div>
+				<div class="">
+					Address:北京市朝阳区大成国际中心
+					Tel:86-10-XXXXXXXX
+					Emial:XXXXXXXX@163.com
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

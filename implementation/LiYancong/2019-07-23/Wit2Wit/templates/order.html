@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单</title>
+	{% load staticfiles %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+</head>
+<body>
+    <h3>确认授业地址</h3>
+
+	<div>
+		<dl>
+            {% for addr in addrs %}
+			<dd><input type="radio" name="addr_id" value="{{ addr.id }}" {% if addr.is_default %}checked{% endif %}>{{ addr.addr }} （{{ addr.receiver }} 收） {{ addr.phone }}</dd>
+		    {% endfor %}
+        </dl>
+		<a href="{% url 'user:address' %}">编辑收货地址</a>
+
+	</div>
+
+	<h3>支付方式</h3>
+		<div>
+			<input type="radio" name="pay_method" value="1" checked>
+			<label>货到付款</label>
+			<input type="radio" name="pay_method" value="2">
+			<label>微信支付</label>
+			<input type="radio" name="pay_method" value="3">
+			<label>支付宝支付</label>
+			<input type="radio" name="pay_method" value="4">
+			<label>银行卡支付</label>
+		</div>
+	<h3>培训方式</h3>
+		<div>
+			<input type="radio" name="teaching_mode" value="1" checked>
+			<label>远程教育</label>
+			<input type="radio" name="teaching_mode" value="2">
+			<label>现场授业</label>
+		</div>
+
+	<h3>商品列表(不允许用户修改)</h3>
+
+	<table cellspacing="0" border="1">
+		<tr>
+			<th></th>
+			<th colspan="2">商品名称</th>
+			<th>商品单位</th>
+			<th>商品价格</th>
+			<th>数量</th>
+			<th>小计</th>
+		</tr>
+        {% for sku in skus %}
+		<tr>
+			<td>{{ forloop.counter }}</td>
+			<td><img src="{{ sku.image.url }}"></td>
+			<td>{{ sku.name }}</td>
+			<td>{{ sku.unite }}</td>
+			<td>{{ sku.price }}元</td>
+			<td>{{ sku.count }}</td>
+			<td>{{ sku.amount }}元</td>
+		</tr>
+        {% endfor %}
+	</table>
+
+	<h3>总金额结算</h3>
+
+	<div>
+		<div>
+			<div>共 {{ cart_count }} 件商品，总金额：{{ cart_price }}元</div>
+			<div>运费：{{ postage }}元</div>
+			<div>实付款：{{ total_price }}元</div>
+		</div>
+	</div>
+
+	<div>
+        {% csrf_token %}
+		<a href="javascript:;" sku_ids={{ sku_ids }} id="order_btn">提交订单</a>
+	</div>
+</body>
+<script type="text/javascript">
+	$('#order_btn').click(function() {
+		// 获取用户选择的地址id, 支付方式, 要购买的商品id字符串
+		addr_id = $('input[name="addr_id"]:checked').val()
+		pay_method = $('input[name="pay_method"]:checked').val()
+		teaching_mode = $('input[name="teaching_mode"]:checked').val()
+		sku_ids = $(this).attr('sku_ids')
+		csrf = $('input[name="csrfmiddlewaretoken"]').val()
+	    // alert(addr_id+":"+pay_method+':'+teaching_mode+':'+sku_ids)
+		// 组织参数
+		params = {'addr_id':addr_id, 'pay_method':pay_method, 'teaching_mode':teaching_mode, 'sku_ids':sku_ids,
+					'csrfmiddlewaretoken':csrf}
+		// 发起ajax post请求，访问/order/commit, 传递的参数: addr_id pay_method, sku_ids
+
+		$.post('/order/submit_order', params, function (data) {
+			if(data.status==1)
+			{
+				alert(data.msg+"，跳转中···")
+				setTimeout(function(){
+                                window.location.href = '/user/order/1';
+                        },3000)
+
+			}else{
+				alert(data.msg)
+			}
+		})
+
+
+	});
+</script>
+</html>
