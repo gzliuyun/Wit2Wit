@@ -1,0 +1,87 @@
+body{
+	background: #F5F5F5;
+	line-height: 22px;
+	font-size: 14px;
+	color: black;
+	font-family: helvetica,arial;
+	}
+#header h1{
+	background: #FFFFFF;
+	margin: 0px auto;
+	line-height: 80px;
+	min-height: 80px;
+	}
+#sec-container .container{
+	margin: 30px auto; /* 上下边距是30 左右居中 */
+	min-height: 400px;
+	}
+.container{
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+.sec-log{
+	margin:50px auto;/*左右居中*/
+	width:460px;
+	min-height:400px;
+	}
+.sec-reg{
+	background:#FFFFFF;
+	padding:15px;
+	border-radius:4px;
+	border:1px solid #E4ECF3
+	}
+.log-tab{
+		margin:-15px -15px 0;/**/
+	}
+.sec-log .log-tab>a{
+		display: block;
+		padding: 20px;
+		float: left;
+		width: 50%;
+		font-size: 16px;
+		text-align: center;
+		color: #616161;
+		background-color: #F5F5F5;
+		text-decoration: none;
+	}
+.sec-log .log-tab>a.active{
+	background-color:#FFFFFF;
+	}
+.sec-log .log-main{
+		padding:40px 45px 20px;
+	}
+.form-control{
+		color: #616161;
+		border-color: #E1E1E1;
+	}
+	.input-lg{
+		line-height: 1.3333333;
+		border-radius: 4px;
+		height: 40px;
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+	.cd-row{
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+	.col-xs-6{
+		float: left;
+		width: 50%;
+		position: relative;
+		min-height: 1px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.sms-send-btn{
+		padding: 9px 10px;
+		width: 100%;
+	}
+	.footer-copyright{
+		background: #212121;
+		border-top: 1px solid #444444;
+		text-align: center;
+		padding: 20px 0;
+		line-height: 30px;
+		color: #C1C1C1;
+	}
