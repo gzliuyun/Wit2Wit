@@ -1,0 +1,113 @@
+*{
+	/* margin: 0;
+	padding: 0;
+	list-style: none; */
+}
+/* 头部 */
+#wit_header{
+	margin-top: 5px;
+}
+#wit_header .fakeimg{
+	background-color: #8C8C8C;
+	text-align: center;
+	padding: 10px;
+}
+#wit_header .fakeimg h3 a{
+	color: #000000;
+	font-weight: bold;
+}
+#wit_header .fakeimg p a{
+	color: #000000;
+	font-weight: bold;
+}
+#wit_header .topic{
+	margin-top: 10px;
+	text-align: center;
+}
+#wit_header .location{
+	font-size: 12px;
+	margin-top: 5px;
+	text-align: center;
+	padding-top: 5px
+}
+#wit_header .location a{
+	color: #000000;
+}
+#wit_header .header-nav ul li+li{
+	border-left: 1px solid #CCCCCC;
+}
+
+#wit_header .header-nav ul li a{
+	color: #000000;
+}
+#wit_header .search{
+	margin-top: 15px;
+	margin-bottom: 15px ;
+	width: 80%;
+	float: right;
+}
+#wit_header .search .topic-text{
+	margin-top: 15px;
+}
+/* 轮播图 */
+#wit_slide{
+	margin-bottom: 15px;
+}
+/* 轮播图 */
+/* 内容 */
+#wit_content{
+	
+}
+#wit_content .container .row .col-md-2 li{
+	padding-top: 20px;
+	padding-left: 30px;
+}
+#wit_content .container .row .col-md-2  a{
+	color: #000000;
+}
+#wit_content .container .row .col-md-2 {
+	padding-top: 10px;
+}
+#myTabContent .row img{
+	width: 80%;
+	height: auto;
+	border-radius: 50%;
+	text-align: center;
+	
+}
+/* 内容 */
+/* 警告 */
+#wit_warning{
+}
+
+#wit_warning .wit-warning{
+	padding: 5px 5px;
+}
+/* 警告 */
+/* 搜索 */
+
+/* 搜索 */
+/* 尾部 */
+#wit_footer .footer-all{
+	margin-top: 5px;
+	color: #c1c1c1;
+	padding: 5px 5px;
+	background-color: #212121;
+}
+#wit_footer .footer-all ul{
+	list-style: none;
+	padding-top: 10px;
+	
+}
+#wit_footer .footer-all ul li{
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#wit_footer .footer-all ul li a{
+	color: #c1c1c1;
+}
+#wit_footer .footer-all li+li {
+	border-left: 1px solid #C1C1C1;
+}
+/* 尾部 */
