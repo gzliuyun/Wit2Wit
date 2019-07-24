@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,4 +157,164 @@
 </div>
 <footer></footer>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>授业者后台</title>
+    <script src="js/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/box.css" type="text/css" rel="stylesheet"/>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(function (){
+          $("header").load("common1.html #witowit_header");
+          $("footer").load("common1.html #witowit_footer");
+		})
+	</script>
+</head>
+<body>
+<header></header>
+<div class="container" style="width: 1370px !important;">
+	<div class="row">
+		<div class="col-md-2">
+			<ul >
+			<li><h3>我的任务</h3></li>
+			<li><a href="taskDone.html">已完成</a></li>
+			<li><a href="taskUndone.html">未完成</a></li>
+		  </ul>
+		  <hr>
+          <ul>
+			<li><h3>店面管理</h3></li>
+			<li><a href="publishGoods.html">发布商品</a></li>
+			<li><a href="productList.html">商品列表</a></li>
+		  	<li><a href="storeDecoration.html">店面装修</a></li>
+		  </ul>
+		  	<hr>
+			<ul >
+			<li><h3>其他</h3></li>
+            <li><a href="perinforSeting.html">账户设置</a></li>
+			<li><a href="stuMana.html">学习者管理</a></li>
+			<li><a href="myAddress.html">常用授业地址</a></li>
+		  </ul>
+		  <hr>
+		</div>
+        <div class="col-md-10">
+            <br>
+              <form class="form-horizontal" action="#" name="publishGoods"
+                    id="publishGoods"  @submit.prevent="checkForm">
+                <div class="form-group">
+                  <label  class="col-md-2 control-label" style="margin-left: -50px">
+                    <span style="color: red"> * </span>上传图片
+                  </label>
+                  <div class="col-md-2">
+                    <a href="#" class="thumbnail">
+                      <img src="images/github.jpg" alt="头像" >
+                    </a>
+                  </div>
+                </div>
+
+        <!--        商品名称-->
+                <div class="form-group">
+                  <label for="nicknameInput" class="col-md-2 control-label" style="margin-left: -50px">
+                    <span style="color: red"> * </span>商品名称
+                  </label>
+                  <div class="col-md-5" id="nickname">
+                    <input type="text" class="form-control" id="nicknameInput"
+                           aria-describedby="nicknameDescription" placeholder="请输入商品名称"
+                           v-model="inputNickname" v-bind:class="{invalidOutline : !isValid}">
+                      <!--
+                    <small id="nicknameDescription" class="form-text text-muted" style="color: red"
+                           v-if="!isValid">
+                      &ensp;&ensp;昵称长度为3-25字符,仅能由数字、字母、汉字和下划线组成，首位不能是下划线和数字
+                    </small>
+                    -->
+                  </div>
+                </div>
+
+        <!--        商品价格-->
+                <div class="form-group">
+                  <label for="trueName" class="col-md-2 control-label" style="margin-left: -50px">
+                      <span style="color: red"> * </span>商品价格
+                  </label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="trueName"
+                         placeholder="请输入商品价格">
+                  </div>
+                </div>
+
+        <!--        商品描述-->
+                <div class="form-group">
+                  <label for="trueName" class="col-md-2 control-label" style="margin-left: -50px">
+                      <span style="color: red"> * </span>商品价格
+                  </label>
+                  <div class="col-md-5">
+                    <textarea   cols="2"   rows="6" class="form-control" id="trueName"
+                         placeholder="请输入商品描述"></textarea>
+                  </div>
+                </div>
+
+        <!--        交付方式-->
+                <div class="form-group">
+                  <label for="male" class="col-md-2 control-label" style="margin-left: -50px">
+                    <span style="color: red"> * </span>交付方式
+                  </label>
+                  <div class="col-md-5">
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" id="male" value="male" checked>远程交付
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" id="female" value="female">线下交付
+                    </label>
+                  </div>
+                </div>
+
+        <!--        立即启用-->
+                <div class="form-group">
+                  <label for="male" class="col-md-2 control-label" style="margin-left: -50px">
+                    <span style="color: red"> * </span>立即启用
+                  </label>
+                  <div class="col-md-5">
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" id="male" value="male" checked>是
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" id="female" value="female">否
+                    </label>
+                  </div>
+                </div>
+
+            <!-- 上传视频-->
+                <div class="form-group">
+                  <label for="trueName" class="col-md-2 control-label" style="margin-left: -50px">上传视频</label>
+                  <div class="col-md-5">
+                    <input type="file" />
+                  </div>
+                </div>
+
+          <!-- 上传视频-->
+                <div class="form-group">
+                  <label for="trueName" class="col-md-2 control-label" style="margin-left: -50px">上传音频</label>
+                  <div class="col-md-5">
+                    <input type="file" />
+                  </div>
+                </div>
+
+
+                <hr/>
+        <!--        保存按钮-->
+                <div class="form-group">
+                  <div class="col-xs-3 col-xl-3 control-label">
+                    <button type="submit" class="btn btn-danger">发布</button>
+                  </div>
+                </div>
+              </form>
+	</div>
+</div>
+<hr>
+</div>
+<footer></footer>
+</body>
+>>>>>>> 修改促销管理,侧边导航栏改为二级
 </html>

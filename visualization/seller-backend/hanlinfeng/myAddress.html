@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -320,4 +321,328 @@
 </div>
 <footer></footer>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>授业者后台</title>
+    <script src="js/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/box.css" type="text/css" rel="stylesheet"/>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $(function (){
+          $("header").load("common1.html #witowit_header");
+          $("footer").load("common1.html #witowit_footer");
+    })
+
+	  $(function () {
+		  for (let i = 0; i < 6; i++) {
+                 var xssp='<tr class=card>' +
+						 '<td>' +
+						 '<input type="checkbox" name="myClass"  id="checkbox-myClass" onclick="IsChecked(this)"></td>' +
+						 '<td>' +
+						 '<img class="col-xs-6" src="images/财税管理.jpg">' +
+						 '<div class="col-xs-6">' +
+						 '<a href="" class="cls-name">财税管理</a><br>ID:593925090675</div></td>' +
+						 '<td class="text-primary">' +
+						 '199.00</td>' +
+						 '<td>' +
+						 'http://cst.buaa.edu.cn/</td>' +
+						 '<td>' +
+						 '2019-05-08 17:31</td>' +
+						 '<td>' +
+						 '<span class="label label-success">是</span></td>' +
+						 '<td>' +
+						 '<a href="">编辑</a><br><a href="javascript:myXiaJia()">删除</a></td></tr>'
+                 $(myaddresstable).append(xssp);
+		  }
+	  })
+  </script>
+</head>
+<body>
+<header></header>
+<div class="container" style="width: 1370px !important;">
+	<div class="row">
+		<div class="col-md-2">
+			<ul >
+			<li><h3>我的任务</h3></li>
+			<li><a href="taskDone.html">已完成</a></li>
+			<li><a href="taskUndone.html">未完成</a></li>
+		  </ul>
+		  <hr>
+          <ul>
+			<li><h3>店面管理</h3></li>
+			<li><a href="publishGoods.html">发布商品</a></li>
+			<li><a href="productList.html">商品列表</a></li>
+		  	<li><a href="storeDecoration.html">店面装修</a></li>
+		  </ul>
+		  	<hr>
+			<ul >
+			<li><h3>其他</h3></li>
+            <li><a href="perinforSeting.html">账户设置</a></li>
+			<li><a href="stuMana.html">学习者管理</a></li>
+			<li><a href="myAddress.html">常用授业地址</a></li>
+		  </ul>
+		  <hr>
+		</div>
+        <div class="col-md-10">
+			<br>
+			<div class="row">
+				<div class="col-md-4">
+				  <div class="col-md-4 suoyin_biaoti">
+					商品名称
+				  </div>
+				  <div class="col-md-8 suoyin_biaodan">
+					<input type="text" class="form-control"
+							   placeholder="请输入商品名称">
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="col-md-4 suoyin_biaoti">
+					商品ID
+				  </div>
+				  <div class="col-md-8 suoyin_biaodan">
+					<input type="text" class="form-control"
+							   placeholder="请输入商品ID">
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="col-md-3 suoyin_biaoti">
+					是否启用
+				  </div>
+				  <div class="col-md-9 suoyin_biaodan" style="margin: 7px -6px 0 0">
+					<label class="radio-inline">
+					  <input type="radio" name="gender" id="male" value="male" checked>是
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="gender" id="female" value="female">否
+					</label>
+				  </div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-7">
+				  <div class="col-md-2 suoyin_biaoti">
+					创建日期
+				  </div>
+				  <div class="col-md-10 suoyin_biaodan">
+					<div class="col-md-3">
+					<input type="date" class="form-control" style="width: 150px">
+					</div>
+					<div class="col-md-1" style="margin: 5px 0px 0 40px">
+					——
+					</div>
+					<div class="col-md-3">
+					<input type="date" class="form-control" style="width: 150px">
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-1">
+				  <button type="button" class="btn btn-default">查询</button>
+				</div>
+				<div class="col-md-1">
+				  <button type="button" class="btn btn-default">重置</button>
+				</div>
+			</div>
+			<br>
+          <!--
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <ul>
+                  <li style="float:left; padding:0 10px"><strong>常用授业地址</strong></li>
+                    <li style="float:right; padding:0 10px;"><a href="#">删除</a></li>
+                    <li style="float:right; padding:0 10px;"><a href="#">编辑</a></li>
+                </ul>
+              </div>
+
+              <div class="panel-body">
+                <ul>
+                  <li style="float:left">
+                    <div class="checkbox"  style="margin-top:-4px">
+                      <label>
+                        <input type="checkbox" name='choice'>
+                      </label>
+                    </div>
+                  </li>
+                  <li style="float:left">
+                    <img src="images/github.jpg" alt="商品名称" width="80">
+                  </li>
+                  <li style="float:left; width:250px; height:80px; position: relative; margin-left: 20px" >
+                      <div>
+                        <a href="#">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a>
+                      </div>
+                      <div style="position: absolute; bottom: 0">
+                        <a href="#">这里是商品折扣这里是商品折扣</a>
+                      </div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">任务创建时间</div>
+                    <div style="text-align: center; padding-top:18px">2019-05-01</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">授业地址</div>
+                    <div style="text-align: center; padding-top:18px">http://cst.buaa.edu.cn/</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">是否启用</div>
+                    <div style="text-align: center; padding-top:15px">
+                        <span class="label label-success">是</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+                <hr style="margin: -5px 0 -5px 0;">
+
+              <div class="panel-body">
+                <ul>
+                  <li style="float:left">
+                    <div class="checkbox"  style="margin-top:-4px">
+                      <label>
+                        <input type="checkbox" name='choice'>
+                      </label>
+                    </div>
+                  </li>
+                  <li style="float:left">
+                    <img src="images/github.jpg" alt="商品名称" width="80">
+                  </li>
+                  <li style="float:left; width:250px; height:80px; position: relative; margin-left: 20px" >
+                      <div>
+                        <a href="#">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a>
+                      </div>
+                      <div style="position: absolute; bottom: 0">
+                        <a href="#">这里是商品折扣这里是商品折扣</a>
+                      </div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">任务创建时间</div>
+                    <div style="text-align: center; padding-top:18px">2019-05-01</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">授业地址</div>
+                    <div style="text-align: center; padding-top:18px">http://cst.buaa.edu.cn/</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">完成状态</div>
+                    <div style="text-align: center; padding-top:15px">
+                        <span class="label label-danger">否</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+                <hr style="margin: -5px 0 -5px 0;">
+
+              <div class="panel-body">
+                <ul>
+                  <li style="float:left">
+                    <div class="checkbox"  style="margin-top:-4px">
+                      <label>
+                        <input type="checkbox" name='choice'>
+                      </label>
+                    </div>
+                  </li>
+                  <li style="float:left">
+                    <img src="images/github.jpg" alt="商品名称" width="80">
+                  </li>
+                  <li style="float:left; width:250px; height:80px; position: relative; margin-left: 20px" >
+                      <div>
+                        <a href="#">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a>
+                      </div>
+                      <div style="position: absolute; bottom: 0">
+                        <a href="#">这里是商品折扣这里是商品折扣</a>
+                      </div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">任务创建时间</div>
+                    <div style="text-align: center; padding-top:18px">2019-05-01</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">授业地址</div>
+                    <div style="text-align: center; padding-top:18px">http://cst.buaa.edu.cn/</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">完成状态</div>
+                    <div style="text-align: center; padding-top:15px">
+                        <span class="label label-danger">否</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+                <hr style="margin: -5px 0 -5px 0;">
+
+              <div class="panel-body">
+                <ul>
+                  <li style="float:left">
+                    <div class="checkbox"  style="margin-top:-4px">
+                      <label>
+                        <input type="checkbox" name='choice'>
+                      </label>
+                    </div>
+                  </li>
+                  <li style="float:left">
+                    <img src="images/github.jpg" alt="商品名称" width="80">
+                  </li>
+                  <li style="float:left; width:250px; height:80px; position: relative; margin-left: 20px" >
+                      <div>
+                        <a href="#">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a>
+                      </div>
+                      <div style="position: absolute; bottom: 0">
+                        <a href="#">这里是商品折扣这里是商品折扣</a>
+                      </div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">任务创建时间</div>
+                    <div style="text-align: center; padding-top:18px">2019-05-01</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">授业地址</div>
+                    <div style="text-align: center; padding-top:18px">http://cst.buaa.edu.cn/</div>
+                  </li>
+                  <li class="liPart">
+                    <div style="text-align: center">完成状态</div>
+                    <div style="text-align: center; padding-top:15px">
+                        <span class="label label-success">是</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          -->
+          <table class="table table-hover text-left" id="myaddresstable">
+      		<tr>
+				<th class=""><input type="checkbox" name="myClass" onclick="allCheck()"></th>
+      			<th class="col-md-3">课程名称</th>
+				<div class="col-md-9">
+					<th class="">价格</th>
+					<th class="">授业地址</th>
+					<th class="">创建时间</th>
+                    <th class="">是否启用</th>
+					<th class="">操作</th>
+				</div>
+      		</tr>
+            <tr class="card">
+              <td><input type="checkbox" name="myClass"  id="checkbox-myClass" onclick="IsChecked(this)"></td>
+              <td>
+                  <img class="col-xs-6" src="images/财税管理.jpg">
+                  <div class="col-xs-6">
+                      <a href="" class="cls-name">财税管理</a><br>ID:593925090675
+                  </div>
+              </td>
+              <td class="text-primary">199.00</td>
+              <td>http://cst.buaa.edu.cn/</td>
+              <td>2019-05-08 17:31</td>
+              <td><span class="label label-success">是</span></td>
+              <td><a href="">编辑</a><br><a href="javascript:myXiaJia()">删除</a></td>
+          	</tr>
+          </table>
+        </div>
+	</div>
+</div>
+<footer></footer>
+</body>
+>>>>>>> 修改促销管理,侧边导航栏改为二级
 </html>

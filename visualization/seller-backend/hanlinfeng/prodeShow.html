@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -364,4 +365,372 @@
 <div class="row clearfix ">
 				<div class = "col-md-offset-4 col-lg-offset-4col-xl-offset-4">
 					<form class="navbar-form navbar-left" role="search">
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>授业者后台</title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/box.css" type="text/css" rel="stylesheet"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function (){
+            $("header").load("common.html #shouyezhehoutai_header");
+            $("footer").load("common.html #shouyezhehoutai_footer");
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+          $(".pic_btn ul li").mouseover(function(){
+            $(this).siblings().find('img').css("border","none");
+            $(this).find('img').css("border","1px solid red");
+            index = $(this).index();
+            i = index;
+            $(".pic a").eq(index).stop().fadeIn(500).show().siblings().stop().fadeIn(500).hide();
+          });
+          $(".pic_btn ul li").mouseout(function(){
+            //$(this).find('img').css("border","none");
+          });
+          $(".pic_btn ul li").click(function(){
+            $(this).mouseover();
+          });
+          $(".pic_btn ul li").click(function(){
+            $(this).mouseout();
+          });
+        });
+
+        $(function(){
+            for(var i=0;i<4;i++){
+                $("#pingjia table tr td span").eq(i).removeClass("glyphicon glyphicon-star-empty").addClass("glyphicon glyphicon-star xingxingright")
+            }
+            //alert('1');
+            for (let i = 0; i < 4; i++) {
+                var temp='<li>' +
+                    '<div class="row">' +
+                    '<div class="col-md-1">' +
+                    '<a href="#"><img src="images/github.jpg" class="img-responsive" height="50" width="30" style="margin-top: -7px"/></a></div>' +
+                    '<div class="col-md-2">这里是用户昵称</div>' +
+                    '<div class="col-md-2">' +
+                    '<table>' +
+                    '<tr>' +
+                    '<td><span class="glyphicon glyphicon-star xingxingright"></span></td>' +
+                    '<td><span class="glyphicon glyphicon-star xingxingright"></span></td>' +
+                    '<td><span class="glyphicon glyphicon-star xingxingright"></span></td>' +
+                    '<td><span class="glyphicon glyphicon-star xingxingright"></span></td>' +
+                    '<td><span class="glyphicon glyphicon-star-empty"></span></td></tr></table></div> </div>' +
+                    '<div class="row" style="margin: 10px 0 0 5px">这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价</div>' +
+                    '<div class="row" style="margin: 20px 0 0 5px">' +
+                    '<div class="col-md-1">' +
+                    '<a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a></div>' +
+                    '<div class="col-md-1">' +
+                    '<a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a></div>' +
+                    '<div class="col-md-1">' +
+                    '<a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a></div>' +
+                    '<div class="col-md-1">' +
+                    '<a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a></div>' +
+                    '</div><hr></li>';
+                $(pingjialiebiao).append(temp);
+            }
+
+             for (let i = 0; i < 4; i++) {
+                 var xssp='<li>' +
+                     '<a href="#"><img src="images/健身.jpg" class="img-responsive" height="500" width="500" /></a></li>'
+                 $(xiangsishangpin).append(xssp);
+                 var xssp1='<li><a href="#"><p>教授企业股权信息</p></a></li>'
+                 $(xiangsishangpin).append(xssp1);
+             }
+        });
+    </script>
+</head>
+<body>
+<header></header>
+<div class="container">
+    <div class="row">
+        <br>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-12" style="padding-bottom: 50px">
+                    <div class="col-md-6">
+                        <div class="pic">
+                            <a href="#" style="display:block"><img src="images/健身大图.jpg" class="img-responsive" height="1000" width="800" /></a>
+                            <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="1000" width="800" /></a>
+                            <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="1000" width="800" /></a>
+                            <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="1000" width="800" /></a>
+                        </div>
+                        <div class="row pic_btn" style="margin: 10px 5px 0 5px">
+                            <ul>
+                                <li>
+                                    <div class="col-md-3">
+                                        <img src="images/健身大图.jpg" class="img-responsive" height="200" width="150" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-3">
+                                        <img src="images/健身大图.jpg" class="img-responsive" height="200" width="150"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-3">
+                                        <img src="images/健身大图.jpg" class="img-responsive" height="200" width="150"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-3">
+                                        <img src="images/健身大图.jpg" class="img-responsive" height="200" width="150"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <strong>这里是商品名称这里是商品名称这里是商品名称这里是商品名称这里是商品名称</strong>
+                        </div>
+                        <div class="row">
+                            <span class="label label-info">信息标签</span>
+                            <span class="label label-info">信息标签</span>
+                            <span class="label label-info">信息标签</span>
+                        </div>
+                        <hr style="margin: 15px -15px 10px -15px">
+                        <div class="row">
+                            <p>价格：<span class="jiage">￥160</span></p>
+                            <span style="color: green; font-size:17px;">已经启用</span>
+                            <p>交付方式：远程交付</p>
+                            <p>退款保证：本产品支持七天无理由退款</p>
+                            <p>商品描述：这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述这里是商品描述</p>
+                            <p>适用人群：大学生、青年人</p>
+                        </div>
+                        <div class="row" onclick="window.location.href='storeDecoration.html'" style="cursor:pointer; width: 20%">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span>联系授业者</span>
+                        </div>
+                        <div class="row" style="margin-top: 40px">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>月销量：50</td>
+                                        <td>总销量：600</td>
+                                        <td><a href="#">评价：80</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row goumaianniu" style="margin-top: 20px">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" style="display: block; width: 100%;" onclick="window.location.href='storeDecoration.html'">
+                                    <span>立即购买</span>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" style="display: block; width: 100%;" onclick="window.location.href='storeDecoration.html'">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                <span>加入购物车</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <ul class="breadcrumb" style="margin: 0 14px 10px 14px">
+                    <li><a href="#">评价</a></li>
+                    <li><a href="#">目录</a></li>
+                </ul>
+            </div>
+
+            <!-- 评价-->
+            <div style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px">
+                <div class="row">
+                    <div class="col-md-1">
+                        <h4>评价</h4>
+                    </div>
+                    <div class="col-md-1" style="margin-top: -3px">
+                        <span class="pingfen">4.0</span>
+                    </div>
+                    <div class="col-md-2" style="margin-top: 8px" id="pingjia">
+                        <table>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                                <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                                <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                                <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                                <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav class="navbar navbar-default" role="navigation" style="min-height:10px; height: 40px">
+                        <div class="container-fluid">
+                            <div>
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <label class="radio-inline" style="margin: 10px 20px 0 0">
+                                          <input type="radio" name="gender" value="male" checked>全部
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="radio-inline" style="margin: 10px 20px 0 0">
+                                          <input type="radio" name="gender" value="male" checked>最近
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="radio-inline" style="margin: 10px 20px 0 0">
+                                          <input type="radio" name="gender" value="male" checked>好评
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="radio-inline" style="margin: 10px 20px 0 0">
+                                          <input type="radio" name="gender" value="male" checked>差评
+                                        </label>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-right" style="margin-right: 10px">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #777">
+                                            排序 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">默认排序</a></li>
+                                            <li><a href="#">时间排序</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <ul id="pingjialiebiao">
+                    <!--
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <a href="#"><img src="images/github.jpg" class="img-responsive" height="50" width="30" style="margin-top: -7px"/></a>
+                            </div>
+                            <div class="col-md-2">
+                                这里是用户昵称
+                            </div>
+                            <div class="col-md-2">
+                                <table>
+                                    <tr>
+                                        <td><span class="glyphicon glyphicon-star xingxingright"></span></td>
+                                        <td><span class="glyphicon glyphicon-star xingxingright"></span></td>
+                                        <td><span class="glyphicon glyphicon-star xingxingright"></span></td>
+                                        <td><span class="glyphicon glyphicon-star xingxingright"></span></td>
+                                        <td><span class="glyphicon glyphicon-star-empty"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 10px 0 0 5px">
+                            这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价这里是用户评价
+                        </div>
+                        <div class="row" style="margin: 20px 0 0 5px">
+                            <div class="col-md-1">
+                                <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="#"><img src="images/健身大图.jpg" class="img-responsive" height="100" width="60" style="margin-top: -7px"/></a>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-2" style="margin-top: 12px">
+                                2019-6-26
+                            </div>
+                        </div>
+                        <hr>
+                    </li>
+                    -->
+                </ul>
+            </div>
+            <br>
+
+            <!-- 目录-->
+            <div style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px;">
+                <div class="row">
+                    <div class="col-md-1">
+                        <h4>目录</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="zhangjie">
+                            <span class="zhangjiehao">章节1：</span>
+                            <span class="zhangjietimu">章节题目：题目名称</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时1：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时2：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时3：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时4：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="zhangjie">
+                            <span class="zhangjiehao">章节2：</span>
+                            <span class="zhangjietimu">章节题目：题目名称</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时1：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时2：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时3：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                        <div class="keshi">
+                            <span class="keshihao">课时4：</span>
+                            <span class="keshitimu">课时题目</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2" style="border-left:solid 1px gainsboro;">
+            <!--
+            <p style="margin-left: 100px">相似产品</p>
+            <img src="images/企业股权.jpg" class="img-responsive" height="300" width="300" />
+            <p>教授企业股权信息</p>
+            -->
+            <ul id="xiangsishangpin">
+			<li><p style="margin-left: 50px">相似产品</p></li>
+            <!--
+            <li><a href="#"><img src="images/健身.jpg" class="img-responsive" height="500" width="500" /></a></li>
+            <li><a href="#"><p>教授企业股权信息</p></a></li>
+            -->
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<footer></footer>
+</body>
+</html>
+
+<!--
+<div class="row clearfix ">
+				<div class = "col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+					<form class="navbar-form navbar-left" role="search">
+>>>>>>> 修改促销管理,侧边导航栏改为二级
 -->

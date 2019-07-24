@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>wit2wit</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
 	<style type="text/css">
@@ -24,13 +24,7 @@
 <div class="container" style="width: 1370px !important;">
   <div class="row">
     <div class="col-xs-2 col-xl-2" >
-      <ul >
-        <li><h3>订单管理</h3></li>
-        <li><a href="JiaoYiJiLu_SYZ.html">交易记录</a></li>
-        <li><a href="TongJiFenXi.html">统计分析</a></li>
-        <li><a href="CuXiaoGuanLi.html">促销管理</a></li>
-				<li><a href="ZaiXianBangZhu.html">在线帮助</a></li>
-        <li><hr/></li>
+      <ul id="witowit_sidebar">
       </ul>
     </div>
 
@@ -134,6 +128,7 @@
 					$(function(){
 						$("header").load("common.html #witowit_header");
 						$("footer").load("common.html #witowit_footer");
+						$("#witowit_sidebar").load("common.html #witowit_sidebar");
 					})
 				</script>
 				<script  type="text/javascript">

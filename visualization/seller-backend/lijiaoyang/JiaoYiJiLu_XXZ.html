@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>wit2wit</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style type="text/css">
       div ul{
@@ -24,13 +24,7 @@
 <div class="container" style="width: 1370px !important;">
   <div class="row">
     <div class="col-xs-2 col-xl-2" >
-      <ul >
-        <li><h3>订单管理</h3></li>
-        <li><a href="JiaoYiJiLu_SYZ.html">交易记录</a></li>
-        <li><a href="TongJiFenXi.html">统计分析</a></li>
-        <li><a href="CuXiaoGuanLi.html">促销管理</a></li>
-		<li><a href="ZaiXianBangZhu.html">在线帮助</a></li>
-        <li><hr/></li>
+      <ul id="witowit_sidebar">
       </ul>
     </div>
 
@@ -51,12 +45,12 @@
 				<input type="button" onclick="myChaXun()" value="查询" class="btn btn-default" /> &nbsp;
 				<input type="reset" class="btn btn-default" value="重置" onclick="myChongZhi()"/> &nbsp;
 				<input type="button" class="btn btn-default" onclick="myShanChu()" value="批量删除" /> &nbsp;
-				已选商品（<span id="shangpin-geshu"></span>）
+				已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
 		  </form>		   
 		  
 		 	  
       	<table class="table table-hover">
-      		<tr>
+      		<tr  class="bg-info">
 				<th><input type="checkbox" name="checkbox-myClass" id="allChecked" onclick="allCheck()"></th>
       			<th class="col-md-3">宝贝</th>
 				<div class="col-md-9">
@@ -260,6 +254,7 @@
 			$(function(){
 				$("header").load("common.html #witowit_header");
 				$("footer").load("common.html #witowit_footer");
+				$("#witowit_sidebar").load("common.html #witowit_sidebar");
 					var data = {　　　　　　
 										key: "UMTBZ-VXFL4-ORWUQ-DWZOB-O5JZO-6NBS4"　//替换成自己的key　　
 								}
