@@ -2,7 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3caa7406-e169-4414-8a1b-38d7fe9f6c39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/images/default2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/default3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/github.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/人际交往.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/企业股权.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/健身.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/健身大图.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图标.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图片1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图片2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图片3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图片放大大图.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/图片放大小图.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/字体.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/工人图片.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/工人图片2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/工人图片3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/思维.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/星空.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/正在建设中.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/海.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/背景.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/财税管理.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/myAddress.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prodeShow.html" beforeDir="false" afterPath="$PROJECT_DIR$/prodeShow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productList.html" beforeDir="false" afterPath="$PROJECT_DIR$/productList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storeDecoration.html" beforeDir="false" afterPath="$PROJECT_DIR$/storeDecoration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stuMana.html" beforeDir="false" afterPath="$PROJECT_DIR$/stuMana.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskDone.html" beforeDir="false" afterPath="$PROJECT_DIR$/taskDone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskUndone.html" beforeDir="false" afterPath="$PROJECT_DIR$/taskUndone.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,16 +45,16 @@
         <entry file="file://$PROJECT_DIR$/myAddress.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prodeShow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#li#0;n#!!top" expanded="true" />
@@ -43,7 +72,46 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/storeDecoration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="107" column="17" lean-forward="true" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_account.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perinforSeting.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>从</find>
+      <find>images/健身.jpg</find>
+      <find>images/健身大图.jpg</find>
+      <find>jpg</find>
+      <find>images/财税管理.jpg</find>
+      <find>images</find>
+      <find>images/企业股权.jpg</find>
+      <find>images/摩托</find>
+      <find>images/</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=c9b7e04287b1cb132a643441bc3d3d2b/f9dcd100baa1cd118f94f98db312c8fcc3ce2d79.jpg</replace>
+      <replace>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1560861381&amp;di=3ac97b5d9fcde1bd9d03193dbb8502a7&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg.findlawimg.com%2Finfo%2F2018%2F1014%2F20181014121421986.jpg</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -52,13 +120,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/prodeShow.html" />
+        <option value="$PROJECT_DIR$/storeDecoration.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,15 +166,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.prodeShow.html">
+  <component name="RunManager" selected="JavaScript Debug.storeDecoration.html">
     <configuration name="myAddress.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hanlinfeng/myAddress.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="prodeShow.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hanlinfeng/prodeShow.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="storeDecoration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hanlinfeng/storeDecoration.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.storeDecoration.html" />
         <item itemvalue="JavaScript Debug.prodeShow.html" />
         <item itemvalue="JavaScript Debug.myAddress.html" />
       </list>
@@ -121,19 +194,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563965652567</updated>
-      <workItem from="1563965655782" duration="3382000" />
+      <workItem from="1563965655782" duration="6403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3382000" />
+    <option name="totallyTimeSpent" value="6403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -162,14 +235,14 @@
     <entry file="file://$PROJECT_DIR$/myAddress.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prodeShow.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="266">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#li#0;n#!!top" expanded="true" />
@@ -183,6 +256,21 @@
             <element signature="e#13059#15854#0" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_account.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perinforSeting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storeDecoration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="107" column="17" lean-forward="true" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
         </state>
       </provider>
     </entry>
