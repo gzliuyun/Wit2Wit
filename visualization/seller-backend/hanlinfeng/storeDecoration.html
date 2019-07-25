@@ -6,35 +6,6 @@
     <script type="text/jscript" src="js/jquery.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-          //手动播放图片
-          $(".btn_pic ul li").hover(function () {
-              $(this).addClass("one").siblings().removeClass("one");
-              index = $(this).index();
-              i = index;
-              $(".pic a").eq(index).stop().fadeIn(500).show().siblings().stop().fadeIn(500).hide();
-          });
-          //自动播放图片
-          var i = 0;
-          var t = setInterval(autoplay, 1000);
-          function autoplay() {
-              i++;
-              if (i > 4) i = 0;
-              $(".btn_pic ul li").eq(i).addClass("one").siblings().removeClass("one");
-              $(".pic a").eq(i).stop().fadeIn(500).show().siblings().stop().fadeIn(500).hide();
-          }
-          $("#banner").hover(function () {
-              clearInterval(t);
-          }, function () {
-              t = setInterval(autoplay, 1000);
-          });
-      });
-
-        $(function () {
-            //alert('1');
-        })
-    </script>
 	<link href="css/box.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -117,28 +88,36 @@
 </div>
 <br>
 <div class="container">
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<div id="banner">
-                <div class="pic">
-                    <a href="prodeShow.html" style="display:block"><img class="img-responsive" alt="" src="images/摩托.jpg" /></a>
-                    <a href="prodeShow.html"><img alt="" src="images/摩托.jpg" class="img-responsive" /></a>
-                    <a href="prodeShow.html"><img alt="" src="images/摩托.jpg" class="img-responsive" /></a>
-                    <a href="prodeShow.html"><img alt="" src="images/摩托.jpg" class="img-responsive" /></a>
-                    <a href="prodeShow.html"><img alt="" src="images/摩托.jpg" class="img-responsive" /></a>
-                </div>
-                <div class="btn_pic">
-                    <ul>
-                        <li class="one">1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                    </ul>
-                </div>
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/摩托.jpg" alt="First slide">
             </div>
-		</div>
-	</div>
+            <div class="item">
+                <img src="images/摩托.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="images/摩托.jpg" alt="Third slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
     <h3 class="title">特价商品</h3>
     <hr>
 	<div class="row clearfix tejia">
