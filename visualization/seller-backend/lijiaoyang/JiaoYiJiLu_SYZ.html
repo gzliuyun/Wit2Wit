@@ -255,7 +255,10 @@
 			$(function(){
 				$("header").load("common.html #witowit_header");
 				$("footer").load("common.html #witowit_footer");
-				$("#witowit_sidebar").load("common.html #witowit_sidebar");
+				$("#witowit_sidebar").load("common.html #witowit_sidebar",function(){
+					$("#orderSetting").collapse('show');
+					$(".JiaoYiJiLu").addClass('bg-info');
+				});	
 					var data = {　　　　　　
 										key: "UMTBZ-VXFL4-ORWUQ-DWZOB-O5JZO-6NBS4"　//替换成自己的key　　
 								}

@@ -32,6 +32,7 @@
       <div class="panel panel-info">
       	<div class="panel-heading">今日流量</div>
       		<div style="width: 60%; margin-left: 150px;">
+				<br>
       		   <table class="table">
       		   	<tr>
 								<th> </th>
@@ -128,7 +129,10 @@
 					$(function(){
 						$("header").load("common.html #witowit_header");
 						$("footer").load("common.html #witowit_footer");
-						$("#witowit_sidebar").load("common.html #witowit_sidebar");
+						$("#witowit_sidebar").load("common.html #witowit_sidebar",function(){
+							$("#orderSetting").collapse('show');
+							$(".TongJiFenXi").addClass('bg-info');
+						});	
 					})
 				</script>
 				<script  type="text/javascript">
