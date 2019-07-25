@@ -31,6 +31,16 @@
           $(".pic_btn ul li").click(function(){
             $(this).mouseout();
           });
+
+          $("#pingjiashow").on("click",function(){
+              $("#pingjiaxingqing").show();
+              $("#muluxiangqing").hide()
+         });
+
+          $("#mulushow").on("click",function(){
+              $("#pingjiaxingqing").hide();
+              $("#muluxiangqing").show()
+         });
         });
 
         $(function(){
@@ -167,14 +177,14 @@
             </div>
 
             <div class="row">
-                <ul class="breadcrumb" style="margin: 0 14px 10px 14px">
-                    <li><a href="#">评价</a></li>
-                    <li><a href="#">目录</a></li>
+                <ul class="breadcrumb" id="pingjiamulu" style="margin: 0 14px 10px 14px">
+                    <li id="pingjiashow"><a>评价</a></li>
+                    <li id="mulushow"><a>目录</a></li>
                 </ul>
             </div>
 
             <!-- 评价-->
-            <div style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px">
+            <div id="pingjiaxingqing" style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px">
                 <div class="row">
                     <div class="col-md-1">
                         <h4>评价</h4>
@@ -283,10 +293,9 @@
                     -->
                 </ul>
             </div>
-            <br>
 
             <!-- 目录-->
-            <div style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px;">
+            <div id="muluxiangqing" style="border:solid 1px gainsboro; padding: 5px 20px 0px 20px; display: none">
                 <div class="row">
                     <div class="col-md-1">
                         <h4>目录</h4>
