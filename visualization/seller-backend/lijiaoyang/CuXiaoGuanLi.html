@@ -74,7 +74,7 @@
 							<input type="text" id="gaojia" name="gaojia" style="width: 60px;" class="form-control"/> &nbsp;&nbsp;
 							<input type="button" onclick="myChaXun()" value="查询" class="btn btn-default" /> &nbsp;
 							<input type="reset" class="btn btn-default" value="重置" onclick="myChongZhi()"/> &nbsp;
-							<input type="button" class="btn btn-default" onclick="myShanChu()" value="批量删除" /> &nbsp;
+							<input type="button" class="btn btn-danger" onclick="myShanChu()" value="批量删除" /> &nbsp;
 							已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
 			</form>	
       	<table class="table table-hover text-left">
@@ -83,8 +83,8 @@
       			<th class="col-md-3">课程名称</th>
 				<div class="col-md-9">
 					<th class="">价格</th>
-					<th class="">销量</th>
-					<th class="">创建时间</th>
+					<th class="form-inline">优惠折扣</th>
+					<!-- <th class="">促销价（元）</th> -->
 					<th class="">操作</th>
 				</div>      			
       		</tr>
@@ -96,10 +96,10 @@
 						<a href="" class="cls-name">财税管理</a><br>ID:593925090675
 					</div>
 				</td>
-				<td class="text-primary">199.00</td>
-				<td>&nbsp;&nbsp;2</td>
-				<td>2019-05-08 17:31</td>
-				<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="text-primary cls-jiage">199.00</td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+				<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -110,9 +110,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">139.00</td>
-      			<td >8</td>
-      			<td >2019-07-05 13:15</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -123,9 +123,9 @@
       				</div>
       			</td>
       			<td class="text-primary  cls-jiage">169.00</td>
-      			<td >3</td>
-      			<td >2019-04-17 18:35</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -136,9 +136,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">99.00</td>
-      			<td >4</td>
-      			<td >2019-04-05 06:24</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -149,9 +149,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">880.00</td>
-      			<td >7</td>
-      			<td >2019-06-12 14:15</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -162,9 +162,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">1500.00</td>
-      			<td >11</td>
-      			<td >2019-03-31 08:07</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -175,9 +175,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">60.00</td>
-      			<td >5</td>
-      			<td >2019-07-02 16:52</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -188,9 +188,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">29.80</td>
-      			<td >2</td>
-      			<td >2019-05-15 10:26</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -201,9 +201,9 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">5.99</td>
-      			<td >6</td>
-      			<td >2019-02-22 05:39</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       		<tr class="card">
       			<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
@@ -214,18 +214,18 @@
       				</div>
       			</td>
       			<td class="text-primary cls-jiage">79.00</td>
-      			<td >3</td>
-      			<td >2019-04-24 21:45</td>
-      			<td><a href="">编辑商品</a><br><a href="javascript:myXiaJia()">立即下架</a></td>
+				<td class="form-inline">&nbsp;<input type="number" class="form-control" style="width: 50px;height: 25px;" id="discount" placeholder="9" min="1" max="9">折</td>
+				<!-- <td class="discountPrice"></td> -->
+      			<td><a href="javascript:myXiaJia()">立即下架</a></td>
       		</tr>
       	</table>	
 		</div>
 		<div class="text-center">
-			<button type="button" class="btn btn-success">立即创建</button>&nbsp;&nbsp;
+			<button type="button" class="btn btn-success setDiscount">立即创建</button>&nbsp;&nbsp;
 			<button type="button" class="btn btn-default">取消</button>
+			<h5 style="color: red;" class="afterDiscount"></h5>
 		</div>
       </div>
-		
 	  					<div class="text-center">
 	  					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 	  						<div class="modal-dialog" role="document">
@@ -276,8 +276,7 @@
 				$("#witowit_sidebar").load("common.html #witowit_sidebar",function(){
 					$("#helpSell").collapse('show');
 					$(".CuXiaoGuanLi").addClass('bg-info');
-				});				
-				// $(".CuXiaoGuanLi").addClass('active');
+				});	
 					var data = {　　　　　　
 										key: "UMTBZ-VXFL4-ORWUQ-DWZOB-O5JZO-6NBS4"　//替换成自己的key　　
 								}
@@ -300,11 +299,20 @@
 								}						
 						});
 			})
+			$(".setDiscount").click(function(){
+				var allPrice=0;
+				$(".card").each(function(){
+					if ($(this).find("input[id='discount']").val() != 0) {
+						allPrice += parseFloat($(this).find('.cls-jiage').html())*(10-$(this).find("input[id='discount']").val())*0.1
+					}
+				});
+				$(".afterDiscount").text('共优惠'+ allPrice +'元');
+			});
 		</script>
-	<script type="text/javascript">
+	<script type="text/javascript">		
 			//checkbox 全选/取消全选  
-		    var isCheckAll = false;  
-				var checkNumber=0;
+			var isCheckAll = false;  
+			var checkNumber=0;			
 		    function allCheck() {  
 		        if (isCheckAll) {  
 		            $("input[id='checkbox-myClass']").each(function() {  
