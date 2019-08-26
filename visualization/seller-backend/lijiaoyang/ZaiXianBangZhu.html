@@ -15,7 +15,8 @@
         background: #aaa;
       }
 	  .bangzhuColor{color: #4386FB;}
-	  .MyTop{position:fixed; right:0; bottom:20%}
+	  .MyTop{position:fixed; right:0; bottom:20%; z-index: 3; background-color: #FFFFFF;border: darkgray 1px solid; border-radius:2em; margin-right: 45px;}
+	  .myDivide{ border-right: 1px solid #DDDDDD;}
     </style>
 </head>
 
@@ -37,7 +38,7 @@
 		<!-- 自助服务 -->
 		<div class="panel panel-info">
 		  <div class="panel-heading">
-			<h3 class="panel-title">自助服务&nbsp;<small>SERVICE</small></h3>
+			<h3 class="panel-title">自助工具&nbsp;<small>SERVICE</small></h3>
 		  </div>
 		  <div class="panel-body">
 			<div class="list-group">
@@ -61,7 +62,7 @@
 					<p class="list-group-item-text">查看当前账户余额、会员等级</p>
 				  </a>
 				  <a href="#" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">退货退款</h4>
+					<h4 class="list-group-item-heading">快速退款</h4>
 					<p class="list-group-item-text">查看目前已申请售后的订单状态</p>
 				  </a>
 				  <a href="CuXiaoGuanLi.html" class="list-group-item  col-xs-4 col-xl-4">
@@ -76,20 +77,25 @@
 		<!-- 电话服务 -->
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">电话服务&nbsp;<small>CUSTOMER SERVICE HOTLINE</small></h3>
+				<h3 class="panel-title">在线客服&nbsp;<small>CUSTOMER SERVICE HOTLINE</small></h3>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-8 col-sm-6">
-				<h4 class="list-group-item-heading">客服电话<small>Customer service hotline</small></h4>
+				<div class="col-sm-4 myDivide">
+				<h4 class="list-group-item-heading">授业客服电话<small>Customer service hotline</small></h4>
 				<h5 class="list-group-item-text">123456</h5>
 				</div>
-				<div class="col-xs-8 col-sm-6">
+				<div class="col-sm-4 myDivide">
+				<h4 class="list-group-item-heading">学员客服电话<small>Customer service hotline</small></h4>
+				<h5 class="list-group-item-text">123456</h5>
+				</div>
+				<div class="col-sm-4 ">
 				<h4 class="list-group-item-heading">客服工作时间<small>Customer service hotline working time</small></h4>
 				<p class="list-group-item-text">周一到周日9:00-22:00，法定节假日除外</p>
 				</div>
 			</div>		  
 		</div> 
 	  <div class="container text-left">
+		<h3>常见问题</h3> <hr >
       	<p class="bangzhuColor"><strong>问：为什么注册不了会员？</strong></p>
       	<p>答：请确认您是否开了诺顿防火墙，如有请关闭，我们发现诺盾防火墙的等级过高，导致本站程序不能确认您注册提交数据时是否从本站的程序发出。</p>
       	<hr>
@@ -158,7 +164,7 @@
 <br/>
 
 	<div class="text-right MyTop" id="MyTop">
-		<div style="border: darkgray 1px solid; border-radius:2em; margin-right: 45px;">
+		<div>
 			 <a href = '#top'><img src="top32.png" style="margin-right: 15px; padding-top: 10px; padding-left: 15px;"></a>
 			 <hr >
 			 <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><img src="kefu32.png" style="margin-right: 15px; padding-bottom: 10px; padding-left: 15px;"></a>

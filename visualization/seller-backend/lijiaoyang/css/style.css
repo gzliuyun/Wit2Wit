@@ -1,0 +1,60 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 0;
+}
+@media (min-width: 450px) {
+  #root {
+    width: 100%;
+  }
+}
+/* .container {
+  width: 100%;
+  margin-bottom: 50px;
+  user-select: none;
+} */
+/* .manual-btn {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  margin-top: -30px;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 3;
+  background-repeat: no-repeat;
+} */
+.manual-previous {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.6;
+  background-image: url(../image/左32.png);
+  background-repeat: no-repeat;
+}
+
+.manual-next {
+  right: 0;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.6;
+  background-image: url(../image/右32.png);
+  background-repeat: no-repeat;
+}
+
+
+
+
