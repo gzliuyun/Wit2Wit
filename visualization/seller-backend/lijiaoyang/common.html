@@ -1,160 +1,147 @@
 <header id="witowit_header">
 	<style type="text/css">
-		.wzdh_sub{position: absolute; display: none;background-color: #FFFFFF; right: 0; top: 50px; border: 1px solid #DDDDDD; border-radius: 6px; box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD;  z-index: 3;}
+		
+		.wzdh_sub{position: absolute; display: none;background-color: #FFFFFF; right: 0; top: 26px; border: 1px solid #DDDDDD; border-radius: 6px; box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD;  z-index: 3;}
 		.wzdh:hover{border: 1px solid #DDDDDD;}
 		.wzdh:hover .wzdh_sub{display: block; z-index: 4; width: 800px; height: 200px;}
-		.wzdh_sub dl {padding: 20px 0;}
+		.wzdh_sub dl {padding: 20px 5px;}
 		.centerDivide{border-right: 1px solid #DDDDDD;height: 200px;}
 		.wzdh_sub dl dt {color:  #BA1A33; height: 20px; line-height: 20px; cursor: pointer;}
 		.wzdh_sub dl dd a{padding: 0 6px; color: #666666; transition:0.25s; text-decoration:none; border-right: 1px solid #DDDDDD; line-height: 30px;}
 		.wzdh_sub dl dd a:hover{color: #BA1A33;}
+		.headerColor{padding: 0 32px;}
+		.headerColor a{color: #000000; text-decoration:none; font-size: 13px; }
+		.headerColor a:hover{color: #BA1A33;}
+		a:hover{text-decoration:none;}
+		.thirdHeader{margin-top: 10px;left: 0px;}
+		.thirdHeader a{padding: 0 20px; color: #555555;text-decoration:none;font-size: 17px;}
+		.thirdHeader a:hover{color: #BA1A33;}
+		.thirdHeaderRight{right: 376px;position: absolute;padding-left:32px;}
+		/* 底部链接 */
+		.footerLink a{color: #FFFFFF;text-decoration: none;padding:0 10px;}
+		
 	</style>
-  <div class="container" style="width: 1370px !important;">
+	<div style="width: 100%;">
+		<div class="row" style="height: 26px; background-color:#DDDDDD;">
+				<div style="color: #BA1A33; padding-left: 416px; font-size: 13px; padding-top: 3px;">
+					学技能，上慧师搜网
+				</div>
+				<div class="headerColor">
+					<img src="../lijiaoyang/image/定位16.png" >
+					<a href="">定位/语言</a>
+				</div>
+				<div class="headerColor">
+					<a href="">我的订单</a>
+				</div>			
+				<div class="headerColor">
+					<a href="">技能购物车 0</a>
+				</div>			
+				<div class="headerColor">
+					<a href="phone.html">手机版</a>
+				</div>			
+				<div class="headerColor">
+					<a href="">授业者入驻</a>
+				</div>			
+				<div class="headerColor">
+					<a href="service.html">授业服务商</a>
+				</div>			
+				<div class="headerColor">
+					<a href="kefuHelp.html">学习客服</a>
+				</div>			
+				<div class="headerColor">
+					<ul>
+						<li class="wzdh"><a href="">网站导航</a>
+							<div class="wzdh_sub">
+								<div class="row">
+									<div class="col-4 centerDivide">
+										<dl>
+										  <dt>学习者后台 ></dt>
+										  <dd> <a href="">账户设置</a> <a href="">我的订单</a> <br><a href="">我的技能购物车</a> <a href="">我的技能收藏</a> <a href="">常用学习地址</a> <a href="">在线客服</a> </dd>
+										</dl>
+									</div>
+									<div class="col-4 centerDivide">
+										<dl>
+										  <dt>授业者后台 ></dt>
+										  <dd> <a href="">账户设置</a> <a href="">我的任务</a> <a href="">学习者管理</a> <a href="">常用授业地址</a> <a href="">授业店面管理</a><br>
+										  <a href="">交易记录</a>  <a href="">统计分析</a>  <a href="">促销管理</a>  <a href="">在线帮助</a>  <a href="">授业服务商</a> </dd>
+										</dl>
+									</div>
+									<div class="col-4">
+										<dl>
+										  <dt>平台后台 ></dt>
+										  <dd> <a href="">权限分级设置</a> <a href="">账户设置</a> <br><a href="">统计分析</a> <a href="">一般投诉处理</a> <a href="">预设条件检索及投诉异常增多预警</a> <a href="">紧急求助处置</a> <a href="">第三方支付管理</a></dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>	
+		</div>
+	</div>
+  <div class="container">
     <div class="row">
-      <div class="col-xs-2 col-xl-2">
-        <div class="fakeimg text-center" style="height: 100px;padding-top:7%">
-          <h4>慧师搜网</h4>
-          <a href="http://witowit.com/" target="_blank">witowit.com</a>
-        </div>
-		<h4 class="text-center">学技能上慧师搜网</h4>
-      </div>
-
-      <div class="col-xs-10 col-xl-10">
-        <div class="row">
-          <div class="col-xs-2 col-xl-2">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left: 5px">
-                  <span class="glyphicon glyphicon-map-marker"></span>
-                  <span id="area">地区</span>
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a tabindex="-1" href="#">中文(简体)</a></li>
-                  <li><a tabindex="-1" href="#">中文(繁體)</a></li>
-                  <li><a tabindex="-1" href="#">English</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-10 col-xl-19">
-            <ul class="nav navbar-nav" style="float: right">
-              <li> <a class="navbar-header" href="#">您好！请登录 注册</a> </li>
-              <li> <a class="navbar-header" href="myHome.html">我的订单</a> </li>
-              <li> <a class="navbar-header" href="#">我的购物车</a> </li>
-              <li> <a class="navbar-header" href="#">手机版</a> </li>
-              <li> <a class="navbar-header" href="#">授业者入驻</a> </li>
-              <li> <a class="navbar-header" href="syfws.html">授业服务商</a> </li>
-              <li> <a class="navbar-header" href="ZaiXianBangZhu.html">学习客服</a> </li>
-              <li class="wzdh"> 
-					<a class="navbar-header" href="#">网址导航</a> 
-					<div class="wzdh_sub">
-						<div class="col-xs-8 col-sm-4 centerDivide">
-							<dl>
-							  <dt>学习者后台 ></dt>
-							  <dd> <a href="">账户设置</a> <a href="">我的订单</a> <br><a href="">我的技能购物车</a> <a href="">我的技能收藏</a> <a href="">常用学习地址</a> <a href="">在线客服</a> </dd>
-							</dl>
-						</div>
-						<div class="col-xs-8 col-sm-4 centerDivide">
-							<dl>
-							  <dt>授业者后台 ></dt>
-							  <dd> <a href="">账户设置</a> <a href="">我的任务</a> <a href="">学习者管理</a> <a href="">常用授业地址</a> <a href="">授业店面管理</a><br>
-							  <a href="">交易记录</a>  <a href="">统计分析</a>  <a href="">促销管理</a>  <a href="">在线帮助</a>  <a href="">授业服务商</a> </dd>
-							</dl>
-						</div>
-						<div class="col-xs-8 col-sm-4">
-							<dl>
-							  <dt>平台后台 ></dt>
-							  <dd> <a href="">权限分级设置</a> <a href="">账户设置</a> <br><a href="">统计分析</a> <a href="">一般投诉处理</a> <a href="">预设条件检索及投诉异常增多预警</a> <a href="">紧急求助处置</a> <a href="">第三方支付管理</a></dd>
-							</dl>
-						</div>
-					</div>
-				</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-2 col-xl-2">
-            <ul class="nav navbar-nav">
-              <li class="dropdown" >
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-                  <span >语言</span>
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a tabindex="-1" href="#">中文(简体)</a></li>
-                  <li><a tabindex="-1" href="#">中文(繁體)</a></li>
-                  <li><a tabindex="-1" href="#">English</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-10 col-xl-10">
-            <div class="input-group" >
-              <input type="search" class="form-control" placeholder="搜索..."/>
-              <span class="input-group-btn">
-                <button type="submit"
-                        class="btn btn-info btn-search">
-                  搜索
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+		<div class="col-2">
+			<div class="text-center" style="height: 100px;padding-top:3%">
+			  <img src="../lijiaoyang/image/logo.PNG" width="90px" height="90px">
+			</div>
+		</div>
+		  <div class="col-10">
+		  	<div class="input-group" style="padding-top: 30px; width: 600px; margin-left: 130px;">
+		  	  <input type="search" class="form-control" style="border:1.5px solid #BA1A33;"/>
+		  	  <span class="input-group-btn">
+		  	    <button type="submit"
+		  	            class="btn btn-search" style="background-color: #BA1A33;color: #FFFFFF;width: 90px;border-radius: 0;">
+		  	      搜索
+		  	    </button>
+		  	  </span>
+			  <div style="padding-left: 60px; padding-top: 5px;">
+			  	<a href="" style="color: #BA1A33;">登录</a>&nbsp;|&nbsp;<a href="" style="color: #BA1A33;">注册</a>
+			  </div>
+		  	</div>
+			<div class="" style="padding-left: 200px; font-size: 13px;">
+				汇聚全球一技之长者，使访问者受益
+			</div>
+			
+		  </div>
     </div>
+	<div class="thirdHeader row">
+		<a href="" style="color: #BA1A33;">首页</a>
+		<a href="">授业者推荐</a>
+		<a href="">新增技能</a>
+		<a href="">新增类别</a>
+		<div class="thirdHeaderRight">
+			<a href="ShouYeChat.html">授业同行交流</a>
+			<a href="XueYuanChat.html">学员社交</a>	
+		</div>
+	</div>
+	
   </div>
+  <hr >
 </header>
 
 <footer id="witowit_footer">
-  <div style="background-color: lightgray">
-    <div class="container" style="width: 1370px !important;">
-      <div class="row" style="padding-top: 1em">
-        <p style="color:grey">本网站严正声明：禁止下列人员注册为授业者：反共产党反社会反对国家统一的人，枪支弹药装配制造技术、涉及国家安全的保密技术，各种犯罪技术，邪教，传销，封建迷信，宗教传播，恐怖技术，爆炸品制造，有毒化学品制造，按摩、足疗、开锁、涉黄，制毒，涉赌类技术，完全丧失劳动能力、生活大部分不能自理或不具备完全民事行为能力的人员，未满18周岁的人，剥夺政治权利期间的人，精神类病人，正在服刑的人，正在社区戒毒和强制戒毒的人，吸毒的人，有犯罪记录且出狱未满五年者，通缉在逃人员，性骚扰性变态者，间谍技术，造假技术，药品和保健品制造，走私行为，虐待儿童妇女，有暴力倾向者，身心经常处于极度不稳定状态的行为人，一经平台发现或学习者举报，封号处理，根据情节和后果扣罚部分或全部保证金，严重者列入黑名单，涉及犯罪行为的本网站同步把该信息线索移交当地公安机关。</p>
-        <p class="text-center">Copyright@9012</p>
+    <div style="width: 100%;background-color:#BA1A33;">
+      <div class="text-center" style="padding-top: 1em;color: #FFFFFF;padding-bottom: 0.2em;">
+		<p class="footerLink"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">投诉举报</a> | <a href="">诚征英才</a> | <a href="">隐私权协议</a> | <a href="">回到顶部</a></p>
+        <p>© 2019 witowit.com版权所有 京ICP 备 19030437 号</p>
       </div>
     </div>
-  </div>
 </footer>
 
-<ul class="nav nav-pills nav-stacked" id="witowit_sidebar">
+<ul id="witowit_sidebar">
         <li>
-        	<a href="#orderSetting" class="nav-header collapsed" data-toggle="collapse" style="color: #000000;" >
-        	    <i class="glyphicon glyphicon-cog"></i>
-        	    订单管理
-				<span class="pull-right glyphicon glyphicon-chevron-down"></span>				
-        	</a>
-        	<ul id="orderSetting" class="nav nav-list collapse secondmenu">
-        		<li class="JiaoYiJiLu"><a href="JiaoYiJiLu_SYZ.html"><i class="glyphicon glyphicon-th-list"></i>&nbsp;交易记录</a></li>
-        		<li class="TongJiFenXi"><a href="TongJiFenXi.html"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;统计分析</a></li>
-        	</ul>
+          <h4>订单管理</h4>
+          <ul  >
+            <li><a href="JiaoYiJiLu_SYZ.html">交易记录</a></li>
+            <li><a href="TongJiFenXi.html">统计分析</a></li>
+          </ul>
         </li>
-        <li>
-        	<a href="#helpSell" class="nav-header collapsed" data-toggle="collapse" style="color: #000000;">
-        	    <i class="glyphicon glyphicon-bullhorn"></i>&nbsp;
-        		促销管理
-        	    <span class="pull-right glyphicon glyphicon-chevron-down"></span>
-        	</a>
-        	<ul id="helpSell" class="nav nav-list collapse secondmenu">
-        		<li class="CuXiaoGuanLi"><a href="CuXiaoGuanLi.html"><i class="glyphicon glyphicon-bullhorn"></i>&nbsp;创建促销</a></li>
-				<li class="LookCuXiaoGuanLi"><a href="LookCuXiaoGuanLi.html"><i class="glyphicon glyphicon-cog"></i>&nbsp;管理已创建的促销</a></li>
-        	</ul>
-        </li>        
-        <li class="ZaiXianBangZhu"><a href="ZaiXianBangZhu.html" style="color: #000000;"><i class="glyphicon glyphicon-question-sign"></i>&nbsp;客服帮助</a></li>
-		<li>
-			<a href="#SYFWS" class="nav-header collapsed" data-toggle="collapse" style="color: #000000;">
-			    <i class="glyphicon glyphicon-link"></i>&nbsp;
-				授业服务商
-			    <span class="pull-right glyphicon glyphicon-chevron-down"></span>
-			</a>
-			<ul id="SYFWS" class="nav nav-list collapse secondmenu">
-				<li class="SYFWS_SY"><a href="syfws.html"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
-				<li class="SYFWS_FWB"><a href="syfws.html"><i class="glyphicon glyphicon-hand-up"></i>&nbsp;服务帮</a></li>
-				<li class="SYFWS_ZXSC"><a href="syfws.html"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;装修市场</a></li>
-				<li class="SYFWS_SYSC"><a href="syfws.html"><i class="glyphicon glyphicon-phone"></i>&nbsp;摄影市场</a></li>
-				<li class="SYFWS_SJPX"><a href="syfws.html"><i class="glyphicon glyphicon-bullhorn"></i>&nbsp;商家培训</a></li>
-				<li class="SYFWS_PKZJ"><a href="syfws.html"><i class="glyphicon glyphicon-wrench"></i>&nbsp;品控质检</a></li>
-			</ul>
-		</li>
+		<hr/>
+        <li><h4>促销管理</h4></li>
+        <li><a href="CuXiaoGuanLi.html">创建促销</a></li>
+        <li><a href="LookCuXiaoGuanLi.html">管理已创建的促销</a></li>
+		<hr/>
+        <li><a href="ZaiXianBangZhu.html">客服帮助</a></li>
+        <li><a href="../../service-backend/service.html">授业服务商</a></li>
 </ul>

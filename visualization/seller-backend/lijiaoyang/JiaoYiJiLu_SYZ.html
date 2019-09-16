@@ -3,9 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>wit2wit</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -32,21 +36,21 @@
       <div>
 		  <div class="">
 			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="JiaoYiJiLu_SYZ.html">我是授业者</a></li>
-			  <li role="presentation"><a href="JiaoYiJiLu_XXZ.html">我是学习者</a></li>
+			  <li role="presentation" class="nav-item"><a href="JiaoYiJiLu_SYZ.html" class="nav-link active">我是授业者</a></li>
+			  <li role="presentation" class="nav-item"><a href="JiaoYiJiLu_XXZ.html" class="nav-link">我是学习者</a></li>
 			</ul>
 		  </div>
 		  <br>
-		  <form action="" method="" id="" class="form-inline">
-		  	商品名称：<input type="text" id="BiaoTi" name="biaoti" class="form-control"/>
-			商品ID：<input type="text" id="ID" name="id" class="form-control"/>
-			商品价格：<input type="text" id="dijia" name="dijia" style="width: 60px;" class="form-control"/>&nbsp;--&nbsp;
-				<input type="text" id="gaojia" name="gaojia" style="width: 60px;" class="form-control"/> &nbsp;&nbsp;
-				<input type="button" onclick="myChaXun()" value="查询" class="btn btn-default" /> &nbsp;
-				<input type="reset" class="btn btn-default" value="重置" onclick="myChongZhi()"/> &nbsp;
-				<input type="button" class="btn btn-default" onclick="MuchShanChu()" value="批量删除" /> &nbsp;
-				已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
-		  </form>		   
+		  <form class="form-inline">
+		  商品标题：<input type="text" id="BiaoTi" name="biaoti" class="form-control" style="width: 100px;"/>
+		  商品ID：<input type="text" id="ID" name="id" class="form-control" style="width: 100px;"/>
+		  价格：<input type="text" id="dijia" name="dijia" style="width: 60px;" class="form-control"/>&nbsp;--&nbsp;
+		  	<input type="text" id="gaojia" name="gaojia" style="width: 60px;" class="form-control"/> &nbsp;&nbsp;
+		  	<input type="button" onclick="myChaXun()" value="查询" class="btn btn-primary" /> &nbsp;
+		  	<input type="reset" class="btn btn-danger" value="重置" onclick="myChongZhi()"/> &nbsp;
+		  	<input type="button" class="btn btn-primary" onclick="myShanChu()" value="批量删除" /> &nbsp;
+		  	已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
+		  </form>	 	   
 		  
 		 	  
       	<table class="table table-hover">
@@ -201,44 +205,11 @@
 					<td class="text-center">3</td>
 					<td class="text-center"><a href="">啊哈哈哈哈</a></td>
 					<td class="text-danger text-center">交易失败</td>
-					<td class="text-center"><a href="javascript:myShanChu()" 	class="del">删除</a></td>
+					<td class="text-center"><a href="javascript:myShanChu()" class="del">删除</a></td>
 				</tr>
 			</tbody>			
       	</table>
       </div>
-	  
-	  					<div class="text-center">
-	  					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-	  						<div class="modal-dialog" role="document">
-	  							<div class="modal-content">
-	  								<div class="modal-header">
-	  								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  								<h4 class="modal-title" id="exampleModalLabel">告诉我们在<strong>慧师搜网</strong>遇到的问题</h4>
-	  								</div>
-	  								<div class="modal-body">
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>问题描述 &nbsp;<span id="mustQuestion" style="color: red;"></span></h5>
-	  										
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkQuestion" rows="3" placeholder="至少输入5个字。不要输入您的隐私信息，如：支付密码。"></textarea>
-	  										</div>
-	  									</form>
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>联系方式 &nbsp;<span id="mustPhone" style="color: red;"></span></h5>
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkPhone" rows="1" placeholder="请输入您的邮箱或手机号。"></textarea>
-	  										</div>
-	  									</form>
-	  									<div class="modal-footer">
-	  										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-	  										<input type="button" class="btn btn-primary" value="发送" onclick="inputQestion()"/>
-	  									</div>
-	  								</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>	  
-	  
    </div>
    </div>
 </div>

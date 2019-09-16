@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>wit2wit</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -17,159 +18,335 @@
 	  .bangzhuColor{color: #4386FB;}
 	  .MyTop{position:fixed; right:0; bottom:20%; z-index: 3; background-color: #FFFFFF;border: darkgray 1px solid; border-radius:2em; margin-right: 45px;}
 	  .myDivide{ border-right: 1px solid #DDDDDD;}
+	  /* 左侧导航栏 */
+	  .leftGuideBar ul{display: list-item;}
+	  .horizontalStrip{width: 180px;height: 6px;background-color: #BA1A33;border: 1px solid #BA1A33;}
+	  .navOpen{border: 1px solid #DDDDDD; width: 180px; background-color: #FFFFFF; }
+	  .navOpen li a{margin-left: 30px;color: #000000;line-height: 10px;}
+	  .navOpen li a:hover{color: #BA1A33;}
+	  .littleQuestion{font-size: 14px;}
+	  .littleQuestion li a{line-height: 18px;}
+	  .navBefore{border: 1px solid #DDDDDD; width: 180px;height: 30px; background-color: #F7F7F7;}
+	  .navBefore a{color: #000000;margin-left: 10px;font-weight: bold;}
+	  /* 右侧问题搜索 */
+	  .questionQuery{margin-left: 215px; padding-bottom: 8px;}
+	  .questionQuery a{padding-right: 15px;font-size: 15px;color: #000000;}
+	  .questionQuery a:hover{color: #BA1A33;}
+	  /* 平台规则 */
+	  .helpHome{display: block;}
+	  .PlatformRule{display: none;}
+	  .PrivacyRule{display: none;}
+	  .witowit-rule h5{color: #BA1A33;}
+	  .witowit-privacy h5{color: #BA1A33;}
     </style>
 </head>
 
 <body>
 	<header></header>
 <div class="container" style="width: 1370px !important;">
-  <div class="row">
-    <div class="col-xs-2 col-xl-2" >
-      <ul id="witowit_sidebar">
-      </ul>
-    </div>
-
-    <div class="col-xs-10 col-xl-10">
-		<!-- 安全提示 -->
-		<div class="alert alert-warning" role="alert">
-		  <i class="glyphicon glyphicon-info-sign"></i>
-		  <span style="color: red;">安全提示：</span>慧师搜网不会以订单异常、系统升级为由，要求您提供银行卡号、密码等信息，或让您支付额外费用，请谨防钓鱼链接和诈骗电话！
-		</div>
-		<!-- 自助服务 -->
-		<div class="panel panel-info">
-		  <div class="panel-heading">
-			<h3 class="panel-title">自助工具&nbsp;<small>SERVICE</small></h3>
-		  </div>
-		  <div class="panel-body">
-			<div class="list-group">
-				<div class="">
-				  <a href="myHome.html" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">查询订单</h4>
-					<p class="list-group-item-text">快速查看订单详情</p>
-				  </a>
-				  <a href="#" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">账户相关</h4>
-					<p class="list-group-item-text">可快速修改账户密码、邮箱验证与更换绑定手机号</p>
-				  </a>
-				  <a href="#" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">取消订单</h4>
-					<p class="list-group-item-text">查看取消订单政策</p>
-				  </a>
-				</div>
-				<div class="">
-				  <a href="#" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">查询余额</h4>
-					<p class="list-group-item-text">查看当前账户余额、会员等级</p>
-				  </a>
-				  <a href="#" class="list-group-item col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">快速退款</h4>
-					<p class="list-group-item-text">查看目前已申请售后的订单状态</p>
-				  </a>
-				  <a href="CuXiaoGuanLi.html" class="list-group-item  col-xs-4 col-xl-4">
-					<h4 class="list-group-item-heading">促销优惠</h4>
-					<p class="list-group-item-text">设定相关产品的促销活动</p>
-				  </a>
-				</div>
-			</div>			
-			
-		  </div>
-		</div> 
-		<!-- 电话服务 -->
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title">在线客服&nbsp;<small>CUSTOMER SERVICE HOTLINE</small></h3>
-			</div>
-			<div class="panel-body">
-				<div class="col-sm-4 myDivide">
-				<h4 class="list-group-item-heading">授业客服电话<small>Customer service hotline</small></h4>
-				<h5 class="list-group-item-text">123456</h5>
-				</div>
-				<div class="col-sm-4 myDivide">
-				<h4 class="list-group-item-heading">学员客服电话<small>Customer service hotline</small></h4>
-				<h5 class="list-group-item-text">123456</h5>
-				</div>
-				<div class="col-sm-4 ">
-				<h4 class="list-group-item-heading">客服工作时间<small>Customer service hotline working time</small></h4>
-				<p class="list-group-item-text">周一到周日9:00-22:00，法定节假日除外</p>
-				</div>
-			</div>		  
-		</div> 
-	  <div class="container text-left">
-		<h3>常见问题</h3> <hr >
-      	<p class="bangzhuColor"><strong>问：为什么注册不了会员？</strong></p>
-      	<p>答：请确认您是否开了诺顿防火墙，如有请关闭，我们发现诺盾防火墙的等级过高，导致本站程序不能确认您注册提交数据时是否从本站的程序发出。</p>
-      	<hr>
-      	<p class="bangzhuColor"><strong>问：如何在本站发布软件及建站源码？</strong></p>
-      	<p>答：可从此处提交，如果符合条件，我们将审核通过并发布。</p>
-      	<hr>
-      	<p class="bangzhuColor"><strong>问：如何获得注册邀请码？</strong></p>
-      	<p>答：您可以通过已经是本站用户的朋友获得邀请，或者发布源码，文章被我们网站收录，也可以提得申请，具体可联系我们。</p>
-      	<hr>
-      	<p class="bangzhuColor"><strong>问：你们是否提供网站建设的服务？</strong></p>
-      	<p>答：我们暂时不提供具体的网站建设业务，暂时仅提供建网站相关的资讯及资源。</p>
-      	<hr>
-      	<p class="bangzhuColor"><strong>问：我的作品(文章、软件、源码)被贵站收录了，但是作者及出处却不是我的。</strong></p>
-      	<p>答：请直接联系我们进行修正，如有不妥之处望请见谅。</p>
-      	<hr>
-				<p class="bangzhuColor"><strong>问：为什么注册不了会员？</strong></p>
-				<p>答：请确认您是否开了诺顿防火墙，如有请关闭，我们发现诺盾防火墙的等级过高，导致本站程序不能确认您注册提交数据时是否从本站的程序发出。</p>
-				<hr>
-				<p class="bangzhuColor"><strong>问：如何在本站发布软件及建站源码？</strong></p>
-				<p>答：可从此处提交，如果符合条件，我们将审核通过并发布。</p>
-				<hr>
-				<p class="bangzhuColor"><strong>问：如何获得注册邀请码？</strong></p>
-				<p>答：您可以通过已经是本站用户的朋友获得邀请，或者发布源码，文章被我们网站收录，也可以提得申请，具体可联系我们。</p>
-				<hr>
-				<p class="bangzhuColor"><strong>问：你们是否提供网站建设的服务？</strong></p>
-				<p>答：我们暂时不提供具体的网站建设业务，暂时仅提供建网站相关的资讯及资源。</p>
-				<hr>
-				<p class="bangzhuColor"><strong>问：我的作品(文章、软件、源码)被贵站收录了，但是作者及出处却不是我的。</strong></p>
-				<p>答：请直接联系我们进行修正，如有不妥之处望请见谅。</p>
-				<hr>
-      </div>
-					<div class="text-center">
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="exampleModalLabel">告诉我们在<strong>慧师搜网</strong>遇到的问题</h4>
-									</div>
-									<div class="modal-body">
-											<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>问题描述 &nbsp;<span id="mustQuestion" style="color: red;"></span></h5>
-											
-										<form>
-											<div class="form-group">
-											<textarea class="form-control" id="checkQuestion" rows="3" placeholder="至少输入5个字。不要输入您的隐私信息，如：支付密码。"></textarea>
-											</div>
-										</form>
-											<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>联系方式 &nbsp;<span id="mustPhone" style="color: red;"></span></h5>
-										<form>
-											<div class="form-group">
-											<textarea class="form-control" id="checkPhone" rows="1" placeholder="请输入您的邮箱或手机号。"></textarea>
-											</div>
-										</form>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-											<input type="button" class="btn btn-primary" value="发送" onclick="inputQestion()"/>
-										</div>
-									</div>
-								</div>
+		您现在的位置：<a href="">慧师搜网</a>&nbsp;>&nbsp;<a href="javascript:helpHome()">客服帮助</a>
+		<div class="row">
+			<div class="col-2">
+				<div class="leftGuideBar">
+					<div class="horizontalStrip">
+						
+					</div>
+					<ul class="nav nav-stacked">
+						<li >
+							<div class="navBefore" data-toggle="collapse" data-target="#questionList">
+								<a href="#">常见问题</a>
 							</div>
+							<ul id="questionList" class="collapse in navOpen">
+								<li><a href=""><strong>退款类</strong></a></li>
+								<div class="littleQuestion">
+									<li><a href="">我要退款？</a></li>
+									<li><a href="">支付宝退款退到哪？</a></li>
+									<li><a href="">网上支付退款退到哪？</a></li>
+								</div>
+								<li><a href=""><strong>发票类</strong></a></li>
+								<div class="littleQuestion">
+									<li><a href="">发票内容可以写什么？</a></li>
+									<li><a href="">怎么补开发票？</a></li>
+								</div>
+							</ul>
+						</li>
+						<li >
+							<div class="navBefore" data-toggle="collapse" data-target="#buyGuide">
+								<a href="#">购物指南</a>
+							</div>
+							<ul id="buyGuide" class="collapse in navOpen">
+								<li><a href="javascript:thePlatformRule()" >平台规则</a></li>
+								<li><a href="javascript:thePrivacyRule()" >隐私协议</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-10">
+				<!-- 问题搜索 -->
+				<div class="card">
+					<div class="input-group" style="padding-top: 10px; width: 600px; margin-left: 130px;">
+						<span style="padding: 10px;color: #666666;"><strong>问题搜索</strong></span>
+						<input type="search" class="form-control" style="border:1.5px solid #777777;"/>
+						<span class="input-group-btn">
+						  <button type="submit"
+								  class="btn btn-search" style="background-color: #777777;color: #FFFFFF;width: 50px;border-radius: 0;">
+							<img src="./image/搜索.png" >
+						  </button>
+						</span>
+					</div>
+					<div class="questionQuery">
+						<strong>热门搜索：</strong><a href="">货到付款</a><a href="">退货政策</a><a href="">网上支付</a><a href="">发票开具</a>
+					</div>
+				</div>
+				<div class="helpHome">
+					<!-- 安全提示 -->
+					<div class="alert alert-warning" role="alert">
+					  <i class="glyphicon glyphicon-info-sign"></i>
+					  <span style="color: red;">安全提示：</span>慧师搜网不会以订单异常、系统升级为由，要求您提供银行卡号、密码等信息，或让您支付额外费用，请谨防钓鱼链接和诈骗电话！
+					</div>
+					<!-- 自助服务 -->
+					<div class="card">
+					  <div class="card-header">
+						自助工具<small>SERVICE</small>
+					  </div>
+					  <div class="card-body">
+						<div class="list-group">
+							<div class="form-inline">
+								<a href="myHome.html" class="list-group-item list-group-item-action col-4">
+									<h4 class="list-group-item-heading">查询订单</h4>
+									<span class="list-group-item-text">快速查看订单详情</span>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action col-4">
+									<h4 class="list-group-item-heading">账户相关</h4>
+									<span class="list-group-item-text">修改账户密码、更换绑定手机号</span>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action col-4">
+									<h4 class="list-group-item-heading">取消订单</h4>
+									<span class="list-group-item-text">查看取消订单政策</span>
+								</a>
+							</div>
+							<div class="form-inline">
+							  <a href="#" class="list-group-item list-group-item-action col-4">
+								<h4 class="list-group-item-heading">查询余额</h4>
+								<span class="list-group-item-text">查看当前账户余额、会员等级</span>
+							  </a>
+							  <a href="#" class="list-group-item list-group-item-action col-4">
+								<h4 class="list-group-item-heading">快速退款</h4>
+								<span class="list-group-item-text">查看目前已申请售后的订单状态</span>
+							  </a>
+							  <a href="CuXiaoGuanLi.html" class="list-group-item list-group-item-action col-4">
+								<h4 class="list-group-item-heading">促销优惠</h4>
+								<span class="list-group-item-text">设定相关产品的促销活动</span>
+							  </a>
+							</div>  
+						</div>	
+					  </div>
+					</div> 
+					<!-- 电话服务 -->
+					<div class="card">
+						<div class="card-header">
+							在线客服<small>CUSTOMER SERVICE HOTLINE</small>
+						</div>
+						<div class="card-body row">
+							<div class="myDivide col-4">
+							授业客服电话<br><small>Customer service hotline</small><br>123456
+							</div>
+							<div class="myDivide col-4">学员客服电话<br><small>Customer service hotline</small><br>123456
+							</div>
+							<div class=" col-4">
+							客服工作时间<br><small>Customer service hotline working time</small><br>周一到周日9:00-22:00，法定节假日除外
+							</div>
+						</div>		  
+					</div>
+				</div>
+				<div class="PlatformRule">
+					<div class="card">
+						<div class="card-header">
+							平台规则
+						</div>
+						<div class="card-body witowit-rule">
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了规范平台授业/学习秩序，营造一个良好的技能/技术传播生态环境，促进授业/学习生态健康发展，特制定本规则，本规则简称为总则，平台其它的规则、规范、解读、协议、公告和规定称为细则：</p>
+							<h5>一、定义及编码命名</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;慧师搜网统一定义为平台。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传授技能、技术的个人或机构统一定义为授业者。标识字母S<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学习技能、技术的个人或机构统一定义为学习者。标识字母X<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为授业者提供服务的个人或机构统一定义为授业服务商。标识字母F<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台为每一位用户匹配始终不变的数字码。数字码从1001起编。每一位平台用户代码由标识字母+数字码构成，标识字母是变化的，数字码是唯一不变的，标识字母升级到满格，用户代码不再变化。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统自动编码规则：先注册的身份，标识字母在前，后面补充的身份标识字母在后，系统按补充身份先后顺序排列字母，数字保持不变。如：某个人用户，初次注册为授业者，用户代码S1001；后来转换为学习者，用户代码变为SX1001；不久又转换为服务商，用户代码变为SXF1001，以此类推，个人用户标识字母满三位后不再降级变化。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;企业和机构用户在标识字母末尾多一个识别字母Q, 如：某企业用户，初次注册为学习者，用户代码XQ1002；后来转换为机构服务商，用户代码变为XFQ1002；不久又转换学习者，用户代码变为XFSQ1002，以此类推。企业/机构用户标识字母满四位后不再降级变化。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网名规则：学习者的昵称（花名）、授业者和授业服务商的名称（授业者与授业服务商名称要求都是真实项，不允许昵称和化名）、店铺名称、授业技能名称及服务业务名称应遵守国家法律法规，不得包含违法、涉嫌侵犯他人权利、有违社会公德良俗或干扰网站秩序等相关信息。名称中不得包含明显政治色彩、明显宗教色彩、旗舰、第一、最、唯一、独家、顶级等词汇和其它极端的、排他性、授业者自封的与自身实际水平明显不匹配的“大师/名师/专家”等称号。
+</p>
+							<h5>二、关系界定</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台为授业者和学习者搭建一个公平的愉悦的生态环境，授业者与学习者之间是平等的师生关系、师徒关系、同志关系，不是上下级关系，从属关系、控制关系。授业者与授业服务商之间是独立的第三方服务关系。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者与授业者之间，学习者与学习者之间交往是平等的，志同道合的、兴趣爱好一致的朋友关系，非其它恶意目的或有组织的恶意联盟关系。
+</p>
+							<h5>三、称呼规范</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者可称谓如下：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、老师、师傅、先生、同志、职务、职称。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、姓+老师、姓+师傅、姓+工、姓+老，姓+先生、姓+女士、姓+同志、姓+职务、姓+职称。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、名字+老师、名字+师傅、名字+先生、名字+女士、名字+同志、名字+职务、名字+职称。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学习者可称谓如下：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A、学员、同学、同志、先生、女士、职务、职称。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B、姓+学员、姓+同学、姓+同志、姓+先生、姓+女士、姓+职务、姓+职称。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C、名字+学员、名字+同学、名字+同志、名字+先生、名字+女士、名字+职务、名字+职称。
+</p>
+							<h5>四、授业内容规定</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一切危害国家、危害社会、危害家庭、危害人身安全的，被所在国法律、法规文明规定禁止的，都不得列入授业内容，在授业广告宣传和线上/线下授业中都必须遵守此规定。</p>
+							<h5>五、授业规范</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文明授业：不准辱骂、使用脏字、损害人格、侮辱其长辈子女的用语授业。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台建议授业者必要时的采用的批评用语：“平时多练习、课后多练习、多实践、建议多学几期、多学些时间”等。
+</p>
+							<h5>六、学习规范</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;礼貌学习：不准辱骂、使用脏字、损害人格、侮辱师长等用语交流。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台建议学习者多采用的沟通用语：“是否可以讲的慢一些、仔细一些？是否可以降低一下难度？”等。
+</p>
+							<h5>七、线下授业/交流/交往规范</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者之间线下交流、学习者之间线下交往、授业者与学习者之间线下授业都不得强行留置，限制对方人身自由、抢夺财物、损害身体、侮辱骚扰、诈骗盗窃、拉入非法组织等。线下授业/交往/交流尽量选在安全的时间段和能及时得到其他人帮助的安全场所。</p>
+							<h5>八、平台注册审核及费用</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每一位用户均采用手机号码+验证码+密码的注册方式。学习者注册成功后即可下单学习。授业者和授业服务商注册成功后，需要在后台提供补充完善的资料，资料内容包括个人和机构实名认证，提供联系方式，个人常住地址/企业办公地址等必要的完整真实信息，并签署《平台入驻协议》后，方可对外开展业务。并尽可能多的提供自身已经拥有的各类证书、业绩证明和奖杯、奖励证书等，授业者和授业服务商提供的资料越全面，搜索排序越靠前。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者和学习者，如果要开通社交权限，都需要在账号后台，补充必要的真实的社交信息后，并在账号后台勾选《隐私权协议》后，方可开通平台社交权限。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者和学习者的社交信息不完整的，或者没有在后台勾选《隐私权协议》的，只有授业和学习的权限，没有社交权限。仅注册为授业服务商的用户无社交权限。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无论您同时兼具几个身份，开通授业业务和开通授业服务商业务时，平台会从授业者和授业服务商处收取相关的平台中间费用。平台学习者只缴纳学费，不缴纳平台中间费用。（详见费用细则）。
+</p>
+							<h5>九、试听/试学和试授业</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者必须开通至少有一次或几次试听/试学课和试授业，试学/试听和试授业期内，学习者可无条件中途退款。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业进度小于等于1/2时，学习者可以退回50%学费；学习进度大于1/2时，且小于等于2/3时，学习者可以退回30%学费；授业进度大于2/3时，学习者不可以申请退还学费。
+</p>
+							<h5>十、考核奖惩及违规管理</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每半年为一个考核周期。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对前5%的授业者店铺标注“杰出授业者”并奖励扶持。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对前6%--20%的授业者店铺标注“优秀授业者”。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对前21%--95%的授业者保持正常续约。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对考评最后5%授业者，暂时中止线上营业3个月，3个月内整改并上传整改措施，审查通过后可继续营业；平台审核不通过，终止合作。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台对授业者采用业绩考核+评价+投诉的综合考评体系。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者违规处置办法：警告、搜索排序靠后、搜索屏蔽、限制推广广告、限制发布新技能、违规技能下架、扣除保证金（部分或全部）、封号一个月、封号三个月、封号半年、封号一年、永久封号、涉及犯罪的，线索及证据移交司法机关。（详见考核奖惩细则）<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台对学习者采用投诉的信用体系。对某一学习者在一定时间段内被授业者或同学投诉量大且有证据证明较为严重时，平台会对学习者做出如下处置：警告、封号一个月、封号三个月、封号半年、封号一年、永久封号。涉及犯罪的，线索及证据移交司法机关。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台对授业服务商采用评价加投诉的综合信用体系。对某一授业服务商在一定时间段内被授业者或平台其它用户差评条数多、投诉量大且有证据证明较为严重时，平台会对授业服务商做出如下处置：警告、搜索排序靠后、搜索屏蔽、限制推广广告、限制发布新服务项目、扣除保证金（部分或全部）、封号一个月、封号三个月、封号半年、封号一年、永久封号、涉及犯罪的，线索及证据移交司法机关。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了确保投诉和评价体系的公正性、客观性和真实性，对恶意评价、异常评价和非正常投诉等破坏慧师搜网投诉评价体系的行为予以坚决打击，包括但不限于屏蔽评论内容、删除评价、限制评价和投诉不予采纳、封号暂停交易等监管措施。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经新闻媒体曝光或者国家市场监督管理部门等行政管理部门通报，系描述不符的，或平台抽检有虚假成分的，依照其情形严重程度，采取临时性的管控措施，直至查封账户。<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因注册用户行为引发其他人或第三方诉讼至司法机关的，若用户怠于处置、消极应对，或继续违规等情形，对平台造成或可能造成实际损失或不良影响的，可根据产生或可能产生后果的严重程度采取临时性市场管控措施。 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对任何涉嫌违反国家法律、行政法规、部门规章及相关规范性文件的规定的行为，本规则已有规定的，适用本规则；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本规则尚无规定的，平台有权酌情处理。
+</p>
+							<h5>十一、区域总量控制</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在某一区域或某一位置点，同一技能/技术授业者比较集中时采用总量控制，授业者数量达到区域人口千分之一上限，不再接收该技能/技术的授业者注册，地域人口和位置点选择由平台市场团队根据内部算法确定（详见区域总量细则）。</p>
+							<h5>十二、下列人员禁止成为授业者</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;危害所在国家、危害社会的人员和机构，有严重传染病者、畸形不良癖好者、严重暴力倾向和严重不稳定情绪的人、重度抑郁症和精神障碍者，正在服刑、缓刑、假释、监外执行、保外就医、剥夺政治权利期间的人，正在社区戒毒和强制戒毒的人、正在吸毒的人、通缉在逃人员、性骚扰性变态者、虐待儿童妇女的人、完全丧失劳动能力、生活大部分不能自理或不具备完全民事行为能力的人员，未满18周岁的人、传授毒品制造技术、枪支弹药装配制造技术、涉及国家安全保密技术、未经专利权人授权许可的专利技术、造假技术、间谍技术、药品化学品制造、涉黄、涉赌、涉爆炸品技术，制造恐怖技术、各种犯罪技术、封建迷信、邪教、传销、按摩、足疗、开锁、走私等行业人员，禁止入驻本平台，一经平台发现或被学习者举报，立即封号处理，扣除全部保证金，同时列入平台黑名单，涉及犯罪的同步将线索上报公安机关。</p>
+							<h5>十三、下列人员禁止成为学习者</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;危害所在国家、危害社会的人员和机构，有严重传染病者、畸形不良癖好者、严重暴力倾向和严重不稳定情绪的人，重度抑郁症和精神障碍者、正在吸毒和戒毒的人、通缉在逃人员、性骚扰性变态者、虐待妇女儿童的人、完全丧失劳动能力、生活大部分不能自理的人。禁止入驻本平台，一经平台发现或被授业者举报，立即封号处理，同时列入平台黑名单，涉及犯罪的同步将线索上报公安机关。</p>
+							<h5>十四、未满18周岁的用户</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未满18周岁的，需报告父母或监护人后方可注册，没有报告父母或监护人并经父母或监护人同意，不准许注册本平台用户，一切可能后果由父母或监护人负责。已成功注册用户视为父母或监护人同意。</p>
+							<h5>十五、隐私权</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台在运营中会获取用户部分隐私权，如电话、微信号、身份证号、邮箱等私人信息，用户需签署隐私权协议（详见隐私权协议），签署隐私权协议的用户，才具有社交权限，你的相关信息会推荐给志趣一致的用户。向平台提交申请后，经平台审核后，向授业者每月最多推荐3人（不限地域）；向学习者每月最多推荐5人，同城3人和异地2人。</p>
+							<h5>十六、责任及索赔处理</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台造成的责任由平台负责；由授业者、授业服务商和学习者造成的责任，平台方负次要责任或无责任，平台协助受害一方向侵害一方发起索赔追偿，在侵害一方无力赔偿或失联状态下，平台只赔付次要责任对应承担的赔偿部分。平台无责任时则免于赔偿。</p>
+							<h5>十七、免责声明</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;授业者与授业者之间、学习者与学习者之间、授业者与学习者之间通过本平台认识交往后的一切交往后果，本平台不予承担任何责任，交往双方为自己交友行为负完全责任。未满18周岁者交友，由父母或监护人负监护责任。</p>
+							<h5>十八、法律声明：</h5>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除非慧师搜网特别声明，本网推出的所有官方产品、技术、软件、程序、数据及其他信息（包括文字、图标、图片、音频、视频、色彩组合、版面设计等）的所有权利（包括著作权、商标权、专利权、商业秘密及其他相关权利）均归智慧平台（北京）网络技术有限公司所有。未经本公司事先许可，任何人擅自使用上述内容和信息，可能会侵犯本公司的权利，我公司将会追究侵权者的法律责任。如有使用需要，您务必取得公司的事前许可。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;慧师搜网上的店铺、技能信息（包括但不限于店铺名称、公司名称、身份信息、授业技能和服务项目的描述和简介、相关图片、视频等）由授业者或授业服务商自行提供并上传，由上传者对其提供的上传信息真实性和知识产权归属承担相应法律责任。知识产权权利人若认为网站内容侵犯其合法权益的，可以通过公司客服进行投诉，我们将在收到知识产权权利人的充分证据通知后依据相应的法律法规处理。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“如实描述”是授业者的基本义务。“如实描述”是指授业者应当对自身信息和技能的基本水平、特点、效果等进行真实的描述，并对所做的描述的真实性承担保证责任，虚假性描述可能带来的法律后果由授业者负全责。
+</p>
+							<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本规则的解释权和变更权归平台运营公司智慧平台（北京）网络技术有限公司，规则从变更公告之日自动生效，不再另行通知平台用户。</h5>
 						</div>
 					</div>
-	</div>
-</div>
+				</div>
+				
+				<div class="PrivacyRule card">
+					<div class="card-header">
+						隐私权协议
+					</div>
+					<div class="card-body witowit-privacy">
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了保护您的信息安全可控。为此，慧师搜网（简称“平台或我们”）制定本《隐私权协议》（下称“本协议/本隐私权协议”）：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本协议适用于慧师搜网提供的所有产品和服务，在使用慧师搜网各项产品或服务前，请您务必仔细阅读并理解本协议，在确认充分理解并同意后再使用相关产品或服务。一旦您开始使用慧师搜网各项产品或服务，即表示您已充分理解并同意本协议中内容。</p>
+						<h5>第一部分 定义</h5>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人/机构信息：指以电子或者其它方式记录的能够单独或者与其它信息结合识别自然人/机构身份或者反映其活动情况的各种信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人/机构敏感信息：指包括身份证件号码、统一社会信用代码、电话、住址/办公地址，邮箱、微信号、QQ号、银行账号、交易信息等各种信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信息删除：指在实现日常业务功能所涉及的系统中去除信息的行为，使其保持不可被检索、访问的状态。</p>
+						<h5>第二部分 隐私权协议</h5>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一、收集信息范围</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（a）您提供给我们的信息</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们通过平台账号为您提供服务。为使用我们的服务，您需要创建平台账号，提供相关信息。如果您仅使用浏览、搜索服务，您不需要提供相关信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于需要通过平台才能使用的服务，我们可能会根据您提供的上述信息校验您的真实身份，确保我们是在为您提供服务。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您已拥有平台账号，我们可能会在平台服务中显示您的上述信息，以及您在平台上相关联的产品和服务中执行的操作，我们会尊重您在平台账号设置中所做的选择。为便于向您提供订单管理服务，我们会收集您在使用我们服务过程中产生的订单信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（b）您使用服务过程中的信息，这些信息包括：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您使用的设备信息：我们会根据您在软件安装及/或使用中授予的具体权限，接收并记录您所使用的设备相关信息（例如设备型号、操作系统版本、设备设置、唯一设备标识符、设备环境等软硬件特征信息）、设备所在位置相关信息（例如IP 地址、GPS位置以及能够提供相关信息的WLAN接入点、蓝牙和基站等传感器信息）。如果您在安装及/或使用过程中拒绝授予我们相应权限的，我们并不会记录您上述对应的信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务日志信息：当您使用我们的网站或客户端提供的产品或服务时，我们会自动收集您对我们服务的详细使用情况，作为有关网络日志保存。例如搜索查询内容、IP地址、浏览器的类型、电信运营商、使用的语言、访问日期和时间及您访问的网页记录等。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其他相关信息：为了帮助您更好地使用我们的产品或服务，我们会收集相关信息。例如分享服务时选择开启通讯录功能，我们可能对您联系人的姓名和电话号码进行采集。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您与我们联系时，为验证您的身份，帮助您解决问题，我们可能会记录您与我们的对话并收集为解决问题所需的必要信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二、使用您的信息的目的</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、向您更好的提供产品或服务。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、以便向您提供更符合您个性化需求的信息展示、搜索及交易服务，我们会根据您的浏览及搜索记录、设备信息、位置信息、订单信息，提取您的浏览及搜索偏好、行为习惯、位置信息等特征，基于特征标签的人群画像，并展示、推送可能的商业广告。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、为提高服务的安全性。确保操作环境安全，保护您的人身财产安全免遭侵害，更好地预防钓鱼网站、欺诈、网络漏洞、计算机病毒、网络攻击、网络侵入等安全风险，更准确地识别违反法律法规或平台相关协议规则的情况，我们可能进行身份验证、检测及防范安全事件，并依法采取必要的记录、审计、分析、处置措施。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、如我们停止运营平台产品或服务，我们将及时停止继续收集您信息的活动，将停止运营的通知以公告的形式通知您，并对我们所持有的与已关停业务相关的信息进行删除或匿名化处理。</p>
+						
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三、使用Cookie及其它更优化的同类技术</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（a）Cookie </p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为确保网站正常运转、为您获得更轻松的访问体验、向您推荐您可能感兴趣的内容，我们会在您的计算机或移动设备上存储Cookie、Flash Cookie，或浏览器（或关联应用程序）提供的其他通常包含标识符、站点名称以及一些号码和字符的本地存储（统称“Cookie”）。借助于Cookie，网站能够存储您的偏好或技能购物车内等数据。如果您的浏览器或浏览器附加服务允许，您可修改对Cookie的接受程度或拒绝我们的Cookie。但如果您这么做，在某些情况下可能会影响您安全访问我们的网站，且可能需要在每一次访问我们的网站时更改用户设置。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（b）Cookie同类技术</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除Cookie外，我们还会在网站上使用网站信标、像素标签、ETag等其他更优化的同类技术。例如，我们向您发送的电子邮件可能含有链接至我们网站内容的地址链接，如果您点击该链接，我们则会跟踪此次点击，帮助我们了解您的产品或服务偏好，以便于我们主动改善客户服务体验。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网站信标通常是一种嵌入到网站或电子邮件中的透明图像。借助于电子邮件中的像素标签，我们能够获知电子邮件是否被打开。如果您不希望自己的活动以这种方式被追踪，则可以随时从我们的寄信名单中退订。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ETag（实体标签）是在互联网浏览器与互联网服务器之间背后传送的HTTP协议标头，可代替Cookie。ETag可以帮助我们避免不必要的服务器负载，提高服务效率，节省资源、能源，同时，我们可能通过ETag来记录您的身份，以便我们可以更深入地了解和改善我们的产品或服务。大多数浏览器均为用户提供了清除浏览器缓存数据的功能，您可以在浏览器设置功能中进行相应的数据清除操作。但请注意，如果停用ETag，您可能无法享受相对更佳的产品或服务体验。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;四、信息使用的三种特定情况</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（一）共享</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们不会与平台以外的公司、组织和个人共享您的信息，但以下情况除外：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、在法定情形下的共享：我们可能会根据法律法规规定、诉讼争议解决需要，或按行政、司法机关依法提出的要求，对外共享您的信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、在获得您的明确同意后，我们会与其它方共享您的信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、在您主动选择情况下共享： 您通过平台购买服务，我们会根据您的选择，将您的订单与交易有关的必要信息共享给相关服务者，以实现您的交易及售后服务需求。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、与授权合作伙伴共享：我们可能委托授权合作伙伴为您提供某些服务职能，授权合作伙伴只能接触到其履行职责所需信息，且不得将此信息用于其他任何目的。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前，我们的授权合作伙伴包括以下类型：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）广告、数据分析类的授权合作伙伴。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）其他合作伙伴。包括提供技术基础设施服务。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们会与其约定严格的数据保护措施，令其按照我们的隐私权协议以及其他任何相关的保密和安全措施来处理信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（二）转让</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们不会将您的信息转让给任何公司、组织和个人，但以下情况除外：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、在获取明确同意的情况下转让：获得您的明确同意后，我们会向其他方转让您的信息；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、在平台发生合并、收购或破产清算情形，或其他涉及合并、收购或破产清算情形时，如涉及到信息转让，我们会要求新的持有您信息的公司、组织继续受本协议的约束。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（三）披露</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们仅会在以下情况下，公开披露您的信息：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、获得您明确同意或基于您的主动选择，我们可能会公开披露您的信息；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、如果我们确定您出现违反法律法规或严重违反平台相关协议及规则的情况，或为保护平台用户或公众的人身财产安全免遭侵害，我们可能依据法律法规或征得您同意的情况下披露关于您的个人信息，包括相关违规行为以及平台已对您采取的措施。例如，若您因严重违反平台规则，我们可能会公开披露您的信息与违规情况。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（四）共享、转让、披露信息时事先征得授权同意的例外情形：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下情形中，共享、转让、披露您的信息无需事先征得您的授权同意：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、与国家安全、国防安全有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、与公共安全、公共卫生、重大公共利益有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、与犯罪侦查、起诉、审判和判决执行等司法或行政执法有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、为维护您的生命、财产等重大合法权益但又很难得到您方同意的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、您自行向社会公众公开的信息；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、从合法公开的信息中收集个人信息的。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五、保护信息的措施</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（一）我们采取合理可行的安全防护措施保护您的信息，防止个人信息遭到未经授权访问、公开披露、使用、修改、损坏或丢失。我们会使用加密技术提高信息的安全性；我们会部署访问控制机制，尽力确保只有授权人员才可访问信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（二）在使用平台服务进行网上交易时，您不可避免地要向交易对方披露信息，如姓名、微信号、QQ号、评价信息、联络方式或联系地址等。请您仅在必要的情形下向他人提供。如您发现自己的信息尤其是您的账户或密码发生泄露，请您立即联络平台客服，以便我们根据您的申请采取相应措施。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（三）在不幸发生信息安全事件后，我们将按照法律法规的要求向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，上报信息安全事件的处置情况。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;六、管理您的信息</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（一）查询您的信息</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以通过以下方式查询修改您的信息：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账户信息——您可以通过登录账号，在账号后台执行此类操作。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单信息：您可以在平台查阅或清除您的订单记录、交易记录等。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（二）更正或补充您的信息</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您发现关于您的信息有错误时，您可以通过账号中列明的方式更正或补充完善。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（三）删除您的信息</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以通过账号后台删除您的信息。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您删除相关信息后，我们可能无法立即从备份系统中删除相应的信息，我们将安全地存储您的信息并将其与任何进一步处理隔离，直到备份可以完全清除。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（四）注销您的账户</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以自行在后台提交账户注销申请。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在您主动注销账户之后，我们将停止为您提供产品或服务，根据适用法律的要求删除您的信息，或匿名化处理。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（五）在以下情形中，我们将无法响应您的管理信息请求：</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、与国家安全、国防安全有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、与公共安全、公共卫生、重大公共利益有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、与犯罪侦查、起诉、审判和执行判决等有关的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、有充分证据表明主体存在主观恶意或滥用权利的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、涉及商业秘密的。 </p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;七、本隐私权协议解释和更新</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本协议的解释权和变更权归平台运营公司智慧平台（北京）网络技术有限公司，协议从变更公告之日自动生效，不再另行通知平台用户。</p>
+					</div>
+				</div>
+			</div>
+		</div>
 </div>
 <br/>
-
-	<div class="text-right MyTop" id="MyTop">
-		<div>
-			 <a href = '#top'><img src="top32.png" style="margin-right: 15px; padding-top: 10px; padding-left: 15px;"></a>
-			 <hr >
-			 <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><img src="kefu32.png" style="margin-right: 15px; padding-bottom: 10px; padding-left: 15px;"></a>
-		</div>
-	</div> 
 <footer></footer>
 	
 	
@@ -187,9 +364,9 @@
 			$(function(){
 				$("header").load("common.html #witowit_header");
 				$("footer").load("common.html #witowit_footer");
-				$("#witowit_sidebar").load("common.html #witowit_sidebar",function(){
-					$(".ZaiXianBangZhu").addClass('bg-info');
-				});	
+				// $("#witowit_sidebar").load("common.html #witowit_sidebar",function(){
+				// 	$(".ZaiXianBangZhu").addClass('bg-info');
+				// });	
 					var data = {　　　　　　
 										key: "UMTBZ-VXFL4-ORWUQ-DWZOB-O5JZO-6NBS4"　//替换成自己的key　　
 								}
@@ -222,6 +399,22 @@
 					$("#mustPhone").text("联系方式不能为空")
 				}
 			}
+			function helpHome(){
+				$(".helpHome").show(); 
+				$(".PlatformRule").hide(); 
+				$(".PrivacyRule").hide(); 
+			}
+			function thePlatformRule(){
+				$(".helpHome").hide(); 
+				$(".PlatformRule").show(); 
+				$(".PrivacyRule").hide();
+			}
+			function thePrivacyRule(){
+				$(".helpHome").hide();
+				$(".PlatformRule").hide(); 
+				$(".PrivacyRule").show(); 
+			}
+			
 </script>
 </body>
 </html>

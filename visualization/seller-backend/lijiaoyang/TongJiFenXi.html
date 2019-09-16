@@ -3,10 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>wit2wit</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -28,19 +32,20 @@
       </ul>
     </div>
 
-    <div class="col-xs-10 col-xl-10">
-      <div class="panel panel-info">
-      	<div class="panel-heading">今日流量</div>
-      		<div style="width: 60%; margin-left: 150px;">
+    <div class="col-xs-10 col-xl-10">	  
+	  <div class="card bg-light text-dark">
+	      <div class="card-header">今日流量</div>
+	      <div class="card-body">
+			<div style="width: 60%; margin-left: 150px;">
 				<br>
-      		   <table class="table">
-      		   	<tr>
+			   <table class="table">
+							<tr>
 								<th> </th>
 								<th>浏览量(PV)</th>
 								<th>访客数(UV)</th>
 								<th>平均访问时长	</th>
 							</tr>
-      		   	<tr>
+							<tr>
 								<td>今日</td>
 								<td><strong>32,822</strong></td>
 								<td><strong>4,853</strong></td>
@@ -58,72 +63,35 @@
 								<td>8,978 <span class="glyphicon glyphicon-arrow-up"></span></td>
 								<td>--</td>
 							</tr>
-      		   </table>
-					</div>
-      </div>
+			   </table>
+					</div>			  
+		  </div> 
+	 </div>
 			
-			
-			<div class="panel panel-info">
-				<div class="panel-heading">近期订单统计</div>
-					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
-					   <canvas id="myChart"></canvas>
-				</div>
+	<div class="card bg-light text-dark">
+		<div class="card-header">
+			近期销量
+		</div>
+		<div class="card-body">
+				<div style="width: 60%; margin-left: 150px;" class="row panel-body">
+				   <canvas id="myChart"></canvas>
 			</div>
-			<div class="panel panel-info">
-				 <div class="panel-heading">订单类别</div>
-					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
-						<canvas id="myPieChart"></canvas>
-				</div>
-			</div>	
-			<div class="panel panel-info">
-				 <div class="panel-heading">近期天气情况</div>
-					<div style="width: 60%; margin-left: 150px;" class="row panel-body">
-						<canvas id="ResTianQiChart"></canvas>
-				</div>
-			</div>	
-			
-	  					<div class="text-center">
-	  					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-	  						<div class="modal-dialog" role="document">
-	  							<div class="modal-content">
-	  								<div class="modal-header">
-	  								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  								<h4 class="modal-title" id="exampleModalLabel">告诉我们在<strong>慧师搜网</strong>遇到的问题</h4>
-	  								</div>
-	  								<div class="modal-body">
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>问题描述 &nbsp;<span id="mustQuestion" style="color: red;"></span></h5>
-	  										
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkQuestion" rows="3" placeholder="至少输入5个字。不要输入您的隐私信息，如：支付密码。"></textarea>
-	  										</div>
-	  									</form>
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>联系方式 &nbsp;<span id="mustPhone" style="color: red;"></span></h5>
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkPhone" rows="1" placeholder="请输入您的邮箱或手机号。"></textarea>
-	  										</div>
-	  									</form>
-	  									<div class="modal-footer">
-	  										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-	  										<input type="button" class="btn btn-primary" value="发送" onclick="inputQestion()"/>
-	  									</div>
-	  								</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>			
+		</div>
+	</div>	
+	<div class="card bg-light text-dark">
+		<div class="card-header">
+			课程类别
+		</div>
+		<div class="card-body">
+			<div style="width: 60%; margin-left: 150px;" class="row panel-body">
+				<canvas id="myPieChart"></canvas>
+			</div>
+		</div>	
+	</div>		
     </div>
   </div>
 </div>
 <br/>
-	<div class="text-right MyTop" id="MyTop">
-		<div>
-			 <a href = '#top'><img src="top32.png" style="margin-right: 15px; padding-top: 10px; padding-left: 15px;"></a>
-			 <hr >
-			 <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><img src="kefu32.png" style="margin-right: 15px; padding-bottom: 10px; padding-left: 15px;"></a>
-		</div>
-	</div> 
 <footer></footer>
 				<script>
 					$(function(){

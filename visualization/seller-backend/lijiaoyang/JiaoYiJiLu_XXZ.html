@@ -3,9 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>wit2wit</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -29,215 +33,176 @@
     </div>
 
     <div class="col-xs-10 col-xl-10">
-      <div>
-		  <div class="">
-			<ul class="nav nav-tabs">
-			  <li role="presentation"><a href="JiaoYiJiLu_SYZ.html">我是授业者</a></li>
-			  <li role="presentation"  class="active"><a href="JiaoYiJiLu_XXZ.html">我是学习者</a></li>
-			</ul>
-		  </div>
-		  <br>
-		  <form action="" method="" id="" class="form-inline">
-		  	商品标题：<input type="text" id="BiaoTi" name="biaoti" class="form-control"/>
-			商品ID：<input type="text" id="ID" name="id" class="form-control"/>
-			价格：<input type="text" id="dijia" name="dijia" style="width: 60px;" class="form-control"/>&nbsp;--&nbsp;
-				<input type="text" id="gaojia" name="gaojia" style="width: 60px;" class="form-control"/> &nbsp;&nbsp;
-				<input type="button" onclick="myChaXun()" value="查询" class="btn btn-default" /> &nbsp;
-				<input type="reset" class="btn btn-default" value="重置" onclick="myChongZhi()"/> &nbsp;
-				<input type="button" class="btn btn-default" onclick="myShanChu()" value="批量删除" /> &nbsp;
-				已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
-		  </form>		   
-		  
-		 	  
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="nav-item"><a href="JiaoYiJiLu_SYZ.html" class="nav-link">我是授业者</a></li>
+		  <li role="presentation" class="nav-item"><a href="JiaoYiJiLu_XXZ.html" class="nav-link active">我是学习者</a></li>
+		</ul>
+		<br>
+		<form class="form-inline">
+		商品标题：<input type="text" id="BiaoTi" name="biaoti" class="form-control" style="width: 100px;"/>
+		商品ID：<input type="text" id="ID" name="id" class="form-control" style="width: 100px;"/>
+		价格：<input type="text" id="dijia" name="dijia" style="width: 60px;" class="form-control"/>&nbsp;--&nbsp;
+			<input type="text" id="gaojia" name="gaojia" style="width: 60px;" class="form-control"/> &nbsp;&nbsp;
+			<input type="button" onclick="myChaXun()" value="查询" class="btn btn-primary" /> &nbsp;
+			<input type="reset" class="btn btn-danger" value="重置" onclick="myChongZhi()"/> &nbsp;
+			<input type="button" class="btn btn-primary" onclick="myShanChu()" value="批量删除" /> &nbsp;
+			已选商品（<span id="shangpin-geshu" style="color: red;"></span>）
+		</form>	 
       	<table class="table table-hover">
-      		<tr  class="bg-info">
-				<th><input type="checkbox" name="checkbox-myClass" id="allChecked" onclick="allCheck()"></th>
-      			<th class="col-md-3">宝贝</th>
-				<div class="col-md-9">
-					<th class="text-center">单价</th>
-					<th class="text-center">数量</th>
-					<th class="text-center">授业者</th>
-					<th class="text-center">交易状态</th>
-					<th class="text-center">操作</th>
-				</div>      			
-      		</tr>	
-			<div class="div-main">
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/财税管理.jpg">
-						<div class="">
-							<a href=""class="cls-name">财税管理</a><br>ID:593925090675
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">199.00</td>
-					<td class="text-center">2</td>
-					<td class="text-center"><a href="">wooden</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>		
-					
+			<thead>
+				<tr class="table-info">
+					<th><input type="checkbox" name="checkbox-myClass" id="allChecked" onclick="allCheck()"></th>
+					<th>宝贝</th>
+					<th>单价</th>
+					<th>数量</th>
+					<th>授业者</th>
+					<th>交易状态</th>
+					<th>操作</th>    			
 				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/企业股权.jpg">
-						<div class="">
-							<a href="" class="cls-name">企业股权</a><br>ID:149742754
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">139.00</td>
-					<td class="text-center">8</td>
-					<td class="text-center"><a href="">徐达多</a></td>
-					<td class="text-danger text-center">交易失败</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/如何提升人际交往能力.jpg">
-						<div class="">
-							<a href="" class="cls-name">如何提升人际交往能力</a><br>ID:9787301071014
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">169.00</td>
-					<td class="text-center">3</td>
-					<td class="text-center"><a href="">T-egg</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/从零开始学健身.jpg">
-						<div class="">
-							<a href="" class="cls-name">从零开始学健身</a><br>ID:9787553757056
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">99.00</td>
-					<td class="text-center">4</td>
-					<td class="text-center"><a href="">天蓝蓝</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/创新营销思维.jpg">
-						<div class="">
-							<a href="" class="cls-name">创新营销思维</a><br>ID:9787801972002
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">880.00</td>
-					<td class="text-center">7</td>
-					<td class="text-center"><a href="">必先生</a></td>
-					<td class="text-danger text-center">交易失败</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/宝宝也可以学的理财课.jpg">
-						<div class="">
-							<a href="" class="cls-name">宝宝也可以学的理财课</a><br>ID:9787508265537
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">1500.00</td>
-					<td class="text-center">11</td>
-					<td class="text-center"><a href="">Aabcd</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/市场环境下的企业经营.jpg">
-						<div>
-							<a href="" class="cls-name">市场环境下的企业经营</a><br>ID:9787502571405
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">60.00</td>
-					<td class="text-center">5</td>
-					<td class="text-center"><a href="">小娟</a></td>
-					<td class="text-danger text-center">交易失败</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/看透人心的110个技巧.jpg">
-						<div class="">
-							<a href="" class="cls-name">看透人心的110个技巧</a><br>ID:9787504727183
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">29.80</td>
-					<td class="text-center">2</td>
-					<td class="text-center"><a href="">笑谈人生</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/茶艺文化与健康.png">
-						<div class="">
-							<a href="" class="cls-name">茶艺文化与健康</a><br>ID:7504723398
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">5.99</td>
-					<td class="text-center">6</td>
-					<td class="text-center"><a href="">故梦</a></td>
-					<td class="text-success text-center">交易成功</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-				<tr class="card">
-					<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
-					<td>
-						<img class="col-xs-6" src="./image/碎片化时代如何进行深度思考？.jpg">
-						<div class="">
-							<a href="" class="cls-name">碎片化时代如何进行深度思考？</a><br>ID:9787300215419
-						</div>
-					</td>
-					<td class="text-primary text-center cls-jiage">79.00</td>
-					<td class="text-center">3</td>
-					<td class="text-center"><a href="">啊哈哈哈哈</a></td>
-					<td class="text-danger text-center">交易失败</td>
-					<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
-				</tr>
-			</div>			
+			</thead>
+			<tbody>
+					<tr>
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-6" src="./image/财税管理.jpg">
+							<div class="">
+								<a href=""class="cls-name">财税管理</a><br>ID:593925090675
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">199.00</td>
+						<td class="text-center">2</td>
+						<td class="text-center"><a href="">wooden</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>		
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/企业股权.jpg">
+							<div class="">
+								<a href="" class="cls-name">企业股权</a><br>ID:149742754
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">139.00</td>
+						<td class="text-center">8</td>
+						<td class="text-center"><a href="">徐达多</a></td>
+						<td class="text-danger text-center">交易失败</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/如何提升人际交往能力.jpg">
+							<div class="">
+								<a href="" class="cls-name">如何提升人际交往能力</a><br>ID:9787301071014
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">169.00</td>
+						<td class="text-center">3</td>
+						<td class="text-center"><a href="">T-egg</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/从零开始学健身.jpg">
+							<div class="">
+								<a href="" class="cls-name">从零开始学健身</a><br>ID:9787553757056
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">99.00</td>
+						<td class="text-center">4</td>
+						<td class="text-center"><a href="">天蓝蓝</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/创新营销思维.jpg">
+							<div class="">
+								<a href="" class="cls-name">创新营销思维</a><br>ID:9787801972002
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">880.00</td>
+						<td class="text-center">7</td>
+						<td class="text-center"><a href="">必先生</a></td>
+						<td class="text-danger text-center">交易失败</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/宝宝也可以学的理财课.jpg">
+							<div class="">
+								<a href="" class="cls-name">宝宝也可以学的理财课</a><br>ID:9787508265537
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">1500.00</td>
+						<td class="text-center">11</td>
+						<td class="text-center"><a href="">Aabcd</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/市场环境下的企业经营.jpg">
+							<div>
+								<a href="" class="cls-name">市场环境下的企业经营</a><br>ID:9787502571405
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">60.00</td>
+						<td class="text-center">5</td>
+						<td class="text-center"><a href="">小娟</a></td>
+						<td class="text-danger text-center">交易失败</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/看透人心的110个技巧.jpg">
+							<div class="">
+								<a href="" class="cls-name">看透人心的110个技巧</a><br>ID:9787504727183
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">29.80</td>
+						<td class="text-center">2</td>
+						<td class="text-center"><a href="">笑谈人生</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/茶艺文化与健康.png">
+							<div class="">
+								<a href="" class="cls-name">茶艺文化与健康</a><br>ID:7504723398
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">5.99</td>
+						<td class="text-center">6</td>
+						<td class="text-center"><a href="">故梦</a></td>
+						<td class="text-success text-center">交易成功</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>
+					<tr class="card">
+						<td><input type="checkbox" name="checkbox-myClass" id="checkbox-myClass" onclick="IsChecked(this)"></td>
+						<td>
+							<img class="col-xs-6" src="./image/碎片化时代如何进行深度思考？.jpg">
+							<div class="">
+								<a href="" class="cls-name">碎片化时代如何进行深度思考？</a><br>ID:9787300215419
+							</div>
+						</td>
+						<td class="text-primary text-center cls-jiage">79.00</td>
+						<td class="text-center">3</td>
+						<td class="text-center"><a href="">啊哈哈哈哈</a></td>
+						<td class="text-danger text-center">交易失败</td>
+						<td class="text-center"><a href="javascript:myShanChu()">删除</a></td>
+					</tr>	
+			</tbody>
       	</table>
-      </div>
-	  					<div class="text-center">
-	  					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-	  						<div class="modal-dialog" role="document">
-	  							<div class="modal-content">
-	  								<div class="modal-header">
-	  								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  								<h4 class="modal-title" id="exampleModalLabel">告诉我们在<strong>慧师搜网</strong>遇到的问题</h4>
-	  								</div>
-	  								<div class="modal-body">
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>问题描述 &nbsp;<span id="mustQuestion" style="color: red;"></span></h5>
-	  										
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkQuestion" rows="3" placeholder="至少输入5个字。不要输入您的隐私信息，如：支付密码。"></textarea>
-	  										</div>
-	  									</form>
-	  										<h5 class="text-left"><span class="glyphicon glyphicon-asterisk" style="color: orangered;"></span>联系方式 &nbsp;<span id="mustPhone" style="color: red;"></span></h5>
-	  									<form>
-	  										<div class="form-group">
-	  										<textarea class="form-control" id="checkPhone" rows="1" placeholder="请输入您的邮箱或手机号。"></textarea>
-	  										</div>
-	  									</form>
-	  									<div class="modal-footer">
-	  										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-	  										<input type="button" class="btn btn-primary" value="发送" onclick="inputQestion()"/>
-	  									</div>
-	  								</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  
    </div>
    </div>
 </div>
