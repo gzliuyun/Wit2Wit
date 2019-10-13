@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>wit2wit</title>
-	<script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
@@ -13,21 +12,20 @@
         list-style:none;
         padding-left:0;
       }
-	  .guide{margin-left: 230px;margin-top: 30px;}
-	  .guide a{font-size: 16px;color: rgb(139,129,129);}
-	  .guide span{font-size: 16px;color: rgb(139,129,129);}
 	  /* 信息框 */
 	  .msgInput{width: 432px;height: 50px;font-size: 16px;color: rgb(139,129,129);margin-right: 10px;border-radius: 10px;border: 1px solid rgb(224,218,219);padding-left: 18px;}
 	  /* 填写内容提示字设置 */
 	  .msgTitle{font-size: 16px; color: rgb(85,79,79);}
+	  input { outline:none; }
     </style>
 </head>
 
 <body style="background-color: #EBEBEB;width: 100%;">
+	<header></header>
 <div class="" style="width: 1920px;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;">
 	<span style="color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;margin-left: 230px;">授业同行交流</span>
 </div>
-<div class="guide">
+<div class="guideStrip">
 	<a href="">首页</a><span>>></span><a href="ShouYeChat.html">授业同行交流</a>
 </div>
 <div class="container" style="width: 1370px !important;">
@@ -55,8 +53,9 @@
 				<span style="color: red;margin-top: 50px;">*</span>
 			</div>
 			<div style="font-size: 12.5px;color: rgb(139,129,129);margin-top: 40px;">温馨提示：每月仅可申请一次，请慎重提交。<br>
-			授业者需要补充：微信号或QQ号码，并勾选《隐私权协议》。<br>
-			备注：不具备申请资格的会跳转到补充社交资料界面。</div>
+				授业者需要补充：微信号或QQ号码，并勾选《隐私权协议》。<br>
+				备注：不具备申请资格的会跳转到补充社交资料界面。
+			</div>
 			<div style="padding-left: 110px;">
 				<button type="submit"
 				class="btn btn-search" style="margin-top: 35px; margin-bottom: 40px; border-radius: 10px; font-size: 16px; background-color: #BA1A33;color: #FFFFFF;width: 432px;height: 50px;">
@@ -65,9 +64,9 @@
 			</div>
 		  </div> 
 	 </div>
-  </div>
 </div>
-<br/>
+<br><br>
+<footer></footer>
 	<script>
 		$(function(){
 			$("header").load("common.html #witowit_header");
