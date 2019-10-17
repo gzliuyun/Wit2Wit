@@ -7,6 +7,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
 		<style type="text/css">
 			/* 头部 */
 			a{color: #444444; text-decoration: none;}
@@ -36,6 +37,10 @@
 			.MyTop a img{margin-right: 15px; padding-bottom: 55px;}
 			/* 分页 */
 			.pagination li a{color: #444444; text-decoration: none;}
+			/* 顶部灰色路径指示 */
+			.guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+			.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
+			.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
 		</style>
 	</head>
 	<body style="background-color: #EBEBEB;width: 100%;">
@@ -362,9 +367,9 @@
 		<footer></footer>
 		<script>
 			$(function(){
-				$("header").load("common.html #witowit_header");
+				$("header").load("common.html #wit_header");
 				$("section").load("common.html #wit_search");
-				$("footer").load("common.html #witowit_footer");
+				$("footer").load("common.html #wit_footer");
 				
 			})
 			function ZHPX(){

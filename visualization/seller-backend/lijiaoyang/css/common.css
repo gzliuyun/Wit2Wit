@@ -1,0 +1,58 @@
+/* 隐藏横向滚动条 */
+/* html { overflow-x: hidden; overflow-y: auto; } */
+li{list-style-type: none;}
+a:hover{text-decoration:none;}	
+.dropdown:hover .dropdown-menu {
+display: block;
+margin-top: 0; 
+/* 模块描边 */
+border-color: rgb(231,231,231); 
+}
+/* 定位、语言 */
+#witowit-dingwei-dropdown{width: 310px;}
+.dingwei,.yuyan{padding-left: 5px;}
+/* 三个字：内蒙古 黑龙江 */
+#dropdown-item-3{width: 60px;} 
+/* 七个字：境外注册者 */
+#dropdown-item-7{width: 120px;}
+.dingwei div a, .yuyan a{
+  font-size: 16px;
+  width: 42px;
+  padding:3px 5px 3px 5px;
+  margin-right: 4px;
+  color: rgb(139,129,129);
+ }
+.dropdown-item:hover{
+  color: #16181b;
+  text-decoration: none;
+  background-color: rgb(231,231,231);
+}
+/* 定位语言里的分隔线 */
+.dropdown-divider{color: rgb(187,187,187);}
+.yuyan{line-height: 14px;}
+.yuyan a{width: 80px;}
+/* 我的订单 */
+#witowit-orders-dropdown a{font-size: 16px;color: rgb(85,79,79);}
+/* 技能购物车 */
+#witowit-cart-dropdown{width: 400px;}
+.jngwc_content{font-size: 16px; color: rgb(139,129,129);padding: 15px;margin-top: 5px;margin-left: 18px;}
+.jngwc_btn{padding: 15px;margin-top: 5px;}
+.jngwc_btn button{font-size: 16px;border-radius: 10px;background-color: #BA1A33;color: #FFFFFF;height: 25px;padding-top: 0px;}
+/* 网站导航 */
+#witowit-guide-dropdown{width: 665px;height: 200px;}
+.centerDivide{border-right: 1px solid rgb(187,187,187);height: 190px;}
+dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
+.centerDivide dl dd div a{width: 70px;padding:3px; margin: 3px; color: rgb(85,79,79);font-size: 16px;}
+/* 首页 授业者推荐 新增技能 新增类别 授业同行交流 学员社交 */
+#thirdHeaderLeft a{padding: 0 11px;color: #444444; text-decoration: none;}
+#thirdHeaderLeft a:hover{color: #BA1A33;text-decoration: none;}
+#thirdHeaderRight a{padding: 0 11px;color: #444444; text-decoration: none;}
+#thirdHeaderRight a:hover{color: #BA1A33;text-decoration: none;}
+/* 底部链接 */
+#wit_footer{}
+#wit_footer .footer-all {color: #c1c1c1;padding: 5px 5px;background-color: #B91A33;}
+#wit_footer .footer-all ul {list-style: none;padding-top: 25px;}
+#wit_footer .footer-all ul li {display: inline-block;padding-left: 25px;padding-right: 25px;}
+#wit_footer .footer-all ul li a {color: #F5F5F5;}
+#wit_footer .footer-all li+li {border-left: 1px solid #F5F5F5;}
+#wit_footer .footer-all .copyright{	padding: 10px;color: #F5F5F5;font-size: 12px;}

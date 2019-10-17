@@ -7,15 +7,20 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
 		<style type="text/css">
 			/* 头部 */
 			a{color: #444444; text-decoration: none;}
 			a:hover{color: #BA1A33;text-decoration: none;}
+			/* 顶部灰色路径指示 */
+			.guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+			.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
+			.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
 		</style>
 	</head>
-	<body style="background-color: #EBEBEB;width: 100%;">
+	<body style="background-color: #EBEBEB;">
 		<header></header>
-		<div class="container" style="width: 1370px !important;">
+		<div class="container" style="width:100%">
 				<div class="row">
 					<img src="./image/授权服务商和客服中心页面logo.png" style="height: 81px;margin-top: 20px;">
 					<span style="font-size: 36px;color: #BA1A33;margin-top: 32px;margin-left: 10px;">客服帮助</span>
@@ -36,8 +41,8 @@
 		<footer></footer>
 		<script>
 			$(function(){
-				$("header").load("common.html #witowit_header");
-				$("footer").load("common.html #witowit_footer");
+				$("header").load("common.html #wit_header");
+				$("footer").load("common.html #wit_footer");
 			})
 		</script>
 	</body>

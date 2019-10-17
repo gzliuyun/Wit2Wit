@@ -7,6 +7,8 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/common.css"/>
+	<link rel="stylesheet" href="css/index.css">
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -17,11 +19,23 @@
 	  /* 填写内容提示字设置 */
 	  .msgTitle{font-size: 16px; color: rgb(85,79,79);}
 	  input { outline:none; }
+	  /* 顶部灰色路径指示 */
+	  .guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+	  .guideStrip a{font-size: 16px;color: rgb(139,129,129);}
+	  .guideStrip span{font-size: 16px;color: rgb(139,129,129);}
     </style>
+	<script type="text/javascript">
+		$(function(){
+		    $("header").load("common.html #wit_header");
+		    $("section").load("common.html #wit_search");
+		    $("footer").load("common.html #wit_footer");
+		    })
+	</script>
 </head>
 
 <body style="background-color: #EBEBEB;width: 100%;">
 	<header></header>
+	<section></section>
 <div class="" style="width: 1920px;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;">
 	<span style="color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;margin-left: 230px;">授业同行交流</span>
 </div>
@@ -67,11 +81,5 @@
 </div>
 <br><br>
 <footer></footer>
-	<script>
-		$(function(){
-			$("header").load("common.html #witowit_header");
-			$("footer").load("common.html #witowit_footer");
-		})
-	</script>
 </body>
 </html>

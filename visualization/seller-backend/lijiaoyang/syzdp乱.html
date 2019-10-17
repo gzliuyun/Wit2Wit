@@ -7,31 +7,8 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<style type="text/css">
-			/* 基本信息 联系店铺 收藏店铺 */
-			.dpBasicInfo{right: 390px;position: absolute;}
-			.dpBasicInfo a{padding: 0 10px;text-decoration: none;}
-			/* 店标logo */
-			.dpLogo{margin-left: 35px; margin-top: 20px; border: 1px solid #FFFFFF;width: 280px;height: 150px;background-color: #FFFFFF;}
-			.dpLogo span{margin-left:90px;position: absolute;margin-top: 50px;}
-			/* 店名/授业者名称 */
-			.dpName{margin-left: 20px; margin-top: 20px; border: 1px solid #FFFFFF;width: 805px;height: 150px;background-color: #FFFFFF;}
-			.dpName span{padding-left:90px;position: absolute;margin-top: 50px;font-size: 20px;}
-			/* 店铺宣传图片 */
-			.dpImage{margin-left: 35px; margin-top: 20px; border: 1px solid #D8D8D8;width: 1180px;height: 400px;background-color: #D8D8D8;}
-			.dpImage span{padding-left:350px;position: absolute;margin-top: 150px;font-size: 20px;}
-			/* 店铺介绍 */
-			.dpIntro{margin-left: 35px; margin-top: 20px; border: 1px solid #D8D8D8;width: 1180px;height: 190px;background-color: #D8D8D8;}
-			.dpIntro span{padding-left:350px;position: absolute;margin-top: 70px;font-size: 20px;}
-			/* 本店授业技能列表 */
-			.dpContent{padding-right: 10px;}
-			.dpSkillImage{border: 1px solid #D8D8D8;width: 266px;height: 210px;background-color: #D8D8D8;}
-			.dpSkillInfo{border: 1px solid #FFFFFF;widows: 266px;height: 75px;background-color: #FFFFFF;}
-			.dpSkillInfo span{padding-left: 80px;position: absolute;padding-top: 20px;}
-			/* 返回顶部 */
-			.MyTop{position:fixed; right:0; bottom:10%;margin-right: 10px;}
-			.MyTop a img{margin-right: 15px; padding-bottom: 55px;}
-		</style>
+		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/syzdp.css"/>
 	</head>
 	<body style="background-color: #EBEBEB;width: 100%;">
 		<header></header>
@@ -123,18 +100,17 @@
 				</div>
 			</div>
 			<div class="MyTop">
-				<a href="#witowit_header"><img src="./image/top.png"></a>
+				<a href="#wit_header"><img src="./image/top.png"></a>
 			</div> 
 		</div>
-		
 		
 		<footer></footer>
 		<script>
 			$(function(){
-				$("header").load("common.html #witowit_header");
-				$("section").load("common.html #wit_search");
-				$("footer").load("common.html #witowit_footer");
-			})
+			    $("header").load("common.html #wit_header");
+			    $("section").load("common.html #wit_search");
+			    $("footer").load("common.html #wit_footer");
+			    })
 		</script>
 	</body>
 </html>

@@ -7,6 +7,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/common.css"/>
 	<style type="text/css">
       div ul{
         list-style:none;
@@ -16,6 +17,10 @@
 	  .msgInput{width: 432px;height: 50px;font-size: 16px;color: rgb(139,129,129);margin-right: 10px;border-radius: 10px;border: 1px solid rgb(224,218,219);padding-left: 18px;}
 	  /* 填写内容提示字设置 */
 	  .msgTitle{font-size: 16px; color: rgb(85,79,79);}
+	  /* 顶部灰色路径指示 */
+	  .guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+	  .guideStrip a{font-size: 16px;color: rgb(139,129,129);}
+	  .guideStrip span{font-size: 16px;color: rgb(139,129,129);}
     </style>
 </head>
 
@@ -64,8 +69,8 @@
 <footer></footer>
 	<script>
 		$(function(){
-			$("header").load("common.html #witowit_header");
-			$("footer").load("common.html #witowit_footer");
+			$("header").load("common.html #wit_header");
+			$("footer").load("common.html #wit_footer");
 		})
 	</script>
 </body>

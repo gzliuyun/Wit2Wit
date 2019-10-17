@@ -1,169 +1,157 @@
-<header id="witowit_header">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<style type="text/css">
-		/* 隐藏横向滚动条 */
-		html { overflow-x: hidden; overflow-y: auto; }
-		li{list-style-type: none;}
-		a:hover{text-decoration:none;}
-		/* 定位语言 */
-		.dwyy_sub{position: absolute; display: none;background-color: #FFFFFF; right:59.5%; top: 45px; border: 1px solid rgb(231,231,231); box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD;  z-index: 3;}
-		.dwyy:hover .dwyy_sub{display: block; z-index: 4; width: 260px; height: 250px;}
-		.dingwei{padding-top: 10px;padding-left: 13px;}
-		.dingwei a:hover{border: 1px solid rgb(231,231,231);background-color: rgb(231,231,231);}
-		.yuyan{padding-left: 13px;}
-		.yuyan a:hover{border: 1px solid rgb(231,231,231);background-color: rgb(231,231,231);}
-		/* 我的订单 */
-		.wddd_sub{position: absolute; display: none;background-color: #FFFFFF; right: 54.7%; top: 45px; border: 1px solid rgb(231,231,231); box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD;  z-index: 3;}
-		.wddd:hover .wddd_sub{display: block; z-index: 4; width: 125px; height: 180px;}
-		.wddd_sub a{padding-left: 15px;}
-		/* 技能购物车 */
-		.jngwc_sub{position: absolute; display: none;background-color: #FFFFFF; right: 35.3%; top: 45px; border: 1px solid rgb(231,231,231); box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD;  z-index: 3;}
-		.jngwc:hover .jngwc_sub{display: block; z-index: 4; width: 380px; height: 100px;}
-		.jngwc_content{font-size: 16px; color: rgb(139,129,129);padding: 15px;margin-top: 18px;margin-left: 18px;}
-		.jngwc_btn{padding: 15px;margin-top: 15px;}
-		.jngwc_btn button{font-size: 16px;border-radius: 10px;background-color: #BA1A33;color: #FFFFFF;height: 25px;padding-top: 0px;}
-		/* 网址导航 */
-		.wzdh_sub{position: absolute; display: none;background-color: #FFFFFF; right:20.5%; top: 45px; border: 1px solid rgb(231,231,231); box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD; z-index: 3;}
-		.wzdh:hover .wzdh_sub{display: block; z-index: 4; width: 650px; height: 180px;}
-		.wzdh_sub dl {padding: 20px 10px;}
-		.centerDivide{border-right: 1px solid rgb(231,231,231);height: 180px;}
-		.wzdh_sub dl dt {color:  #BA1A33; height: 20px; line-height: 20px; cursor: pointer;}
-		.wzdh_sub dl dd a{padding: 0 6px; color: #666666; transition:0.25s; text-decoration:none;line-height: 30px;}
-		.wzdh_sub dl dd a:hover{color: #BA1A33;}
-		/* 顶部导航 */
-		.headerTabs{padding:10px 20px 10px 20px;}
-		.headerTabs:hover{border-left: 1px solid rgb(231,231,231);border-right: 1px solid rgb(231,231,231);background-color: #FFFFFF;}
-		.headerTabs a{color: #666666; text-decoration:none; font-size: 15px; }
-		.headerTabs a:hover{color: #BA1A33;}
-		/* 顶部灰色路径指示 */
-		.guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
-		.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
-		.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
-		/* 右侧顶部导航间距 */
-		.headerRight{margin-left: 85px;}
-		/* 首页 授业者推荐 新增技能 新增类别 授业同行交流 学员社交 */
-		.thirdHeaderLeft a{padding: 0 10px;color: #444444; text-decoration: none;}
-		.thirdHeaderLeft a:hover{color: #BA1A33;text-decoration: none;}
-		.thirdHeaderRight{right: 390px; position: absolute;}		
-		.thirdHeaderRight a{padding: 0 10px;color: #444444; text-decoration: none;}
-		.thirdHeaderRight a:hover{color: #BA1A33;text-decoration: none;}
-		/* 底部链接 */
-		#witowit_footer{}
-		#witowit_footer .footer-all {color: #c1c1c1;padding: 5px 5px;background-color: #B91A33;}
-		#witowit_footer .footer-all ul {list-style: none;padding-top: 25px;}
-		#witowit_footer .footer-all ul li {display: inline-block;padding-left: 25px;padding-right: 25px;}
-		#witowit_footer .footer-all ul li a {color: #F5F5F5;}
-		#witowit_footer .footer-all li+li {border-left: 1px solid #F5F5F5;}
-		#witowit_footer .footer-all .copyright{	padding: 10px;color: #F5F5F5;font-size: 12px;}
-	</style>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" href="css/index.css">
+<header id="wit_header">
+			<nav class="navbar navbar-expand navbar-light"
+					 style="font-size: 16px;height: 40px; background-color: #F5F5F5" >
+			<div class="container" style="width: 100%">
+				<ul class="navbar-nav mr-auto" >
+					<li class="nav-item">
+						<img src="image/logo_navbar.png" alt="慧师搜网" width="30" style="padding-top:4px"/>
+					</li>
+						<li class="nav-item">
+							<a class="navbar-brand" href="#"
+								 style="color: #B91A33; font-size: 16px; padding-top:8px">
+								&nbsp;&nbsp;&nbsp;学技能&nbsp;上慧师搜网
+							</a>
+						</li>
+						<li class="navbar-nav dropdown">
+								<a class="nav-link dropdown-toggle" href="#"  id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="glyphicon glyphicon-map-marker" style="color: #B91A33;"></span>定位/语言
+								</a>
 
-	<div style="height: 45px; background-color:#F5F5F5;">
-		<div class="container">
-			<div class="row">
-				<div style="color: #BA1A33; font-size: 15px; padding-top: 10px;">
-					学技能&nbsp;&nbsp;上慧师搜网
-				</div>
-				<div class="headerTabs dwyy">
-					<li><img src="./image/定位16.png" >
-						<a href="">定位/语言</a><img src="./image/down.png" >
-						<div class="dwyy_sub">
-							<div class="dingwei">
-								<a href="">北京</a>
-								<a href="">上海</a>
-								<a href="">天津</a>
-								<a href="">重庆</a>
-								<a href="">河北</a>
-								<a href="">山西</a><br>
-								<a href="">江苏</a>
-								<a href="">浙江</a>
-								<a href="">山东</a>
-								<a href="">福建</a>
-								<a href="">河南</a>
-								<a href="">内蒙古</a><br>
-								<a href="">广东</a>
-								<a href="">广西</a>
-								<a href="">四川</a>
-								<a href="">江西</a>
-								<a href="">海南</a>
-								<a href="">贵州</a><br>
-								<a href="">湖北</a>
-								<a href="">湖南</a>
-								<a href="">安徽</a>
-								<a href="">辽宁</a>
-								<a href="">吉林</a>
-								<a href="">黑龙江</a><br>
-								<a href="">云南</a>
-								<a href="">陕西</a>
-								<a href="">甘肃</a>
-								<a href="">宁夏</a>
-								<a href="">青海</a>
-								<a href="">西藏</a><br>
-								<a href="">港澳</a>
-								<a href="">台湾</a>
-								<a href="">新疆</a>
-								<a href="">境外注册者</a>
+								<div class="dropdown-menu" id="witowit-dingwei-dropdown" aria-labelledby="dropdownMenuLink">
+								<div class="dingwei">
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">北京</a>
+										<a class="dropdown-item" href="#">上海</a>
+										<a class="dropdown-item" href="#">天津</a>
+										<a class="dropdown-item" href="#">重庆</a>
+										<a class="dropdown-item" href="#">河北</a>
+										<a class="dropdown-item" href="#">山西</a>
+									</div>
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">江苏</a>
+										<a class="dropdown-item" href="#">浙江</a>
+										<a class="dropdown-item" href="#">山东</a>
+										<a class="dropdown-item" href="#">福建</a>
+										<a class="dropdown-item" href="#">河南</a>
+										<a class="dropdown-item" id="dropdown-item-3" href="#">内蒙古</a>
+									</div>
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">广东</a>
+										<a class="dropdown-item" href="#">广西</a>
+										<a class="dropdown-item" href="#">四川</a>
+										<a class="dropdown-item" href="#">江西</a>
+										<a class="dropdown-item" href="#">海南</a>
+										<a class="dropdown-item" href="#">贵州</a>
+									</div>
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">湖北</a>
+										<a class="dropdown-item" href="#">湖南</a>
+										<a class="dropdown-item" href="#">安徽</a>
+										<a class="dropdown-item" href="#">辽宁</a>
+										<a class="dropdown-item" href="#">吉林</a>
+										<a class="dropdown-item" id="dropdown-item-3" href="#">黑龙江</a>
+									</div>
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">云南</a>
+										<a class="dropdown-item" href="#">陕西</a>
+										<a class="dropdown-item" href="#">甘肃</a>
+										<a class="dropdown-item" href="#">宁夏</a>
+										<a class="dropdown-item" href="#">青海</a>
+										<a class="dropdown-item" href="#">西藏</a>
+									</div>
+									<div class="form-inline">
+										<a class="dropdown-item" href="#">港澳</a>
+										<a class="dropdown-item" href="#">台湾</a>
+										<a class="dropdown-item" href="#">新疆</a>
+										<a class="dropdown-item" id="dropdown-item-7" href="#">境外注册授业者</a>
+									</div>									
+								</div>
+								<!-- 分隔线 -->
+								<div class="dropdown-divider"></div>
+								<div class="yuyan">
+									<a class="dropdown-item" href="#">简体中文</a><br>
+									<a class="dropdown-item" href="#">繁体中文</a><br>
+									<a class="dropdown-item" href="#">English</a>
+								</div>
+								</div>
+						</li>
+				</ul>
+
+
+				<ul class="navbar-nav" style="flex-direction: row !important">
+					<li class="nav-item"><a class="nav-link" href="" style="width:50px">首页</a></li>
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown"
+								 aria-haspopup="true" aria-expanded="false" style="width: 100px">
+								我的订单
+							</a>
+							<div class="dropdown-menu" id="witowit-orders-dropdown" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="#">全部订单</a>
+							<a class="dropdown-item" href="#">待付款</a>
+							<a class="dropdown-item" href="#">待学习/服务</a>
+							<a class="dropdown-item" href="#">待评价</a>
+							<a class="dropdown-item" href="#">中途退款</a>
+							<a class="dropdown-item" href="#">取消订单</a>
+							<a class="dropdown-item" href="#">订单回收站</a>
 							</div>
-							<div style="border: 1px solid rgb(187,187,187);margin-top: 10px;margin-bottom: 10px;">
-								
-							</div>
-							<div class="yuyan">
-								<a href="">简体中文</a><br>
-								<a href="">繁体中文</a><br>
-								<a href="">English</a>
-							</div>
-						</div>
 					</li>
-				</div>
-				<div class="headerTabs headerRight wddd">
-					<li><a href="">我的订单</a><img src="./image/down.png" >
-					<div class="wddd_sub">
-						<a href="" >全部订单</a><br>
-						<a href="">待付款</a><br>
-						<a href="">待学习/服务</a><br>
-						<a href="">待评价</a><br>
-						<a href="">中途退款</a><br>
-						<a href="">取消订单</a><br>
-						<a href="">订单回收站</a>
-					</div>
-					</li>
-				</div>			
-				<div class="headerTabs jngwc">
-					<li><a href="">技能购物车</a><img src="./image/down.png" >
-					<div class="jngwc_sub">
-						<div class="row">
-							<div class="jngwc_content">
-								您的购物车中没有技能。
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+								 aria-haspopup="true" aria-expanded="false" style="color: #B91A33; width: 120px">
+								技能购物车
+							</a>
+							<div class="dropdown-menu" id="witowit-cart-dropdown" aria-labelledby="dropdownMenuLink">
+								<div class="row">
+									<div class="jngwc_content">
+										您的购物车中没有技能。
+									</div>
+									<div class="jngwc_btn">
+										<button type="button" class="btn btn-search">查看我的购物车</button>
+									</div>
+								</div>
 							</div>
-							<div class="jngwc_btn">
-								<button type="button" class="btn btn-search">查看我的购物车</button>
-							</div>
-						</div>
-					</div>
 					</li>
-				</div>			
-				<div class="headerTabs">
-					<a href="phone.html">手机版</a>
-				</div>			
-				<div class="headerTabs">
-					<a href="">授业者入驻</a>
-				</div>			
-				<div class="headerTabs">
-					<a href="service.html">授业服务商</a>
-				</div>			
-				<div class="headerTabs">
-					<a href="kefuHelp.html">客服帮助</a>
-				</div>			
-				<div class="headerTabs wzdh">
-						<li><a href="">网站导航</a><img src="./image/down.png" >
-							<div class="wzdh_sub">
+					<li class="nav-item "><a class="nav-link" href="" style="width: 65px">手机版</a></li>
+					<li class="nav-item"><a class="nav-link" href="" style="width: 100px">授业者入驻</a></li>
+					<li class="nav-item"><a class="nav-link" href="" style="width: 100px">授业服务商</a></li>
+					<li class="nav-item" ><a class="nav-link" href="" style="width: 100px">客服帮助</a></li>
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+								 aria-haspopup="true" aria-expanded="false" style="width: 100px">
+								网站导航
+							</a>
+							<div class="dropdown-menu dropdown-menu-right" id="witowit-guide-dropdown" aria-labelledby="dropdownMenuLink">
 								<div class="row">
 									<div class="col-6 centerDivide">
-										<dl>
+										<dl style="margin-left:10px;">
 										  <dt>技能列表</dt>
-										  <dd><a href="">推荐技能</a><a href="">热门技能</a><a href="">生活技能</a><a href="">文体活动</a><br>
-										  <a href="">体育竞技</a><a href="">宝爸宝妈</a><a href="">美容美妆</a><a href="">休闲娱乐</a><br>
-										  <a href="">职业技术</a><a href="">信息科技</a><a href="">传统技术</a><a href="">知识拓展</a><br>
-										  <a href="">操作技能</a><a href="">金融技术</a><a href="">基础产业</a><a href="">综合技术</a>
+										  <dd style="padding-top: 10px;">
+											  <div class="form-inline">
+											  	<a class="dropdown-item" href="#">推荐技能</a>
+											  	<a class="dropdown-item" href="#">热门技能</a>
+											  	<a class="dropdown-item" href="#">生活技能</a>
+											  	<a class="dropdown-item" href="#">文体活动</a>
+											  </div>
+											  <div class="form-inline">
+											  	<a class="dropdown-item" href="#">体育竞技</a>
+											  	<a class="dropdown-item" href="#">宝爸宝妈</a>
+											  	<a class="dropdown-item" href="#">美容美妆</a>
+											  	<a class="dropdown-item" href="#">休闲娱乐</a>
+											  </div>
+											  <div class="form-inline">
+											  	<a class="dropdown-item" href="#">职业技术</a>
+											  	<a class="dropdown-item" href="#">信息科技</a>
+											  	<a class="dropdown-item" href="#">传统技术</a>
+											  	<a class="dropdown-item" href="#">知识拓展</a>
+											  </div>
+											  <div class="form-inline">
+											  	<a class="dropdown-item" href="#">操作技能</a>
+											  	<a class="dropdown-item" href="#">金融技术</a>
+											  	<a class="dropdown-item" href="#">基础产业</a>
+											  	<a class="dropdown-item" href="#">综合技术</a>
+											  </div>
 										  </dd>
 										</dl>
 									</div>
@@ -179,12 +167,11 @@
 									</div>
 								</div>
 							</div>
-						</li>
-				</div>
+					</li>					
+				</ul>
 			</div>
-		</div>
-	</div> 
-</header>
+			</nav>
+		</header>
 <!-- 搜索 -->
   <section id="wit_search">
   	<div class="container">
@@ -211,22 +198,22 @@
   			</div>
   		</div>
 		<div class="row">
-			<div class="thirdHeaderLeft">
+			<div class="col-8" id="thirdHeaderLeft">
 				<a href="">首页</a>
 				<a href="">授业者推荐</a>
 				<a href="">新增技能</a>
 				<a href="">新增类别</a>
 			</div>			
-			<div class="thirdHeaderRight">
+			<div class="col-4" id="thirdHeaderRight">
 				<a href="ShouYeChat.html">授业同行交流</a>
 				<a href="XueYuanChat.html">学员社交</a>	
-			</div>
+			</div>	
 		</div>
 		
   	</div>
 	<hr>
   </section>
-<footer id="witowit_footer">
+<footer id="wit_footer">
 	  <div class="footer-all">
 	  	<div class="text-center">
 	  		<ul>
