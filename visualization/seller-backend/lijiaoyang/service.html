@@ -37,8 +37,11 @@
 			.MyTop a img{margin-right: 15px; padding-bottom: 55px;}
 			/* 分页 */
 			.pagination li a{color: #444444; text-decoration: none;}
+			/* 顶部红色长条，页面名称 */
+			.topRed{width: 100%;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;}
+			.topRedName{color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;}
 			/* 顶部灰色路径指示 */
-			.guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+			.guideStrip{margin-top: 30px;margin-bottom: 10px;}
 			.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
 			.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
 		</style>
@@ -46,11 +49,15 @@
 	<body style="background-color: #EBEBEB;width: 100%;">
 		<header></header>
 		<section></section>
-		<div class="" style="width: 1920px;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;">
-			<span style="color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;margin-left: 360px;">授业服务专区</span>
+		<div class="topRed">
+			<div class="container">
+				<span class="topRedName">授业服务专区</span>
+			</div>
 		</div>
-		<div class="guideStrip row">
-			<a href="">首页</a><span>>></span><a href="service.html">授业服务商</a>
+		<div class="guideStrip">
+			<div class="container">
+				<a href="">首页</a><span>>></span><a href="ShouYeChat.html">授业服务商</a>
+			</div>
 		</div>
 		<div class="container">
 					<div class="row">
@@ -361,7 +368,7 @@
 						</div>
 					</div>
 					<div class="MyTop">
-						<a href="#witowit_header"><img src="./image/top.png"></a>
+						<a href="#wit_header"><img src="./image/top.png"></a>
 					</div> 
 		</div>
 		<footer></footer>

@@ -17,8 +17,11 @@
 	  .msgInput{width: 432px;height: 50px;font-size: 16px;color: rgb(139,129,129);margin-right: 10px;border-radius: 10px;border: 1px solid rgb(224,218,219);padding-left: 18px;}
 	  /* 填写内容提示字设置 */
 	  .msgTitle{font-size: 16px; color: rgb(85,79,79);}
+	  /* 顶部红色长条，页面名称 */
+	  .topRed{width: 100%;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;}
+	  .topRedName{color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;}
 	  /* 顶部灰色路径指示 */
-	  .guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
+	  .guideStrip{margin-top: 30px;margin-bottom: 10px;}
 	  .guideStrip a{font-size: 16px;color: rgb(139,129,129);}
 	  .guideStrip span{font-size: 16px;color: rgb(139,129,129);}
     </style>
@@ -26,11 +29,15 @@
 
 <body style="background-color: #EBEBEB;width: 100%;">
 	<header></header>
-	<div class="" style="width: 1920px;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;">
-		<span style="color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;margin-left: 230px;">学员社交</span>
+	<div class="topRed">
+		<div class="container">
+			<span class="topRedName">学员社交</span>
+		</div>
 	</div>
 	<div class="guideStrip">
-		<a href="">首页</a><span>>></span><a href="XueYuanChat.html">学员社交</a>
+		<div class="container">
+			<a href="">首页</a><span>>></span><a href="XueYuanChat.html">学员社交</a>
+		</div>
 	</div>
 	<div class="container" style="width: 1370px !important;">
 		  <div class="card" style="border: 0.15px solid rgb(224,218,219);">
