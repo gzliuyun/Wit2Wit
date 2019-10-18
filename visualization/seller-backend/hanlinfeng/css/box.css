@@ -87,13 +87,13 @@ span.pingfen{
 }
 span.mess1{
     position: absolute;
-    padding-left: 21px;
+    padding-left: 20px;
     padding-top:10px;
     color: #fff;
 }
 span.mess{
     position: absolute;
-    padding-left: 21px;
+    padding-left: 20px;
     padding-top:10px;
     color: #fff;
 }
@@ -166,20 +166,15 @@ h2.shoptitle{
             background-color: #ff9966;
         }
 
-.pic_btn{
-
-}
-
-.jumbotron{
-    margin-bottom: 0;
-    background: url("../images/蓝色渐变.jpg") no-repeat center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
+.pic_btn ul li{
+    display: inline;
+    line-height: 40px;
+    float:left;
+    cursor:pointer;
 }
 
 /*-- footer --*/
+
 .footer{
 	/*background: url(../images/footer-bg.png) repeat-x 0px 0px #ecebdf;*/
 	padding: 1em 0 2em;
@@ -209,6 +204,7 @@ h2.shoptitle{
 .footer-grid ul li a:hover{
 	color:#8b4613;
 }
+
 
 .tejia p{
     color: 	#FF0000
@@ -265,6 +261,10 @@ ul{
 
 .fakeimg {
 background: #aaa;
+}
+
+.jumbotron {
+    padding: 0px !important;
 }
 
 .thumbnail {
@@ -324,3 +324,36 @@ background: #aaa;
     font-size: 20px;
 }
 
+.skillpurchasebiaoti{
+    font-size: 20px;
+    color: rgb(85,79,79);
+}
+
+.skillborderN{
+    padding: 1px 1px 4px 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(139,129,129);
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.skillborderNban{
+    padding: 1px 6px 4px 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(139,129,129);
+    margin-left:10px;
+    cursor:pointer;
+}
+.skillborderdata{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(139,129,129);
+    margin-left:10px;
+}
+
+.hengxiang li{
+    display: inline;
+    float:left
+}
