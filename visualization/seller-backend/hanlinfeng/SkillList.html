@@ -16,29 +16,54 @@
             $("footer").load("common.html #wit_footer");
         })
 
-        $(function () {
-            var div = document.getElementById("introduction").innerHTML;
-            var use = delHtmlTag(div);
-            use = use.trim();
-            var more = '<a id =moreintroduction onclick="moreinfo(\''+use+'\')" style="font-size:16px">……展开▼</a>'
-            if(use.length>260){
-                use = use.substring(0,260)
-                document.getElementById("introduction").innerHTML = use
-                $(introduction).append(more);
-            }
-        })
+        $(document).ready(function(){
+            $("#fenyeanniu li").click(function () {
+                var lis=document.getElementById("fenyeanniu").getElementsByTagName("li");
+                for(var i=0;i<lis.length;i++) {
+                    lis[i].setAttribute("index", i);
+                }
+                for(var i=0;i<lis.length;i++){
+                    if(this.getAttribute("index")<8){
+                        if(this.getAttribute("index")==i){
+                            lis[i].children[0].style.borderColor= "rgb(185,26,51)";
+                            lis[i].children[0].style.color= "white";
+                            lis[i].children[0].style.background="rgb(185,26,51)";
+                        }else{
+                            lis[i].children[0].style.borderColor="white";
+                            lis[i].children[0].style.color="rgb(85,79,79)";
+                            lis[i].children[0].style.background="white";
+                        }
+                    }
+                    else{
+                        if(lis[i].children[0].style.borderColor!="white"){
+                            lis[i].children[0].style.borderColor="white";
+                            lis[i].children[0].style.color="rgb(85,79,79)";
+                            lis[i].children[0].style.background="white";
+                            lis[i+1].children[0].style.borderColor= "rgb(185,26,51)";
+                            lis[i+1].children[0].style.color= "white";
+                            lis[i+1].children[0].style.background="rgb(185,26,51)";
+                            break;
+                        }
+                    }
+                }
+            });
 
-        function moreinfo(a) {
-            var len = a.length - 240;
-            var div=document.getElementById("paninfo");
-            div.style.height = 190 + len/60*20 + 'px';
-            document.getElementById("introduction").innerHTML = a
-
-        }
-
-          function delHtmlTag(str){
-            return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
-          }
+            $("#jinengpaixu li").click(function () {
+                var lis = document.getElementById("jinengpaixu").getElementsByTagName("li");
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].setAttribute("index", i);
+                }
+                for (var i = 0; i < lis.length; i++) {
+                    if (this.getAttribute("index") == i) {
+                        lis[i].children[0].style.color = "rgb(185,26,51)";
+                        lis[i].children[0].style.background = "white";
+                    } else {
+                        lis[i].children[0].style.color = "rgb(85,79,79)";
+                        lis[i].children[0].style.background = "#d8d8d8";
+                    }
+                }
+            });
+        });
     </script>
 </head>
 <body style="background: #EBEBEB">
@@ -54,147 +79,533 @@
         <p style="color: #999999; margin-left: 12px">首页>>技能列表>>羽毛球</p>
     </div>
     <div class="row" style="margin-left: -88px">
-        <ul class="hengxiang">
+        <ul id="jinengpaixu" class="hengxiang">
             <li>
-                <p style="padding: 0 30px 0 30px;background: #d8d8d8;color: rgb(185,26,51)">综合排序</p>
+                <p class="jinengliebiaobiaoqianY">综合排序</p>
             </li>
             <li>
-                <p>订单量</p>
+                <p class="jinengliebiaobiaoqian">订单量</p>
             </li>
             <li>
-                <p>评价</p>
+                <p class="jinengliebiaobiaoqian">评价</p>
             </li>
             <li>
-                <p>价格</p>
+                <p class="jinengliebiaobiaoqian">价格</p>
             </li>
             <li>
-                <p>授业者注册地</p>
+                <p class="jinengliebiaobiaoqian">授业者注册地</p>
             </li>
         </ul>
     </div>
-    <div class="row">
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+    <div class="row" style="width: 2000px">
+        <ul style="margin-left: -73px">
+            <li>
+                <div style="position:relative">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-            <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:40px;top:25px; font-size: 16px">
-                    羽毛球基础训练（280*75px）
+            </li>
+            <li>
+                <div style="position:relative">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:30px;top:20px;">
+                        <div class="row">
+                            <p style="font-size: 16px; font-weight:bold; color: rgb(85,79,79)">羽毛球基础训练</p>
+                            <p style="font-size: 18px; font-weight: bold; margin: -1px 0 0px 20px; color: rgb(185,26,51)">￥500.00</p>
+                        </div>
+                        <div class="row" style="font-size: 14px; margin-top: -6px; color: rgb(85,79,79)">
+                            <p>订单量：</p>
+                            <p>10</p>
+                            <p style="margin-left: 12px">注册地</p>
+                            <p style="margin-left: 12px; color: rgb(185,26,51)">加入购物车</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -30px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-            <div style="position:relative; margin-left: -30px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -15px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-            <div style="position:relative; margin-left: -15px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-            <div style="position:relative">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
 
+                    </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row" style="width: 2000px">
+        <ul style="margin-left: -73px">
+            <li>
+                <div style="position:relative">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row" style="width: 2000px">
+        <ul style="margin-left: -73px">
+            <li>
+                <div style="position:relative">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row" style="width: 2000px">
+        <ul style="margin-left: -73px">
+            <li>
+                <div style="position:relative">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row" style="width: 2000px">
+        <ul style="margin-left: -73px">
+            <li>
+                <div style="position:relative">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="margin-left: 15px">
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/gray.png" class="img-responsive" height="180px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="position:relative; margin-left: 0px">
+                    <img src="images/white.png" class="img-responsive" height="90px" width="240px">
+                    <div style="position:absolute;left:0;top:0;">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
     <br>
-    <div class="row">
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-            <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -30px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-            <div style="position:relative; margin-left: -30px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative; margin-left: -15px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-            <div style="position:relative; margin-left: -15px">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div style="position:relative">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-            <div style="position:relative">
-                <img src="images/white.png" class="img-responsive" height="75px" width="280px">
-                <div style="position:absolute;left:0;top:0;">
-
-                </div>
-            </div>
-        </div>
+    <div style="width: 2000px">
+      <ul id="fenyeanniu" class="hengxiang fenye" style="margin: -20px 0 0 758px">
+        <li>
+            <button type="button" class="btn btn-danger" style="color: white; background: rgb(185,26,51); border-color: rgb(185,26,51)">1</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">2</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">3</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">4</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">5</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">...</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">9</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">10</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-danger">></button>
+        </li>
+      </ul>
     </div>
 </div>
 <div class="text-right MyTop" id="MyTop">
 	<div>
-		 <a href = '#top'><img src="images/返回顶部.png" style="margin:-100px 300px 0 0; padding-top: 10px; padding-left: 15px;"></a>
+		 <a href = '#top'><img src="images/返回顶部.png" style="margin:-180px 260px 0 0; padding-top: 10px; padding-left: 15px;"></a>
     </div>
 </div>
+<br>
+<br>
 </body>
 <footer></footer>
 </html>
