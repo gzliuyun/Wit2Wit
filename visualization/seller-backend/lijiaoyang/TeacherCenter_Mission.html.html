@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+		<style type="text/css">
+			div ul{
+			list-style:none;
+			padding-left:0;
+			}
+			.btncolors{background-color: #BA1A33;border: 1px solid #BA1A33;color: #FFFFFF;font-size: 14px;padding-right: 4px;}
+			.btncolors:hover{background-color: #a90922;color: #FFFFFF;}
+			.mySecondTable{font-size: 12px;}
+		</style>
+		<script>
+			$(function(){
+					$("header").load("common.html #wit_header");
+					$("section").load("common.html #wit_centers");
+					$("#studyNav").load("common.html #wit_studyAndTeachNav");
+					$("footer").load("common.html #wit_footer");
+					$("#guessYouLike").load("common.html #wit_guessYouLike");
+					$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+							function() {
+								$("#taughtMission").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+								$("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()); //同第37行load的id名
+							}
+					);
+					})
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+		<section></section>
+		<div id="studyNav"></div>
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<div id="sideNav"></div>
+				<div class="contentBackground" >
+					<div><strong style="font-size:30px; color:#B91A33">授业任务</strong></div>
+					<!-- 分割线 -->
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+					<div style="margin-right: 30px;">
+						<!-- 搜索按钮 -->
+						<div class="btn-group" role="group" aria-label="Basic example"style="width: 100%;margin-bottom: 30px;">
+						  <button type="button" class="btn btncolors">近三个月授业任务</button>
+						  <button type="button" class="btn btncolors">等待授业（未开始）</button>
+						  <button type="button" class="btn btncolors">已完成的授业</button>
+						  <button type="button" class="btn btncolors">异议处理 1</button>
+						  <button type="button" class="btn btncolors">退款处理 2</button>
+						  <button type="button" class="btn btncolors">需要评价</button>
+						  <button type="button" class="btn btncolors">三个月前授业任务</button>
+						  <button type="button" class="btn btncolors">任务回收站</button>
+						</div>
+						<table class="table">
+						  <thead class="table-active table-sm">
+						    <tr>
+						      <th scope="col" class="mySecondTable">技能名称</th>
+						      <th scope="col" class="mySecondTable">单价（元）</th>
+						      <th scope="col" class="mySecondTable">学习期数</th>
+						      <th scope="col" class="mySecondTable">学习人数</th>
+							  <th scope="col" class="mySecondTable">付款状态</th>
+							  <th scope="col" class="mySecondTable">实收款（元）</th>
+							  <th scope="col" class="mySecondTable">开始授业日期</th>
+							  <th scope="col" class="mySecondTable">结束授业日期</th>
+							  <th scope="col" class="mySecondTable">学习者名单</th>
+							  <th scope="col" class="mySecondTable">联系方式</th>
+							  <th scope="col" class="mySecondTable">操作</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						      <tr>
+						        <th scope="row"></th>
+						        <td></td>
+						        <td></td>
+						        <td></td>
+								<td>已付款</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="">上报授业进度</a><br>
+									<a href="">有异议重新上报</a><br>
+									<a href="">已完成</a><br>
+									<a href="">删除</a>
+								</td>
+						      </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+      </div>
+	  <div id="guessYouLike"></div>
+    </div>	
+	<footer></footer>
+	</body>
+
+</html>

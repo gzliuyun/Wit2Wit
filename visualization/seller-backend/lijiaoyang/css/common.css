@@ -1,7 +1,7 @@
 /* 隐藏横向滚动条 */
-/* html { overflow-x: hidden; overflow-y: auto; } */
 li{list-style-type: none;}
-a:hover{text-decoration:none;}	
+a{color: #444444; text-decoration: none;}
+a:hover{color: #BA1A33;text-decoration: none;}
 .dropdown:hover .dropdown-menu {
 display: block;
 margin-top: 0; 
@@ -56,3 +56,65 @@ dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
 #wit_footer .footer-all ul li a {color: #F5F5F5;}
 #wit_footer .footer-all li+li {border-left: 1px solid #F5F5F5;}
 #wit_footer .footer-all .copyright{	padding: 10px;color: #F5F5F5;font-size: 12px;}
+
+/* 三个中心的section部分 */
+.fakePicture{
+	background-color: #CCCCCC;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+}
+.my3centers{margin-top: 35px;margin-left: 25px;}
+/* 猜你喜欢 */
+.guessYouLike{color: #BA1A33;width: 100%; height: 55px;border: 1px solid #BA1A33;background-color: #BA1A33;border-radius: 10px 10px 0 0;}
+.guessYouLike p{font-size: 21px;color: #FFFFFF;margin-top: 10px;margin-left: 45px;}
+/* 猜你喜欢 技能列表 */
+.ServiceSkill{padding-right: 3px;margin-left: 15px;margin-top: 10px;}
+.ServiceSkillImage{border: 1px solid #D8D8D8;width: 270px;height: 210px;background-color: #D8D8D8;}
+.ServiceSkillInfo{border: 1px solid #FFFFFF;width: 270px;height: 75px;background-color: #FFFFFF;}
+.skillName{margin-left: 10px;margin-top: 15px;}
+
+/*三个中心侧边栏*/
+.sideNavbar {
+    width: 230px;
+    font-size:21px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-top:20px;
+    padding-left: 20px;
+}
+.sideNavbar a:link,
+.sideNavbar a:link,
+.sideNavbar a:visited,
+.sideNavbar a:active {
+    color: #534F4E;
+}
+
+.sideNavbar a:hover{
+    color: #BBBBBB;
+}
+
+.sideNavbar .selected a{
+    color: #B91A33;
+    pointer-events: none;
+}
+
+.sideNavbar li{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.contentMainTitle {
+    font-size: 30px;
+    color: #B91A33
+}
+.contentBackground {
+    width:900px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-left:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:15px;
+}

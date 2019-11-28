@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+				$(function(){
+					$("header").load("common.html #wit_header");
+					$("section").load("common.html #wit_centers");
+					$("footer").load("common.html #wit_footer");
+				})
+			});
+		</script>
+	</head>
+
+	<body style="background-color: #F5F5F5;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<ul class="nav flex-column sideNavbar">
+					<li class="nav-item"><strong class="nav-link">全部功能</strong></li>
+					<li class="nav-item selected"><a class="nav-link" href="#">账户管理</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">技能购物车</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">我的订单</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">我的收藏</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">常用学习地址</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">退款管理</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">客户服务</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">评价中心</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">投诉中心（轻微）</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">投诉中心（严重）</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">消息中心</a></li>
+				</ul>
+
+				<div class="contentBackground" >
+					<div><strong style="font-size:30px; color:#B91A33">账户管理</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+					<form id="accountManagerForm">
+
+<!--						用户名称-->
+						<div class="form-group row">
+							<label for="nickname" class="col-3 col-form-label ">用户名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control " id="nickname">
+							</div>
+						</div>
+
+<!--						上传头像-->
+						<div class="form-group row">
+							<label for="upload" class="col-3 col-form-label ">上传头像</label>
+							<div class="col-4">
+								<input type="file" class="form-control-file" id="upload">
+							</div>
+						</div>
+
+<!--						真实名称-->
+						<div class="form-group row">
+							<label for="realName" class="col-3 col-form-label ">真实名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="realName"
+											 placeholder="（学习必填）">
+							</div>
+						</div>
+
+<!--						私人邮箱-->
+						<div class="form-group row">
+							<label for="email" class="col-3 col-form-label ">私人邮箱</label>
+							<div class="col-4">
+								<input type="email" class="form-control redPlaceholder" id="email"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						微信号-->
+						<div class="form-group row">
+							<label for="wechatAccount" class="col-3 col-form-label ">微信号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="wechatAccount"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						QQ号-->
+						<div class="form-group row">
+							<label for="QQAccount" class="col-3 col-form-label ">QQ号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="QQAccount"
+											 placeholder="（无微信号社交必填）">
+							</div>
+						</div>
+
+<!--						身份证号-->
+						<div class="form-group row">
+							<label for="identityNumber" class="col-3 col-form-label ">身份证号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="identityNumber"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						统一社会信用代码(Uniform Social Credit Code)-->
+						<div class="form-group row">
+							<label for="USCC" class="col-3 col-form-label ">统一社会信用代码</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="USCC"
+											 placeholder="（机构代表社交必填）">
+							</div>
+						</div>
+
+<!--						居住/办公地级市或直辖市-->
+						<div class="form-group row">
+							<label for="city" class="col-3 col-form-label ">居住/办公地级市或直辖市</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="city"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						自我介绍-->
+						<div class="form-group row">
+							<label for="selfIntroduction" class="col-3 col-form-label ">自我介绍</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="selfIntroduction" rows="3"
+													style="max-width: 100%" placeholder="（选填）">
+								</textarea>
+							</div>
+						</div>
+
+<!--					添加其他手机号-->
+						<div class="form-group row">
+							<label for="otherMobileNumber" class="col-3 col-form-label ">添加其他手机号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="otherMobileNumber"
+											 placeholder="（选填）">
+							</div>
+						</div>
+
+<!--					紧急联系人名字-->
+						<div class="form-group row">
+							<label for="emergencyName" class="col-3 col-form-label ">紧急联系人名字</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="emergencyName"
+											 placeholder="（必填）">
+							</div>
+						</div>
+
+<!--						紧急联系人关系-->
+						<div class="form-group row">
+							<label for="emergencyRelationship" class="col-3 col-form-label ">紧急联系人关系</label>
+							<div class="col-4">
+								<select class="form-control " id="emergencyRelationship" >
+									<option selected hidden></option>
+									<option>配偶</option>
+									<option>父母</option>
+									<option>兄弟姐妹</option>
+									<option>朋友</option>
+								</select>
+							</div>
+						</div>
+
+<!--						紧急联系人手机号码-->
+						<div class="form-group row">
+							<label for="emergencyNumber" class="col-3 col-form-label ">紧急联系人手机号码</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="emergencyNumber"
+											 placeholder="（学习必填）">
+							</div>
+						</div>
+					</form>
+
+
+				</div>
+      </div>
+    </div>
+		<footer></footer>
+	</body>
+
+</html>
