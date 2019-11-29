@@ -1,440 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>授业服务商</title>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
 		<link rel="stylesheet" href="css/bootstrap.css">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
 		<style type="text/css">
-			/* 头部 */
-			a{color: #444444; text-decoration: none;}
-			a:hover{color: #BA1A33;text-decoration: none;}
-			.thirdHeader{border: 1px solid #FFFFFF;width: 210px;height: 530px;background-color: #FFFFFF;}
-			.thirdHeaderContent{padding-left: 25px;}
-			.thirdHeaderContent a{font-family: "微软雅黑";font-size: 21px;padding:0 0 44px 53px;}
-			/* 右侧内容 */		
-			.syfwsContent{margin-left: 30px;}
-			.syfwSort1{border: 1px solid #FFFFFF;width: 100px;height: 50px;background-color: #FFFFFF;}
-			.syfwSort1 a{margin-left: 15px;padding-top: 10px;position: absolute;}
-			.syfwSort2{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;}
-			.syfwSort2 a{margin-left: 22px;padding-top: 10px;position: absolute;}
-			.syfwSort3{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;}
-			.syfwSort3 a{margin-left: 30px;padding-top: 10px;position: absolute;}
-			.syfwSort4{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;}
-			.syfwSort4 a{margin-left: 30px;padding-top: 10px;position: absolute;}
+			div ul{
+			list-style:none;
+			padding-left:0;
+			}
+			/* 左侧导航栏 */
+			.contentSellersSideNav{
+			    width: 230px;
+				height: 530px;
+			    font-size:21px;
+			    background-color: #FFFFFF;
+			    border-radius: 5px;
+			    padding-top:20px;
+			    padding-left: 20px;
+			}
+			.contentSellersSideNav a:link,
+			.contentSellersSideNav a:link,
+			.contentSellersSideNav a:visited,
+			.contentSellersSideNav a:active {
+			    color: #534F4E;
+			}
+			
+			.contentSellersSideNav a:hover{
+			    color: #BBBBBB;
+			}
+			
+			.contentSellersSideNav .selected a{
+			    color: #B91A33;
+			    pointer-events: none;
+			}
+			
+			.contentSellersSideNav li{
+			    margin-top:10px;
+			    margin-bottom: 10px;
+			}
+			.contentSellers {
+			    width:900px;
+			    padding-left:20px;
+			    padding-top:0px;
+			    padding-bottom:30px;
+			    margin-left:15px;
+			}
+			/* 右侧排序方式 */
+			.syfwSort1{border: 1px solid #FFFFFF;width: 100px;height: 50px;background-color: #FFFFFF;padding: 10px 0 0 15px;}
+			.syfwSort2{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;padding: 10px 0 0 15px;}
+			.syfwSort3{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;padding: 10px 0 0 15px;}
+			.syfwSort4{border: 1px solid #D8D8D8;width: 100px;height: 50px;background-color: #D8D8D8;padding: 10px 0 0 15px;}
 			/* 技能列表 */
-			.ServiceSkill{padding:10px 10px 10px 0;}
-			.ServiceSkillImage{border: 1px solid #D8D8D8;width: 220px;height: 200px;background-color: #D8D8D8;}
-			.ServiceSkillInfo{border: 1px solid #FFFFFF;width: 220px;height: 100px;background-color: #FFFFFF;}
-			.skillName{margin-left: 10px;margin-top: 15px;}
+			.ServiceSkill{margin: 8px 8px 0 0;}
+			.ServiceSkillImage{border: 1px solid #D8D8D8;width: 260px;height: 200px;background-color: #D8D8D8;}
+			.ServiceSkillInfo{border: 1px solid #FFFFFF;width: 260px;height: 100px;background-color: #FFFFFF;}
+			.skillName{margin-left: 12px;margin-top: 15px;}
 			.skillPrice{color: #BA1A33;font-size: 18px;font-weight: bold;margin-left: 13px;}
-			.skillMoreInfo{margin-left: 10px;padding-top: 15px;}
+			.skillMoreInfo{margin-left: 12px;padding-top: 15px;}
 			/* 返回顶部 */
 			.MyTop{position:fixed; right:0; bottom:10%;margin-right: 10px;}
 			.MyTop a img{margin-right: 15px; padding-bottom: 55px;}
 			/* 分页 */
 			.pagination li a{color: #444444; text-decoration: none;}
-			/* 顶部红色长条，页面名称 */
-			.topRed{width: 100%;height: 60px;border: 1px solid #BA1A33;background-color: #BA1A33;}
-			.topRedName{color: #FFFFFF;font-size: 21px;font-weight: bold;margin-top: 15px;position: absolute;}
-			/* 顶部灰色路径指示 */
-			.guideStrip{margin-top: 30px;margin-bottom: 10px;}
-			.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
-			.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
 		</style>
+		
 	</head>
-	<body style="background-color: #EBEBEB;width: 100%;">
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
 		<header></header>
 		<section></section>
-		<div class="topRed">
-			<div class="container">
-				<span class="topRedName">授业服务专区</span>
-			</div>
-		</div>
-		<div class="guideStrip">
-			<div class="container">
-				<a href="">首页</a><span>>></span><a href="ShouYeChat.html">授业服务商</a>
-			</div>
-		</div>
-		<div class="container">
-					<div class="row">
-						<div class="thirdHeader">
-							<div class="thirdHeaderContent">
-								<a href="" style="color: #BA1A33;">
-									<h5>首页<span style="padding-left: 110px;">></span></h5>
-								</a>
-								<a href=""><h5>装修视频</h5></a>
-								<a href=""><h5>摄影市场</h5></a>
-								<a href=""><h5>流量营销</h5></a>
-								<a href=""><h5>运营外包</h5></a>
-								<a href=""><h5>数据分析</h5></a>
-								<a href=""><h5>商户服务及培训</h5></a>
-								<a href="syzdp.html"><h5>授业者店铺</h5></a>
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<ul class="nav flex-column contentSellersSideNav" id="serviceCenter-sideNavbar">
+				  <li class="nav-item" id="">
+					  <a class="nav-link" href="" style="color: #BA1A33;">
+						  首页<span style="padding-left: 100px;color: #BA1A33;">></span>
+					  </a>
+				  </li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">装修视频</a></li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">摄影市场</a></li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">流量营销</a></li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">运营外包</a></li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">数据分析</a></li>
+				  <li class="nav-item" id=""><a class="nav-link" href="">商户服务及培训</a></li>
+				</ul>
+				<div class="contentSellers" >
+					<!-- 排序方式 -->
+					<div class="row" style="margin-left: 0; ">
+						<div class="syfwSort1"><a href="javascript:ZHPX()" style="color: #BA1A33;">综合排序</a></div>
+						<div class="syfwSort2"><a href="javascript:orderNumber()">订单量</a></div>
+						<div class="syfwSort3"><a href="javascript:Comment()">评价</a></div>
+						<div class="syfwSort4"><a href="javascript:Price()">价格</a></div>
+					</div>
+					<div class="row" style="margin-left: 0px;">
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
 							</div>
 						</div>
-						<div class="syfwsContent">
-							<div class="row">
-								<div class="syfwSort1"><a href="javascript:ZHPX()" style="color: #BA1A33;">综合排序</a></div>
-								<div class="syfwSort2"><a href="javascript:DDL()">订单量</a></div>
-								<div class="syfwSort3"><a href="javascript:Comment()">评价</a></div>
-								<div class="syfwSort4"><a href="javascript:Price()">价格</a></div>
-							</div>
-							<div class="row">
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
 								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
 								</div>
 							</div>
-							<div class="row">
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
+						</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
 								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
 								</div>
 							</div>
-							<div class="row">
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-								<div class="ServiceSkill">
-									<div class="ServiceSkillImage"></div>
-									<div class="ServiceSkillInfo">
-										<div class="skillName row">
-											<span style="font-size: 16px;">羽毛球基础训练</span>
-											<span class="skillPrice">￥500.00</span>
-										</div>
-										<div class="row skillMoreInfo" style="font-size: 14px;">
-											订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
-											<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<nav aria-label="Page navigation example">
-							  <ul class="pagination justify-content-end">
-							    <!-- <li class="page-item disabled">
-							      <a class="page-link" href="#" tabindex="-1"><</a>
-							    </li> -->
-							    <li class="page-item"><a class="page-link" href="#" style="background-color:#BA1A33;color: #FFFFFF;">1</a></li>
-							    <li class="page-item"><a class="page-link" href="#" style="background-color:#FFFFFF;">2</a></li>
-							    <li class="page-item"><a class="page-link" href="#" style="background-color:#FFFFFF;">3</a></li>
-							    <li class="page-item">
-							      <a class="page-link" href="#">></a>
-							    </li>
-							  </ul>
-							</nav>
 						</div>
 					</div>
-					<div class="MyTop">
-						<a href="#wit_header"><img src="./image/top.png"></a>
-					</div> 
-		</div>
-		<footer></footer>
-		<script>
-			$(function(){
+					<div class="row" style="margin-left: 0px;">
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-left: 0px;">
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+						<div class="ServiceSkill">
+							<div class="ServiceSkillImage"></div>
+							<div class="ServiceSkillInfo">
+								<div class="skillName row">
+									<span style="font-size: 16px;">羽毛球基础训练</span>
+									<span class="skillPrice">￥500.00</span>
+								</div>
+								<div class="row skillMoreInfo" style="font-size: 14px;">
+									订单量：10 <a href=""style="padding-left: 10px;">注册地</a>
+									<a href="" style="color: #BA1A33;padding-left: 10px;">加入购物车</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<nav aria-label="Page navigation example" style="margin: 10px 75px 10px 0;">
+					  <ul class="pagination justify-content-end">
+					    <li class="page-item"><a class="page-link" href="#" style="background-color:#BA1A33;color: #FFFFFF;">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#" style="background-color:#FFFFFF;">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#" style="background-color:#FFFFFF;">3</a></li>
+					    <li class="page-item">
+					      <a class="page-link" href="#">></a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+      </div>
+    </div>	
+	<footer></footer>
+	<script>
+		$(function(){
 				$("header").load("common.html #wit_header");
 				$("section").load("common.html #wit_search");
 				$("footer").load("common.html #wit_footer");
-				
-			})
-			function ZHPX(){
-				$(".syfwSort1").css("background-color","#FFFFFF");
-				$(".syfwSort1").css("border-color","#FFFFFF");
-				$(".syfwSort2").css("background-color","#D8D8D8");
-				$(".syfwSort2").css("border-color","#D8D8D8");
-				$(".syfwSort3").css("background-color","#D8D8D8");
-				$(".syfwSort3").css("border-color","#D8D8D8");
-				$(".syfwSort4").css("background-color","#D8D8D8");
-				$(".syfwSort4").css("border-color","#D8D8D8");
-				$(".syfwSort1 a").css("color","#BA1A33");
-				$(".syfwSort2 a").css("color","#000000");
-				$(".syfwSort3 a").css("color","#000000");
-				$(".syfwSort4 a").css("color","#000000");
-			}
-			function DDL(){
-				$(".syfwSort1").css("background-color","#D8D8D8");
-				$(".syfwSort1").css("border-color","#D8D8D8");
-				$(".syfwSort2").css("background-color","#FFFFFF");
-				$(".syfwSort2").css("border-color","#FFFFFF");
-				$(".syfwSort3").css("background-color","#D8D8D8");
-				$(".syfwSort3").css("border-color","#D8D8D8");
-				$(".syfwSort4").css("background-color","#D8D8D8");
-				$(".syfwSort4").css("border-color","#D8D8D8");
-				$(".syfwSort2 a").css("color","#BA1A33");
-				$(".syfwSort1 a").css("color","#000000");
-				$(".syfwSort3 a").css("color","#000000");
-				$(".syfwSort4 a").css("color","#000000");
-			}
-			function Comment(){
-				$(".syfwSort1").css("background-color","#D8D8D8");
-				$(".syfwSort1").css("border-color","#D8D8D8");
-				$(".syfwSort2").css("background-color","#D8D8D8");
-				$(".syfwSort2").css("border-color","#D8D8D8");
-				$(".syfwSort3").css("background-color","#FFFFFF");
-				$(".syfwSort3").css("border-color","#FFFFFF");
-				$(".syfwSort4").css("background-color","#D8D8D8");
-				$(".syfwSort4").css("border-color","#D8D8D8");
-				$(".syfwSort3 a").css("color","#BA1A33");
-				$(".syfwSort1 a").css("color","#000000");
-				$(".syfwSort2 a").css("color","#000000");
-				$(".syfwSort4 a").css("color","#000000");
-			}
-			function Price(){
-				$(".syfwSort1").css("background-color","#D8D8D8");
-				$(".syfwSort1").css("border-color","#D8D8D8");				
-				$(".syfwSort2").css("background-color","#D8D8D8");
-				$(".syfwSort2").css("border-color","#D8D8D8");
-				$(".syfwSort3").css("background-color","#D8D8D8");
-				$(".syfwSort3").css("border-color","#D8D8D8");
-				$(".syfwSort4").css("background-color","#FFFFFF");
-				$(".syfwSort4").css("border-color","#FFFFFF");
-				$(".syfwSort4 a").css("color","#BA1A33");
-				$(".syfwSort2 a").css("color","#000000");
-				$(".syfwSort3 a").css("color","#000000");
-				$(".syfwSort1 a").css("color","#000000");
-			}
-		</script>
+				})
+		function ZHPX(){
+			$(".syfwSort1").css("background-color","#FFFFFF");
+			$(".syfwSort1").css("border-color","#FFFFFF");
+			$(".syfwSort2").css("background-color","#D8D8D8");
+			$(".syfwSort2").css("border-color","#D8D8D8");
+			$(".syfwSort3").css("background-color","#D8D8D8");
+			$(".syfwSort3").css("border-color","#D8D8D8");
+			$(".syfwSort4").css("background-color","#D8D8D8");
+			$(".syfwSort4").css("border-color","#D8D8D8");
+			$(".syfwSort1 a").css("color","#BA1A33");
+			$(".syfwSort2 a").css("color","#000000");
+			$(".syfwSort3 a").css("color","#000000");
+			$(".syfwSort4 a").css("color","#000000");
+		};
+		function orderNumber(){
+			$(".syfwSort1").css("background-color","#D8D8D8");
+			$(".syfwSort1").css("border-color","#D8D8D8");
+			$(".syfwSort2").css("background-color","#FFFFFF");
+			$(".syfwSort2").css("border-color","#FFFFFF");
+			$(".syfwSort3").css("background-color","#D8D8D8");
+			$(".syfwSort3").css("border-color","#D8D8D8");
+			$(".syfwSort4").css("background-color","#D8D8D8");
+			$(".syfwSort4").css("border-color","#D8D8D8");
+			$(".syfwSort2 a").css("color","#BA1A33");
+			$(".syfwSort1 a").css("color","#000000");
+			$(".syfwSort3 a").css("color","#000000");
+			$(".syfwSort4 a").css("color","#000000");
+		};
+		function Comment(){
+			$(".syfwSort1").css("background-color","#D8D8D8");
+			$(".syfwSort1").css("border-color","#D8D8D8");
+			$(".syfwSort2").css("background-color","#D8D8D8");
+			$(".syfwSort2").css("border-color","#D8D8D8");
+			$(".syfwSort3").css("background-color","#FFFFFF");
+			$(".syfwSort3").css("border-color","#FFFFFF");
+			$(".syfwSort4").css("background-color","#D8D8D8");
+			$(".syfwSort4").css("border-color","#D8D8D8");
+			$(".syfwSort3 a").css("color","#BA1A33");
+			$(".syfwSort1 a").css("color","#000000");
+			$(".syfwSort2 a").css("color","#000000");
+			$(".syfwSort4 a").css("color","#000000");
+		};
+		function Price(){
+			$(".syfwSort1").css("background-color","#D8D8D8");
+			$(".syfwSort1").css("border-color","#D8D8D8");				
+			$(".syfwSort2").css("background-color","#D8D8D8");
+			$(".syfwSort2").css("border-color","#D8D8D8");
+			$(".syfwSort3").css("background-color","#D8D8D8");
+			$(".syfwSort3").css("border-color","#D8D8D8");
+			$(".syfwSort4").css("background-color","#FFFFFF");
+			$(".syfwSort4").css("border-color","#FFFFFF");
+			$(".syfwSort4 a").css("color","#BA1A33");
+			$(".syfwSort2 a").css("color","#000000");
+			$(".syfwSort3 a").css("color","#000000");
+			$(".syfwSort1 a").css("color","#000000");
+		};
+	</script>
 	</body>
 </html>
