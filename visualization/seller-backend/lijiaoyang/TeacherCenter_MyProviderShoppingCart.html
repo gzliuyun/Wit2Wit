@@ -43,7 +43,7 @@
 					$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
 							function() {
 								$("#myProviderShoppingCart").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
-								$("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()); //同第37行load的id名
+								$("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
 							}
 					);
 					})
@@ -59,7 +59,7 @@
       <div class="row" style=" width:1150px">
 				<div id="sideNav"></div>
 
-				<div class="contentBackground" >
+				<div id="contentMain" class="contentBackground" >
 					<div><strong style="font-size:30px; color:#B91A33">我的服务购物车</strong></div>
 					<!-- 分割线 -->
 					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
