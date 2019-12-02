@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/TeacherCenter.css">
+
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+						function() {
+							$("#teacherAccountManager").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                            $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+<!--    注释1：因为是授业者中心，所以下面这里应该load("#wit_studyAndTeachNav")-->
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+
+<!--    注释2：这里应当根据中心不同load不同的sideNavbar-->
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+<!--      注释3：这里根据页面不同更改内容-->
+					<div><strong class="contentMainTitle">店铺装修及管理</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+<!--          这里是需要修改的内容-->
+<!--          这里是特定内容-->
+<!--          这里是各个页面不一样的内容-->
+					<form id="accountManagerForm">
+
+<!--						店铺名称-->
+						<div class="form-group row">
+							<label for="shopname" class="col-3 col-form-label ">店铺名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="shopname"
+											 placeholder="必填">
+							</div>
+                            <div class="col-4" style="margin-top: 5px">
+                                <p class="remark" style="float: left">（不超过15个汉字）</p>
+                            </div>
+						</div>
+
+<!--						个人店铺基本信息-->
+						<div class="form-group row">
+							<label for="personalshopbasicinformation" class="col-3 col-form-label ">个人店铺基本信息</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="personalshopbasicinformation"
+											 placeholder="">
+							</div>
+                            <div class="col-4" style="margin-top: 5px">
+                                <p class="remark" style="float: left">（店主名字）</p>
+                            </div>
+						</div>
+
+<!--						公司店铺基本信息-->
+						<div class="form-group row">
+							<label for="companyshopbasicinformation" class="col-3 col-form-label ">公司店铺基本信息</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="companyshopbasicinformation"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						公司营业执照上传-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="businesslicense" class="col-form-label " style="float: left">公司营业执照上传</label>
+								<p class="remark" style="margin-top: 6px; color: #B91A33">（必填）</p>
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img id="businesslicense" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+							</div>
+						</div>
+
+<!--						店标上传-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="logo" class="col-form-label " style="float: left">店标上传</label>
+								<p class="remark" style="margin-top: 6px; color: #B91A33">（必填）</p>
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img id="logo" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+							</div>
+							<div class="col-6" style="margin-top: 20px;">
+								<p class="remark">（logo或个人照，不超过2M，像素为280*150px）</p>
+							</div>
+						</div>
+
+<!--						店铺宣传照片上传-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="promotionalphoto" class="col-form-label " style="float: left">店铺宣传照片上传</label>
+								<p class="remark" style="margin-top: 6px; color: #B91A33">（必填）</p>
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img id="promotionalphoto" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+							</div>
+							<div class="col-6" style="margin-top: 20px;">
+								<p class="remark">（或个人照，不超过2M，像素为280*150px）</p>
+							</div>
+						</div>
+
+<!--						店铺介绍-->
+						<div class="form-group row">
+							<label for="shopintroduction" class="col-3 col-form-label ">店铺介绍</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="shopintroduction" rows="3"
+													style="max-width: 100%" placeholder="必填"></textarea>
+							</div>
+							<div class="col-4" style="margin-top: 5px">
+                                <p class="remark" style="float: left">（小于500汉字）</p>
+                            </div>
+						</div>
+
+
+                        <div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="display: inline-block; width: 160px">技能发布</button>
+                            <p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（每店最多发布8项，未满10个订单前只能发布一项）</p>
+						</div>
+
+<!--						本店联系方式-->
+						<div class="form-group row">
+							<label for="contactinformation" class="col-3 col-form-label ">本店联系方式</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="contactinformation"
+											 placeholder="必填">
+							</div>
+						</div>
+
+                        <div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="width: 160px">完成装修并展示</button>
+                            <p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（首次展示日默认为创店日期）</p>
+						</div>
+                        <div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="width: 160px">保存且暂不展示</button>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="width: 160px">店铺仓库</button>
+                            <p class="remark" style="display: inline-block">（保存暂时不发布和不展示的页面内容，按照日期排序）</p>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="submit" class="btn btn-studyCenter noneShadow" style="width: 160px">修改店铺</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-studyCenter noneShadow" style="width: 160px">修改已发布技能</button>
+						</div>
+					</form>
+
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>

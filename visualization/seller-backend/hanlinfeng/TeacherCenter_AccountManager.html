@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/TeacherCenter.css">
+
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+						function() {
+							$("#teacherAccountManager").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                            $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+<!--    注释1：因为是授业者中心，所以下面这里应该load("#wit_studyAndTeachNav")-->
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+
+<!--    注释2：这里应当根据中心不同load不同的sideNavbar-->
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+<!--      注释3：这里根据页面不同更改内容-->
+					<div><strong class="contentMainTitle">账户管理</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+                    <form id="accountManagerForm">
+
+<!--						用户名称-->
+						<div class="form-group row">
+							<label for="nickname" class="col-3 col-form-label ">用户名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control " id="nickname">
+							</div>
+						</div>
+
+<!--						上传头像-->
+						<div class="form-group row">
+							<label for="upload" class="col-3 col-form-label ">上传头像</label>
+							<div class="col-4">
+								<input type="file" class="form-control-file" id="upload">
+							</div>
+						</div>
+
+<!--						私人邮箱-->
+						<div class="form-group row">
+							<label for="email" class="col-3 col-form-label ">私人邮箱</label>
+							<div class="col-4">
+								<input type="email" class="form-control redPlaceholder" id="email"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						微信号-->
+						<div class="form-group row">
+							<label for="wechatAccount" class="col-3 col-form-label ">微信号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="wechatAccount"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						QQ号-->
+						<div class="form-group row">
+							<label for="QQAccount" class="col-3 col-form-label ">QQ号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="QQAccount"
+											 placeholder="（无微信号社交必填）">
+							</div>
+						</div>
+
+<!--					添加其他手机号-->
+						<div class="form-group row">
+							<label for="otherMobileNumber" class="col-3 col-form-label ">添加其他手机号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="otherMobileNumber"
+											 placeholder="（选填）">
+							</div>
+						</div>
+
+<!--					紧急联系人名字-->
+						<div class="form-group row">
+							<label for="emergencyName" class="col-3 col-form-label ">紧急联系人名字</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="emergencyName"
+											 placeholder="（必填）">
+							</div>
+						</div>
+
+<!--						紧急联系人关系-->
+						<div class="form-group row">
+							<label for="emergencyRelationship" class="col-3 col-form-label ">紧急联系人关系</label>
+							<div class="col-4">
+								<select class="form-control " id="emergencyRelationship" >
+									<option selected hidden></option>
+									<option>配偶</option>
+									<option>父母</option>
+									<option>兄弟姐妹</option>
+									<option>朋友</option>
+								</select>
+							</div>
+						</div>
+
+<!--						紧急联系人手机号码-->
+						<div class="form-group row">
+							<label for="emergencyNumber" class="col-3 col-form-label ">紧急联系人手机号码</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="emergencyNumber"
+											 placeholder="（学习必填）">
+							</div>
+						</div>
+
+						<div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="display: inline-block ">安全设置</button>
+							<p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（修改密码，密保问题，更换注册手机）</p>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="submit" class="btn btn-studyCenter noneShadow">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-studyCenter noneShadow">注销账号</button>
+						</div>
+					</form>
+<!--          这里是需要修改的内容-->
+<!--          这里是特定内容-->
+<!--          这里是各个页面不一样的内容-->
+                    <!--
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          用户名称
+                      </div>
+                      <div>
+                        <input type="text" class="specificform">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          上传头像
+                      </div>
+                      <div>
+                        <input type="text" class="specificform">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          私人邮箱
+                      </div>
+                      <div>
+                        <input type="text" class="specificform">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          微信号
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="margin-left: 34px">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          QQ号
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="margin-left: 39px">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          添加其他手机号
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="width: 313px">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          紧急联系人名字
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="width: 313px">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          关系
+                      </div>
+                      <div style="margin-left:100px">
+                          <p class="specificinfo">配偶<input type="checkbox" class="inputcheckbox"/>/</p>
+                          <p class="specificinfo">父母<input type="checkbox" class="inputcheckbox"/>/</p>
+                          <p class="specificinfo">兄弟姐妹<input type="checkbox" class="inputcheckbox"/>/</p>
+                          <p class="specificinfo" style="float: none">&nbsp;&nbsp;朋友<input type="checkbox" class="inputcheckbox"/></p>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          紧急联系人手机号码
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="width: 283px">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="specificinfo">
+                          安全设置
+                      </div>
+                      <div>
+                        <input type="text" class="specificform" style="width: 313px">
+                      </div>
+                    </div>
+                    -->
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>

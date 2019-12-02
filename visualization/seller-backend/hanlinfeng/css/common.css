@@ -1,8 +1,7 @@
 /* 隐藏横向滚动条 */
-/* html { overflow-x: hidden; overflow-y: auto; } */
-html{height: 100%;width: 100%;}
 li{list-style-type: none;}
-a:hover{text-decoration:none;}	
+a{color: #444444; text-decoration: none;}
+a:hover{color: #BA1A33;text-decoration: none;}
 .dropdown:hover .dropdown-menu {
 display: block;
 margin-top: 0; 
@@ -40,10 +39,10 @@ border-color: rgb(231,231,231);
 .jngwc_btn{padding: 15px;margin-top: 5px;}
 .jngwc_btn button{font-size: 16px;border-radius: 10px;background-color: #BA1A33;color: #FFFFFF;height: 25px;padding-top: 0px;}
 /* 网站导航 */
-#witowit-guide-dropdown{width: 600px;height: 190px;}
-.centerDivide{border-right: 1px solid rgb(187,187,187);height: 180px;}
+#witowit-guide-dropdown{width: 665px;height: 200px;}
+.centerDivide{border-right: 1px solid rgb(187,187,187);height: 190px;}
 dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
-.centerDivide dl dd div a{width: 60px;padding:3px; margin: 3px; color: #666666;font-size: 16px;}
+.centerDivide dl dd div a{width: 70px;padding:3px; margin: 3px; color: rgb(85,79,79);font-size: 16px;}
 /* 首页 授业者推荐 新增技能 新增类别 授业同行交流 学员社交 */
 #thirdHeaderLeft a{padding: 0 11px;color: #444444; text-decoration: none;}
 #thirdHeaderLeft a:hover{color: #BA1A33;text-decoration: none;}
@@ -58,9 +57,64 @@ dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
 #wit_footer .footer-all li+li {border-left: 1px solid #F5F5F5;}
 #wit_footer .footer-all .copyright{	padding: 10px;color: #F5F5F5;font-size: 12px;}
 
+/* 三个中心的section部分 */
+.fakePicture{
+	background-color: #CCCCCC;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+}
+.my3centers{margin-top: 35px;margin-left: 25px;}
+/* 猜你喜欢 */
+.guessYouLike{color: #BA1A33;width: 100%; height: 55px;border: 1px solid #BA1A33;background-color: #BA1A33;border-radius: 10px 10px 0 0;}
+.guessYouLike p{font-size: 21px;color: #FFFFFF;margin-top: 10px;margin-left: 45px;}
+/* 猜你喜欢 技能列表 */
+.ServiceSkill{padding-right: 3px;margin-left: 15px;margin-top: 10px;}
+.ServiceSkillImage{border: 1px solid #D8D8D8;width: 270px;height: 210px;background-color: #D8D8D8;}
+.ServiceSkillInfo{border: 1px solid #FFFFFF;width: 270px;height: 75px;background-color: #FFFFFF;}
+.skillName{margin-left: 10px;margin-top: 15px;}
 
-/* 可能无用，可以删去 */
-/* 顶部灰色路径指示 */
-.guideStrip{margin-left: 360px;margin-top: 30px;margin-bottom: 10px;}
-.guideStrip a{font-size: 16px;color: rgb(139,129,129);}
-.guideStrip span{font-size: 16px;color: rgb(139,129,129);}
+/*三个中心侧边栏*/
+.sideNavbar {
+    width: 230px;
+    font-size:21px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-top:20px;
+    padding-left: 20px;
+}
+.sideNavbar a:link,
+.sideNavbar a:link,
+.sideNavbar a:visited,
+.sideNavbar a:active {
+    color: #534F4E;
+}
+
+.sideNavbar a:hover{
+    color: #BBBBBB;
+}
+
+.sideNavbar .selected a{
+    color: #B91A33;
+    pointer-events: none;
+}
+
+.sideNavbar li{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.contentMainTitle {
+    font-size: 30px;
+    color: #B91A33
+}
+.contentBackground {
+    width:900px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-left:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:15px;
+}

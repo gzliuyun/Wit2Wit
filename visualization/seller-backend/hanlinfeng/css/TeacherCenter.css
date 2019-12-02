@@ -1,0 +1,75 @@
+/*
+.specificinfo {
+    float:left;
+    color: #74777b;
+    font-size: 15px;
+    margin: 0px 0 0px 10px;
+}
+
+.specificform{
+    margin: -5px 0 0px 20px;
+    width: 360px;
+}
+
+.inputcheckbox{
+    margin: 0px 0 0 5px;
+}
+*/
+
+/*文博代码*/
+/*输入框默认文字颜色*/
+.redPlaceholder::-webkit-input-placeholder {
+  color: #B91A33;
+}
+/*控制元素所显示的文字占位符*/
+.redPlaceholder:-moz-placeholder {/* Firefox 18- */
+  color: #B91A33;
+}
+/*控制元素所显示的文字占位符*/
+.redPlaceholder::-moz-placeholder{/* Firefox 19+ */
+ color: #B91A33;
+}
+/*表示表单元素的占位符文本（该功能非标准）*/
+.redPlaceholder:-ms-input-placeholder {
+  color: #B91A33;
+}
+.btn-studyCenter {
+    border-radius: 0;
+    width:100px;
+    background-color: #B91A33;
+    color: #FFFFFF;
+}
+/*选择鼠标在链接上面时*/
+.btn-studyCenter:hover{
+    background-color: #A80922;
+    color: #FFFFFF;
+}
+/*选择具有焦点的输入元素*/
+.noneShadow:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+/*备注提示*/
+.remark{
+    color: rgb(139,129,129);
+    font-size: 16px;
+}
+/*文字按钮*/
+.text_btn{
+    color: #B91A33;
+    font-size: 16px;
+}
+/*展示图片*/
+.showpictures{
+    height: 82px;
+    width: 80px;
+    float: left;
+}
+/*选项按钮*/
+.btn-primary {
+  color: black;
+  background-color: gainsboro;
+  border-color: gainsboro;
+}
+.btn-primary

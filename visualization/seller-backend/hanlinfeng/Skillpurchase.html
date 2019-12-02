@@ -5,16 +5,24 @@
     <title>技能购买</title>
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="css/box.css" type="text/css" rel="stylesheet"/>
+    <link href="css/seller-service.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        $(function (){
+        $(function(){
             $("header").load("common.html #wit_header");
-            $("section").load("common.html #wit_search");
+            $("section").load("common.html #wit_centers");
+            $("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
             $("footer").load("common.html #wit_footer");
-        })
+            $("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+                    function() {
+                        $("#teacherAccountManager").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                        $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+                    }
+            );
+            $("#guessYouLike").load("common.html #wit_guessYouLike");
+        });
         function add() {
             $(".text_box1").val(parseInt($(".text_box1").val()) + 1);
         }
@@ -93,12 +101,13 @@
 <body style="background: #EBEBEB">
 <header></header>
 <section></section>
-<div class="jumbotron jumbotron-fluid" style="color: #FFFFFF; background: #BA1A33; height:50px">
+<div id="studyNav"></div>
+<div class="jumbotron-fluid" style="color: #FFFFFF; background: #BA1A33; height:50px">
   <div class="container">
     <h5 style="padding: 13px 0 0 0; margin-left: -90px">技能名称</h5>
   </div>
 </div>
-<div class="container" style="margin-top: -10px">
+<div class="container" style="margin-top: 10px">
     <div class="row" style="margin-left: -100px; width: 2000px">
         <p style="color: #999999; margin-left: 12px">首页>>技能列表>>推荐技能>>羽毛球>>技能名称</p>
         <p style="color: #CD0000; margin-left: 628px">联系店铺</p>
@@ -111,25 +120,25 @@
         <div class="row" style="margin: 0px 30px 0 40px">
             <div class="col-xl-6" style="margin-top: 40px">
                 <div class="pic">
-                    <a href="#" style="display:block"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
-                    <a href="#"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
-                    <a href="#"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display:block"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display: none"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display: none"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
                 </div>
-                <div class="row pic_btn" style="margin: 10px 0 0 -15px">
-                    <ul style="line-height: 20px">
+                <div class="row pic_btn" style="margin: 10px 0 0 -55px">
+                    <ul class="hengxiang" style="line-height: 20px">
                         <li>
                             <div class="col-sm-3">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px" />
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px" />
                             </div>
                         </li>
                         <li style="margin-left: -56px">
                             <div class="col-sm-3" style="margin-left: 34px">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px"/>
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px"/>
                             </div>
                         </li>
                         <li style="margin-left: -56px">
                             <div class="col-sm-3" style="margin-left: 34px">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px"/>
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px"/>
                             </div>
                         </li>
                     </ul>
@@ -253,13 +262,13 @@
     <div class="row" style="margin: 0px 30px 0 -100px; width:1370px">
         <div class="col-xl-3">
             <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="350px">
+                <img src="image/gray.png" class="img-responsive" height="210px" width="350px">
                 <div style="position:absolute;left:0;top:0;">
 
                 </div>
             </div>
             <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="150px" width="350px">
+                <img src="image/white1.png" class="img-responsive" height="150px" width="350px">
                 <div style="position:absolute;left:40px;top:15px; font-size: 20px">
                     <p>技能名称：</p>
                     <p>适用人群：</p>
@@ -268,13 +277,13 @@
             </div>
             <br>
                         <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="350px">
+                <img src="image/gray.png" class="img-responsive" height="210px" width="350px">
                 <div style="position:absolute;left:0;top:0;">
 
                 </div>
             </div>
             <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="150px" width="350px">
+                <img src="image/white1.png" class="img-responsive" height="150px" width="350px">
                 <div style="position:absolute;left:40px;top:15px; font-size: 20px">
                     <p>技能名称：</p>
                     <p>适用人群：</p>

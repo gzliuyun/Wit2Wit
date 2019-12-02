@@ -1,0 +1,33 @@
+/*文博代码*/
+/*输入框默认文字颜色*/
+.redPlaceholder::-webkit-input-placeholder {
+  color: #B91A33;
+}
+/*控制元素所显示的文字占位符*/
+.redPlaceholder:-moz-placeholder {/* Firefox 18- */
+  color: #B91A33;
+}
+/*控制元素所显示的文字占位符*/
+.redPlaceholder::-moz-placeholder{/* Firefox 19+ */
+ color: #B91A33;
+}
+/*表示表单元素的占位符文本（该功能非标准）*/
+.redPlaceholder:-ms-input-placeholder {
+  color: #B91A33;
+}
+.btn-studyCenter {
+    border-radius: 0;
+    width:100px;
+    background-color: #B91A33;
+    color: #FFFFFF;
+}
+/*选择鼠标在链接上面时*/
+.btn-studyCenter:hover{
+    background-color: #A80922;
+    color: #FFFFFF;
+}
+/*选择具有焦点的输入元素*/
+.noneShadow:focus{
+    box-shadow: none;
+    outline: none;
+}

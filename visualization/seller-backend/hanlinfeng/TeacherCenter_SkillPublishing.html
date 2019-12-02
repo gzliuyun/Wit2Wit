@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/TeacherCenter.css">
+
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+						function() {
+							$("#teacherAccountManager").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                            $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+<!--    注释1：因为是授业者中心，所以下面这里应该load("#wit_studyAndTeachNav")-->
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+
+<!--    注释2：这里应当根据中心不同load不同的sideNavbar-->
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+<!--      注释3：这里根据页面不同更改内容-->
+					<div><strong class="contentMainTitle">发布技能</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+<!--          这里是需要修改的内容-->
+<!--          这里是特定内容-->
+<!--          这里是各个页面不一样的内容-->
+					<form id="accountManagerForm">
+
+<!--						选择类别-->
+						<div class="form-group row">
+							<label for="selectcategory" class="col-3 col-form-label ">选择类别</label>
+							<div class="col-4">
+                                <select class="form-control " id="selectcategory" >
+									<option selected hidden></option>
+									<option>配偶</option>
+									<option>父母</option>
+									<option>兄弟姐妹</option>
+									<option>朋友</option>
+								</select>
+							</div>
+                            <div class="col-4" style="margin-top: 5px">
+                                <p class="remark" style="float: left">超出现有类别范围选择--</p>
+                                <p class="text_btn">新增类别</p>
+                            </div>
+						</div>
+
+<!--						选择技能-->
+						<div class="form-group row">
+							<label for="selectskill" class="col-3 col-form-label ">选择技能</label>
+							<div class="col-4">
+                                <select class="form-control " id="selectskill" >
+									<option selected hidden></option>
+									<option>配偶</option>
+									<option>父母</option>
+									<option>兄弟姐妹</option>
+									<option>朋友</option>
+								</select>
+							</div>
+                            <div class="col-4" style="margin-top: 5px">
+                                <p class="remark" style="float: left">超出现有类别范围选择--</p>
+                                <p class="text_btn">新增技能</p>
+                            </div>
+						</div>
+
+<!--						技能名称描述-->
+						<div class="form-group row">
+							<label for="skillnamedescription" class="col-3 col-form-label ">技能名称描述</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="skillnamedescription"
+											 placeholder="（每项不超过30个汉字）">
+							</div>
+						</div>
+
+<!--						电脑端技能图片-->
+						<div class="form-group row">
+							<label for="computerskillspicture" class="col-3 col-form-label ">电脑端技能图片</label>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img id="computerskillspicture" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+							</div>
+                            <p class="remark" style="margin:5px 0 0 238px">小于2M/张，像素为580*625px 主图1张，附图3张。如果是任务需半身着装图</p>
+						</div>
+
+<!--						视频-->
+						<div class="form-group row">
+							<label for="video" class="col-3 col-form-label ">视频</label>
+							<div class="col-4">
+								<input type="file" class="form-control-file " id="video">
+							</div>
+						</div>
+
+<!--						电脑端技能文字描述-->
+						<div class="form-group row">
+							<label for="computerskilltextdescription" class="col-3 col-form-label ">电脑端技能文字描述</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="computerskilltextdescription" rows="3"
+													style="max-width: 100%" placeholder="（小于500汉字）"></textarea>
+							</div>
+						</div>
+
+<!--						手机端技能图片-->
+						<div class="form-group row">
+							<label for="phoneskillspicture" class="col-3 col-form-label ">手机端技能图片</label>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img src="image/gray.png" class="showpictures">
+							</div>
+							<div class="col-1" style="margin-right: 15px">
+                                <img id="phoneskillspicture" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+							</div>
+                            <p class="remark" style="margin:5px 0 0 238px">白底图1-3张，正方形，800*800，小于200K且大于40K，JPG格式。如果是人物需半身着装图</p>
+						</div>
+
+<!--						手机端技能文字描述-->
+						<div class="form-group row">
+							<label for="phoneskilltextdescription" class="col-3 col-form-label ">电脑端技能文字描述</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="phoneskilltextdescription" rows="3"
+													style="max-width: 100%" placeholder="（小于500汉字）"></textarea>
+							</div>
+						</div>
+
+<!--						每期线下授业总课时-->
+						<div class="form-group row">
+							<label for="totalteachinghours" class="col-3 col-form-label ">每期线下授业总课时</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="totalteachinghours"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						试学课时-->
+						<div class="form-group row">
+							<label for="triallesson" class="col-3 col-form-label ">试学课时</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="triallesson"
+											 placeholder="（至少一个标准课时起）">
+							</div>
+						</div>
+
+
+<!--						开始授业日期-->
+						<div class="form-group row">
+							<label class="col-3 col-form-label ">开始授业日期</label>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+						</div>
+
+<!--						结束授业日期-->
+						<div class="form-group row">
+							<label class="col-3 col-form-label ">结束授业日期</label>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" style="width: 180px">
+                            </div>
+                            <p class="remark" style="margin:5px 0 0 238px">备注：只允许发布近三期，超过结束时间，前后端自动清除显示，重新填写新日期</p>
+						</div>
+
+
+<!--						其他条件-->
+						<div class="form-group row">
+							<label for="otherconditions" class="col-3 col-form-label ">其他条件</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="otherconditions"
+											 placeholder="">
+							</div>
+                            <p class="remark" style="margin:5px 0 0 238px">如：自备场地/材料，或包含场地费，设备/材料费等</p>
+						</div>
+
+<!--						授业方式-->
+						<div class="form-group row">
+                            <div class="col-3">
+                                <label class="col-form-label ">授业方式</label>
+                                <p style="font-size: 12px; margin-left: -13px">（最低课时标准）</p>
+                            </div>
+                            <div class="col-7">
+                                <div class="btn_group" data-toggle="buttons">
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="teachingmethod"> 线下面授120分钟
+                                    </label>
+                                    <label class="btn btn-primary" style="margin-left: 10px">
+                                        <input type="radio" name="teachingmethod"> 视频授业60分钟
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="teachingmethod"> 电话/音频授业30分钟
+                                    </label>
+                                    <label class="btn btn-primary" style="margin-left: 10px">
+                                        <input type="radio" name="teachingmethod"> 文字授业至少200个汉字
+                                    </label>
+                                </div>
+                            </div>
+						</div>
+
+<!--						班型-->
+						<div class="form-group row">
+                            <div class="col-3">
+                                <label class="col-form-label ">班型</label>
+                            </div>
+                            <div class="col-7">
+                                <div class="btn_group" data-toggle="buttons">
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="class"> 一人班
+                                    </label>
+                                    <label class="btn btn-primary" style="margin-left: 10px">
+                                        <input type="radio" name="class"> 二人班
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="class"> 三人班
+                                    </label>
+                                    <label class="btn btn-primary" style="margin-left: 10px">
+                                        <input type="radio" name="class"> 四人及以上班
+                                    </label>
+                                </div>
+                            </div>
+						</div>
+
+<!--						价格-->
+						<div class="form-group row">
+							<label for="price" class="col-3 col-form-label ">价格：</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="price"
+											 placeholder="（可以填写多种价格）">
+							</div>
+						</div>
+
+<!--						适用人群-->
+						<div class="form-group row">
+							<label for="price" class="col-3 col-form-label ">适用人群：</label>
+						</div>
+
+<!--						面授地点-->
+						<div class="form-group row">
+                            <div class="col-3">
+                                <label class="col-form-label ">面授地点：</label>
+                            </div>
+                            <div class="col-7">
+                                <div class="btn_group" data-toggle="buttons">
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="face-to-facelocation"> 双方约定
+                                    </label>
+                                    <label class="btn btn-primary" style="margin-left: 10px">
+                                        <input type="radio" name="face-to-facelocation"> 授业者常驻地附近
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="face-to-facelocation"> 学习者常住地附近
+                                    </label>
+                                </div>
+                            </div>
+						</div>
+
+<!--						退款保证-->
+						<div class="form-group row">
+                            <div class="col-3">
+                                <label class="btn btn-default" style="margin-left: -11px">
+                                    <input type="checkbox" name="face-to-facelocation"> 退款保证：
+                                </label>
+                            </div>
+                            <div class="col-8" style="margin-top: 5px">
+                                <p class="remark" style="float: left">必须勾选并同意---</p>
+                                <p class="text_btn">平台规则中的退款条款</p>
+                            </div>
+						</div>
+
+<!--						授业承诺-->
+						<div class="form-group row">
+                            <div class="col-3">
+                                <label class="btn btn-default" style="margin-left: -11px">
+                                    <input type="checkbox" name="face-to-facelocation"> 授业承诺：
+                                </label>
+                            </div>
+                            <div class="col-8" style="margin-top: 5px">
+                                <p class="remark" style="float: left">必须勾选并同意---先试授业，后收费；按时保质交付并及时上报授业进度</p>
+                            </div>
+						</div>
+
+						<div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-studyCenter noneShadow" style="display: inline-block; width: 230px">立即发布</button>
+							<p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（备注：自动生成技能ID）</p>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="submit" class="btn btn-studyCenter noneShadow" style="width: 230px">暂不发布并存入店铺仓库</button>
+							<p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（发布需再次编辑）</p>
+						</div>
+						<div>
+							<button type="button" class="btn btn-studyCenter noneShadow" style="width: 230px">增加发布</button>
+							<p style="color: #B91A33; display: inline-block; margin-bottom: 0;">（每店最多发布8项，未满10个订单前只能发布一项）</p>
+						</div>
+					</form>
+
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>
