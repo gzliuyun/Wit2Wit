@@ -75,17 +75,18 @@
     opacity: 0.5;
 }
 .shoppingCartGoods {
-    margin-top:15px;
     padding: 10px 0 10px 0;
     background-color: #FFFFFF;
+	margin-top:5px;margin-bottom: 15px;
 }
 .shoppingCartGoodsImg {
     margin-left: -10px;
     width: 100px;
 }
+/* 服务店铺 */
 .shoppingCartGoodsName {
-    margin-left: 10px;
-    width: 150px;
+    margin-left: 45px;
+    width: 200px;
 }
 
 .shoppingCartGoods .shoppingCartGoodsName a:link,
@@ -95,22 +96,22 @@
 .shoppingCartGoods .shoppingCartGoodsName a:hover {
     color: #007BFF;
 }
-
+/* 单价（元） */
 .shoppingCartGoodsPrice {
-    margin-left: 10px; width:120px
+    margin-left: 10px; width:200px
 }
-.shoppingCartGoodsSemester{
-    width: 100px
+.shoppingCartGoodsNumber{
+    width: 150px
 }
-.shoppingCartGoodsStudent {
-    width: 100px;
+.shoppingCartGoodsDetail {
+    width: 200px;
 }
 .shoppingCartGoodsTotalPrice {
     margin-left: 10px;
-    width: 120px;
+    width: 200px;
 }
-.shoppingCartGoodsOperating {
-    width: 40px;
+.shoppingCartGoodsDiscountWay {
+    width: 160px;
 }
 
 .shoppingCartGoodsOperating a:hover,

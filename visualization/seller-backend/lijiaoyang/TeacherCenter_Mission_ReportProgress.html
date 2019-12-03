@@ -1,0 +1,96 @@
+<!--授业中心----授业任务中----上报授业进度 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+				$(function(){
+					$("header").load("common.html #wit_header");
+					$("footer").load("common.html #wit_footer");
+				})
+			});
+		</script>
+		<style type="text/css">
+			/* 授业者上报授业进度 */
+			.reportProgressButtons{font-size: 18px; background-color: #BA1A33;color: #FFFFFF;width: 200px;height: 50px;margin-top: 30px;border: 1px solid #BA1A33;margin-left: 30px;}
+			.reportProgressButtons:hover{background-color: #a90922;color: #FFFFFF;}
+			.reportProgressNotion{color: #8B8181;position: absolute;margin: 40px 0 0 20px;}
+		</style>
+	</head>
+
+	<body style="background-color: #F5F5F5;">
+		<!-- 头部 -->
+		<header></header>
+
+    <div class="row" style="height:60px; background-color: #B91A33;">
+			<div class="container">
+				<p style="font-size: 21px; padding: 15px 0">
+					<strong style="color: #F5F5F5">授业者上报授业进度</strong>
+				</p>
+			</div>
+		</div>
+
+    <div class="container">
+
+			<div class="row" style="margin-top: 15px; ">
+					<ul class="breadcrumb" id="breadCrumb"
+							style="color: #8B8181; background-color: #F5F5F5">
+						<li class="breadcrumb-item"><a href="TeacherCenter_Mission.html">首页</a></li>
+						<li class="breadcrumb-item"><a href="TeacherCenter_Mission.html">授业任务</a></li>
+						<li class="breadcrumb-item"><a href="#">授业者上报授业进度</a></li>
+					</ul>
+			</div>
+
+      <div class="row align-items-center"
+					 style="padding:15px 20px 50px 0; width:1150px; background-color: #FFFFFF">
+        <div style="margin-left: 50px; font-size: 16px">
+		  <!-- <div> -->
+		  	<button type="submit" class="btn btn-search reportProgressButtons">过1/3进度</button><span class="reportProgressNotion">（收款50%）</span><br>
+		  	<button type="submit" class="btn btn-search reportProgressButtons">过1/2进度</button><span class="reportProgressNotion">（收款20%）</span><br>
+		  	<button type="submit" class="btn btn-search reportProgressButtons">过2/3进度</button><span class="reportProgressNotion">（收款30%）</span><br>
+		  	<button type="submit" class="btn btn-search reportProgressButtons">全部交付</button><span class="reportProgressNotion">（结课）</span><br>
+		  	<button type="submit" class="btn btn-search reportProgressButtons">未开始取消授业</button><span class="reportProgressNotion">（全额退款）</span><br>
+		  	<button type="submit" class="btn btn-search reportProgressButtons">中途取消授业</button><span class="reportProgressNotion">（需要提前和学习者协商退款金额）</span><br>
+		  <!-- </div> -->
+        </div>
+      </div>
+	  <div style="margin-left: -45px;padding-bottom: 45px;">
+	  	<button type="submit" class="btn btn-search reportProgressButtons">上报进度</button>
+	  	<button type="submit" class="btn btn-search reportProgressButtons">取消</button>
+	  </div>
+
+
+    </div>
+
+
+    <footer></footer>
+	</body>
+
+</html>
