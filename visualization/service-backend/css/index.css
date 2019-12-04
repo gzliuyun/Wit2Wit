@@ -1,0 +1,304 @@
+* {
+	font-family: "微软雅黑";
+	color: #554F4F;
+}
+
+/* 头部 */
+#wit_header{
+	height: 40px;
+	background-color: #F5F5F5;
+}
+#wit_header .container .row a{
+	font-family: "微软雅黑";
+	color: #554F4F;
+	font-size: 13px;
+}
+#wit_header .help{
+	position: relative;
+}
+#wit_header .help .help-2{
+	position: absolute;
+	top: 40px;
+	z-index: 999;
+}
+#wit_header li ul {
+	display: none;
+	list-style: none;
+	color: #B91A33;
+	text-align: center;
+	padding: 5px 15px;
+	background-color: #CCCCCC;
+}
+
+#wit_header li:hover ul {
+	display: block;
+	text-align: center;
+	
+}
+
+#wit_header .topic {
+	line-height: 40px;
+	font-size: 13px;
+	color: #B91A33;
+	text-align: center;
+}
+
+#wit_header .location {
+	line-height: 40px;
+
+}
+
+#wit_header .location a {
+	color: #000000;
+}
+
+#wit_header .header-nav {
+}
+
+#wit_header .header-nav ul li a {
+	color: #000000;
+}
+
+/* 搜索 */
+#wit_search{
+	background-color: #EBEBEB;
+	
+}
+#wit_search .logo{
+	width: 200px;
+	padding-left: 80px;
+}
+#wit_search .logo img{
+	width:180%;
+	height: auto;
+	padding-top: 20px;
+}
+
+#wit_search .search {
+	padding-top: 20px;
+	margin-left: 100px;
+}
+
+#wit_search .search .input-search {
+	margin-top: 10px;
+	border: 3px solid #BA1A33;
+	border-radius: 0px;
+	width: 80%;
+	height: auto;
+	padding: 3px 10px;
+	font-size: 16px;
+	background-color: #EBEBEB;
+}
+
+#wit_search .search .input-search:focus,
+#wit_search .search .btn-search:focus {
+	outline: none;
+	outline-color: none;
+}
+
+#wit_search .search .btn-search {
+	border: 3px solid #B91A33;
+	background-color: #B91A33;
+	color: white;
+	border-left: none;
+	width: 19%;
+	padding: 3px 10px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: -4px;
+}
+
+#wit_search .search .btn-search:active {
+	opacity: 0.5;
+}
+
+#wit_search .search .topic-text {
+	width: 80%;
+	padding-top: 5px;
+}
+
+#wit_search .box {
+	text-align: center;
+	line-height: 80px;
+}
+#wit_search .box{
+	margin-top: 10px;
+}
+#wit_search .box a {
+	
+	color: #B91A33;
+	padding: 0 10px;
+}
+
+/* 搜索 */
+/* 广告 */
+#wit_ad{
+	background-color: #EBEBEB;
+}
+.nav-tabs {
+  border-bottom: 1px solid #BBBBBB;
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -2px;
+}
+.nav-tabs > li > a {
+  margin-right: 2px;
+  color: #555;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+}
+.nav-tabs > li > a:hover {
+  border: none;
+  color: #B91A33;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #B91A33;
+  background-color: transparent;
+  cursor: default;
+  border: 1px solid transparent;
+  border-bottom: 2px solid #B91A33;
+}
+#wit_ad .tab-content{
+	margin-top: 15px;
+}
+/* 广告 */
+/* 内容 */
+#wit_content{
+	background-color: #EBEBEB;
+	padding-bottom: 100px;
+}
+#wit_content .row ul {
+	background-color: #9D999A;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+#wit_content .row .circal {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	color: #F5F5F5;
+	border: 1px solid;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+#wit_content .row ul li {
+	width: 100%;
+	text-align: center;
+}
+
+#wit_content .row ul li a {
+	color: #F5F5F5;
+}
+
+#wit_content .nav>li>a:hover,
+#wit_content .nav>li>a:focus {
+	color: #F5F5F5;
+	background-color: #9D999A;
+}
+
+#wit_content .nav-pills>li {
+	float: left;
+}
+
+#wit_content .nav-pills>li>a {
+	border-radius: 0px;
+}
+
+#wit_content .nav-pills>li+li {
+	margin-left: 0px;
+}
+#wit_content .nav-pills>li.active .circal{
+	color: #B91A33;
+}
+#wit_content .nav-pills>li.active>a,
+#wit_content .nav-pills>li.active>a:hover,
+#wit_content .nav-pills>li.active>a:focus 
+{
+	color: #B91A33;
+	background-color: #FFFFFF;
+}
+#wit_content .container .row .col-md-10 .col-md-2{
+	margin-bottom: 20px;
+}
+#wit_content .tab-box{
+	height: 640px;
+	overflow: auto;
+}
+ /* 设置滚动条的样式 */
+#wit_content .tab-box::-webkit-scrollbar {
+    width:0px;
+}
+
+        /* 滚动槽 */
+#wit_content .tab-box::-webkit-scrollbar-track {
+    border-radius:10px;
+}
+
+        /* 滚动条滑块 */
+#wit_content .tab-box::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:black;
+}
+#wit_content .border {
+	width: 100%;
+	border: 1px solid black;
+	height: 50px;
+	background-color: #212121;
+	color: #F5F5F5;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+}
+
+#wit_content .container .row .col-md-2 li {}
+
+#wit_content .container .row .col-md-2 a {}
+
+#wit_content .container .row .col-md-2 {}
+
+#myTabContent .row img {}
+
+/* 内容 */
+
+
+/* 尾部 */
+#wit_footer{
+}
+#wit_footer .footer-all {
+	
+	color: #c1c1c1;
+	padding: 5px 5px;
+	background-color: #B91A33;
+}
+
+#wit_footer .footer-all ul {
+	list-style: none;
+	padding-top: 25px;
+
+}
+
+#wit_footer .footer-all ul li {
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#wit_footer .footer-all ul li a {
+	color: #F5F5F5;
+}
+
+#wit_footer .footer-all li+li {
+	border-left: 1px solid #F5F5F5;
+}
+#wit_footer .footer-all .copyright
+{	
+	padding: 10px;
+	color: #F5F5F5;
+	font-size: 12px;
+}
+/* 尾部 */

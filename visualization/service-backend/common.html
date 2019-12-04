@@ -1,0 +1,408 @@
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" href="css/bootstrap.css">
+<header id="wit_header">
+	<nav class="navbar navbar-expand"
+			 style="font-size: 16px;height: 40px; background-color: #F5F5F5" >
+		<div class="container" style="width: 100%">
+			<ul class="navbar-nav mr-auto" >
+				<li class="nav-item">
+					<img src="image/logo_navbar.png" alt="慧师搜网" width="30" style="padding-top:4px"/>
+				</li>
+					<li class="nav-item">
+						<a class="navbar-brand" href="#"
+							 style="color: #B91A33; font-size: 16px; padding-top:8px">
+							&nbsp;&nbsp;&nbsp;学技能&nbsp;上慧师搜网
+						</a>
+					</li>
+					<li class="navbar-nav dropdown">
+							<a class="nav-link dropdown-toggle" href="#"  id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="glyphicon glyphicon-map-marker" style="color: #B91A33;"></span>定位/语言
+							</a>
+
+							<div class="dropdown-menu" id="witowit-dingwei-dropdown" aria-labelledby="dropdownMenuLink">
+							<div class="dingwei">
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">北京</a>
+									<a class="dropdown-item" href="#">上海</a>
+									<a class="dropdown-item" href="#">天津</a>
+									<a class="dropdown-item" href="#">重庆</a>
+									<a class="dropdown-item" href="#">河北</a>
+									<a class="dropdown-item" href="#">山西</a>
+								</div>
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">江苏</a>
+									<a class="dropdown-item" href="#">浙江</a>
+									<a class="dropdown-item" href="#">山东</a>
+									<a class="dropdown-item" href="#">福建</a>
+									<a class="dropdown-item" href="#">河南</a>
+									<a class="dropdown-item dropdown-item-3"  href="#">内蒙古</a>
+								</div>
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">广东</a>
+									<a class="dropdown-item" href="#">广西</a>
+									<a class="dropdown-item" href="#">四川</a>
+									<a class="dropdown-item" href="#">江西</a>
+									<a class="dropdown-item" href="#">海南</a>
+									<a class="dropdown-item" href="#">贵州</a>
+								</div>
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">湖北</a>
+									<a class="dropdown-item" href="#">湖南</a>
+									<a class="dropdown-item" href="#">安徽</a>
+									<a class="dropdown-item" href="#">辽宁</a>
+									<a class="dropdown-item" href="#">吉林</a>
+									<a class="dropdown-item dropdown-item-3"  href="#">黑龙江</a>
+								</div>
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">云南</a>
+									<a class="dropdown-item" href="#">陕西</a>
+									<a class="dropdown-item" href="#">甘肃</a>
+									<a class="dropdown-item" href="#">宁夏</a>
+									<a class="dropdown-item" href="#">青海</a>
+									<a class="dropdown-item" href="#">西藏</a>
+								</div>
+								<div class="form-inline">
+									<a class="dropdown-item" href="#">港澳</a>
+									<a class="dropdown-item" href="#">台湾</a>
+									<a class="dropdown-item" href="#">新疆</a>
+									<a class="dropdown-item dropdown-item-7"  href="#">境外注册授业者</a>
+								</div>
+							</div>
+							<!-- 分隔线 -->
+							<div class="dropdown-divider"></div>
+							<div class="yuyan">
+								<a class="dropdown-item" href="#">简体中文</a><br>
+								<a class="dropdown-item" href="#">繁体中文</a><br>
+								<a class="dropdown-item" href="#">English</a>
+							</div>
+							</div>
+					</li>
+			</ul>
+
+
+			<ul class="navbar-nav" style="flex-direction: row !important">
+				<li class="nav-item"><a class="nav-link" href="" style="width:50px">首页</a></li>
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown"
+							 aria-haspopup="true" aria-expanded="false" style="width: 100px">
+							我的订单
+						</a>
+						<div class="dropdown-menu" id="witowit-orders-dropdown" aria-labelledby="dropdownMenuLink">
+						<a class="dropdown-item" href="#">全部订单</a>
+						<a class="dropdown-item" href="#">待付款</a>
+						<a class="dropdown-item" href="#">待学习/服务</a>
+						<a class="dropdown-item" href="#">待评价</a>
+						<a class="dropdown-item" href="#">中途退款</a>
+						<a class="dropdown-item" href="#">取消订单</a>
+						<a class="dropdown-item" href="#">订单回收站</a>
+						</div>
+				</li>
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+							 aria-haspopup="true" aria-expanded="false" style="width: 120px">
+							技能购物车
+						</a>
+						<div class="dropdown-menu" id="witowit-cart-dropdown" aria-labelledby="dropdownMenuLink">
+							<div class="row">
+								<div class="jngwc_content">
+									您的购物车中没有技能。
+								</div>
+								<div class="jngwc_btn">
+									<button type="button" class="btn btn-search">查看我的购物车</button>
+								</div>
+							</div>
+						</div>
+				</li>
+				<li class="nav-item "><a class="nav-link" href="" style="width: 65px">手机版</a></li>
+				<li class="nav-item"><a class="nav-link" href="" style="width: 100px">授业者入驻</a></li>
+				<li class="nav-item"><a class="nav-link" href="" style="width: 100px">授业服务商</a></li>
+				<li class="nav-item" ><a class="nav-link" href="" style="width: 100px">客服帮助</a></li>
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+							 aria-haspopup="true" aria-expanded="false" style="width: 100px">
+							网站导航
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="witowit-guide-dropdown" aria-labelledby="dropdownMenuLink">
+							<div class="row">
+								<div class="col-6 centerDivide">
+									<dl style="margin-left:10px;">
+										<dt>技能列表</dt>
+										<dd style="padding-top: 10px;">
+											<div class="form-inline">
+												<a class="dropdown-item" href="#">推荐技能</a>
+												<a class="dropdown-item" href="#">热门技能</a>
+												<a class="dropdown-item" href="#">生活技能</a>
+												<a class="dropdown-item" href="#">文体活动</a>
+											</div>
+											<div class="form-inline">
+												<a class="dropdown-item" href="#">体育竞技</a>
+												<a class="dropdown-item" href="#">宝爸宝妈</a>
+												<a class="dropdown-item" href="#">美容美妆</a>
+												<a class="dropdown-item" href="#">休闲娱乐</a>
+											</div>
+											<div class="form-inline">
+												<a class="dropdown-item" href="#">职业技术</a>
+												<a class="dropdown-item" href="#">信息科技</a>
+												<a class="dropdown-item" href="#">传统技术</a>
+												<a class="dropdown-item" href="#">知识拓展</a>
+											</div>
+											<div class="form-inline">
+												<a class="dropdown-item" href="#">操作技能</a>
+												<a class="dropdown-item" href="#">金融技术</a>
+												<a class="dropdown-item" href="#">基础产业</a>
+												<a class="dropdown-item" href="#">综合技术</a>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<div class="col-3 centerDivide">
+									<dl>
+										<dt>授业同行交流</dt>
+									</dl>
+								</div>
+								<div class="col-3">
+									<dl>
+										<dt>学员社交</dt>
+									</dl>
+								</div>
+							</div>
+						</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- 带慧师搜网logo的搜索 -->
+<section-index id="wit_search">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-2">
+  				<a href="http://witowit.com/" target="_blank"><img src="./image/logo.png" style="height: 90px;padding-top:20px;margin-left: 30px;" ></a>
+  			</div>
+  			<div class="col-10">
+  				<div class="input-group" style="padding-top: 30px; width: 700px; margin-left: 130px;">
+  				  <input type="search" class="form-control" style="border:1.5px solid #BA1A33;border-radius: 0;"/>
+  				  <span class="input-group-btn">
+  				    <button type="submit"
+  				            class="btn btn-search" style="font-weight: bolder; background-color: #BA1A33;color: #FFFFFF;width: 90px;border-radius: 0;">
+  				      搜索
+  				    </button>
+  				  </span>
+  				  <div style="padding-left: 60px; padding-top: 5px;">
+  				  	<a href="" style="color: #BA1A33;">登录</a>&nbsp;|&nbsp;<a href="" style="color: #BA1A33;">注册</a>
+  				  </div>
+  				</div>
+  				<div style="padding-left: 250px; font-size: 13px;padding-top: 10px;">
+  					<p class="text-muted ">汇聚全球一技之长者，使访问者人人受益</p>
+  				</div>
+  			</div>
+  		</div>
+		<div class="row">
+			<div class="col-8" id="thirdHeaderLeft">
+				<a href="">首页</a>
+				<a href="">授业者推荐</a>
+				<a href="">新增技能</a>
+				<a href="">新增类别</a>
+			</div>			
+			<div class="col-4" id="thirdHeaderRight">
+				<a href="ShouYeChat.html">授业同行交流</a>
+				<a href="XueYuanChat.html">学员社交</a>	
+			</div>	
+		</div>
+  	</div>
+	<hr>
+  </section-index>
+<!-- 有头像的三个中心 -->
+<section-center id="wit_centers">
+	<div class="container">
+			<div class="row" style="width: 1150px;">
+				<div class="col-4">
+					<div class="row">
+						<div class="fakePicture">
+							<p style="margin-top: 35px;margin-left: 35px;font-size: 16px;">头像</p>
+						</div>
+						<div class="my3centers">
+							<span style="color: #BA1A33;">我的服务中心</span><span>/学习中心/授业中心</span>
+							<div style="font-size: 12px;margin-top: 10px;">
+								<span style="color: #BA1A33;">荣誉值:</span>
+								<span style="margin-left: 10px;color: #BA1A33;">100</span>
+								<span style="margin-left: 50px;color: #BA1A33;">100</span>
+								<span style="margin-left: 50px;color: #BA1A33;">100</span>
+							</div>
+						</div>
+					</div>
+					<div style="font-size: 12px; margin-top: 10px;">
+						<p>用户代码：00000001</p>
+					</div>					
+				</div>
+				<div class="col-8">
+					<div class="input-group" style="padding-top: 30px; width: 700px;">
+					  <input type="search" class="form-control" style="border:1.5px solid #BA1A33;border-radius: 0;"/>
+					  <span class="input-group-btn">
+					    <button type="submit"
+					            class="btn btn-search" style="font-weight: bolder; background-color: #BA1A33;color: #FFFFFF;width: 90px;border-radius: 0;">
+					      搜索
+					    </button>
+					  </span>
+					  <div style="padding-left: 60px; padding-top: 5px;">
+					  	<a href="" style="color: #BA1A33;">您好，用户名</a>&nbsp;|&nbsp;<a href="" style="color: #BA1A33;">退出</a>
+					  </div>
+					</div>
+					<div style="padding-left: 100px; font-size: 13px;padding-top: 10px;">
+						<p class="text-muted ">汇聚全球一技之长者，使访问者人人受益</p>
+					</div>
+				</div>
+			</div>
+		</div>
+</section-center>
+<!-- 稍微靠上的导航栏 -->
+<div id="wit_serviceNav">
+	<div class="container">
+		<div class="row">
+			<div id="thirdHeaderLeft">
+				<a href="">首页</a>
+				<a href="">装修视频</a>
+				<a href="">摄影市场</a>
+				<a href="">流量营销</a>
+				<a href="">运营外包</a>
+				<a href="">数据分析</a>
+				<a href="">商务服务及培训</a>
+			</div>	
+		</div>
+	</div>
+	<hr>
+</div>
+<div id="wit_studyAndTeachNav">
+	<div class="container">
+		<div class="row">
+			<div id="thirdHeaderLeft">
+				<a href="">首页</a>
+				<a href="">授业者推荐</a>
+				<a href="">新增技能</a>
+				<a href="">新增类别</a>
+				<a href="">授业同行交流</a>
+				<a href="">学员社交</a>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<!--服务中心侧边栏-->
+<ul class="nav flex-column sideNavbar" id="serviceCenter-sideNavbar">
+  <li class="nav-item"><strong class="nav-link">全部功能</strong></li>
+  <li class="nav-item" id="serviceAccountManager"><a class="nav-link" href="ServiceCenter_AccountManager.html">账号管理</a></li>
+  <li class="nav-item" id="serviceApplication"><a class="nav-link" href="ServiceCenter_Application.html">授业服务申请</a></li>
+  <li class="nav-item" id="serviceMission"><a class="nav-link" href="ServiceCenter_Mission.html">服务任务</a></li>
+  <li class="nav-item" id="servicePublishing"><a class="nav-link" href="ServiceCenter_ServicePublishing.html">发布服务</a></li>
+  <li class="nav-item" id="serviceDecorationAndManagement"><a class="nav-link" href="ServiceCenter_DecorationAndManagement.html">店铺装修及管理</a></li>
+  <li class="nav-item" id="servicePromotion"><a class="nav-link" href="ServiceCenter_Promotion.html">推广促销</a></li>
+  <li class="nav-item" id="serviceAddresses"><a class="nav-link" href="ServiceCenter_Addresses.html">常用服务地址</a></li>
+	<li class="nav-item" id="serviceStatisticalAnalysis"><a class="nav-link" href="ServiceCenter_StatisticalAnalysis.html">统计分析</a></li>
+	<li class="nav-item" id="serviceAfterSalesService"><a class="nav-link" href="ServiceCenter_AfterSalesService.html">售后服务</a></li>
+	<li class="nav-item" id="serviceViolationAlert"><a class="nav-link" href="ServiceCenter_ViolationAlert.html">违规提醒</a></li>
+  <li class="nav-item" id="serviceCommentCenter"><a class="nav-link" href="ServiceCenter_CommentCenter.html">评价中心</a></li>
+  <li class="nav-item" id="serviceComplaintCenter-slight"><a class="nav-link" href="ServiceCenter_ComplaintCenter-slight.html">投诉中心（轻微）</a></li>
+  <li class="nav-item" id="serviceComplaintCenter-serious"><a class="nav-link" href="ServiceCenter_ComplaintCenter-serious.html">投诉中心（严重）</a></li>
+  <li class="nav-item" id="serviceMessageCenter"><a class="nav-link" href="ServiceCenter_MessageCenter.html">消息中心</a></li>
+	<li class="nav-item" id="serviceNotion"><a class="nav-link" href="ServiceCenter_Notion.html">考核奖惩通知</a></li>
+</ul>
+<!--授业中心侧边栏-->
+<ul class="nav flex-column sideNavbar" id="teacherCenter-sideNavbar">
+  <li class="nav-item"><strong class="nav-link">全部功能</strong></li>
+  <li class="nav-item" id="teacherAccountManager"><a class="nav-link" href="TeacherCenter_AccountManager.html">账户管理</a></li>
+  <li class="nav-item" id="taughtApplication"><a class="nav-link" href="TeacherCenter_Application.html">授业申请</a></li>
+  <li class="nav-item" id="taughtMission"><a class="nav-link" href="TeacherCenter_Mission.html">授业任务</a></li>
+  <li class="nav-item" id="skillPublishing"><a class="nav-link" href="TeacherCenter_SkillPublishing.html">发布技能</a></li>
+  <li class="nav-item" id="teacherDecorationAndManagement"><a class="nav-link" href="TeacherCenter_DecorationAndManagement.html">店铺装修及管理</a></li>
+  <li class="nav-item" id="teacherPromotion"><a class="nav-link" href="TeacherCenter_Promotion.html">推广促销</a></li>
+  <li class="nav-item" id="studentManager"><a class="nav-link" href="TeacherCenter_StudentManager.html">学习者管理</a></li>
+  <li class="nav-item" id="taughtAddresses"><a class="nav-link" href="TeacherCenter_Addresses.html">常用授业地址</a></li>
+  <li class="nav-item" id="taughtStatisticalAnalysis"><a class="nav-link" href="TeacherCenter_StatisticalAnalysis.html">统计分析</a></li>
+  <li class="nav-item" id="taughtAfterSalesService"><a class="nav-link" href="TeacherCenter_AfterSalesService.html">授后服务</a></li>
+  <li class="nav-item" id="teacherViolationAlert"><a class="nav-link" href="TeacherCenter_ViolationAlert.html">违规提醒</a></li>
+  <li class="nav-item" id="teacherCommentCenter"><a class="nav-link" href="TeacherCenter_CommentCenter.html">评价中心</a></li>
+  <li class="nav-item" id="taughtComplaintCenter-slight"><a class="nav-link" href="TeacherCenter_ComplaintCenter-slight.html">投诉中心（轻微）</a></li>
+  <li class="nav-item" id="taughtComplaintCenter-serious"><a class="nav-link" href="TeacherCenter_ComplaintCenter-serious.html">投诉中心（严重）</a></li>
+  <li class="nav-item" id="teacherMessageCenter"><a class="nav-link" href="TeacherCenter_MessageCenter.html">消息中心</a></li>
+  <li class="nav-item" id="teacherNotion"><a class="nav-link" href="TeacherCenter_Notion.html">考核奖惩通知</a></li>
+  <li class="nav-item" id="myProviderOrders"><a class="nav-link" href="TeacherCenter_MyProviderOrders.html">我的服务商订单</a></li>
+  <li class="nav-item" id="myProviderShoppingCart"><a class="nav-link" href="TeacherCenter_MyProviderShoppingCart.html">我的服务购物车</a></li>
+  <li class="nav-item" id="myProviderFavorites"><a class="nav-link" href="TeacherCenter_MyProviderFavorites.html">我的服务商收藏</a></li>
+</ul>
+<!--学习中心侧边栏-->
+<ul class="nav flex-column sideNavbar" id="studyCenter-sideNavbar">
+  <li class="nav-item"><strong class="nav-link">全部功能</strong></li>
+  <li class="nav-item" id="studentAccountManager"><a class="nav-link" href="StudyCenter_AccountManager.html">账户管理</a></li>
+  <li class="nav-item" id="studentShoppingCart"><a class="nav-link" href="StudyCenter_ShoppingCart.html">技能购物车</a></li>
+  <li class="nav-item" id="myOrders"><a class="nav-link" href="StudyCenter_MyOrders.html">我的订单</a></li>
+  <li class="nav-item" id="myFavorites"><a class="nav-link" href="StudyCenter_MyFavorites.html">我的收藏</a></li>
+  <li class="nav-item" id="myAddresses"><a class="nav-link" href="StudyCenter_MyAddresses.html">常用学习地址</a></li>
+  <li class="nav-item" id="refundManager"><a class="nav-link" href="StudyCenter_RefundManager.html">退款管理</a></li>
+  <li class="nav-item" id="customerService"><a class="nav-link" href="StudyCenter_CustomerService.html">客户服务</a></li>
+  <li class="nav-item" id="studyCommentCenter"><a class="nav-link" href="StudyCenter_CommentCenter.html">评价中心</a></li>
+  <li class="nav-item" id="studyComplaintCenter-slight"><a class="nav-link" href="StudyCenter_ComplaintCenter-slight.html">投诉中心（轻微）</a></li>
+  <li class="nav-item" id="studyComplaintCenter-serious"><a class="nav-link" href="StudyCenter_ComplaintCenter-serious.html">投诉中心（严重）</a></li>
+  <li class="nav-item" id="studentMessageCenter"><a class="nav-link" href="StudyCenter_MessageCenter.html">消息中心</a></li>
+</ul>
+<!-- 猜你喜欢 -->
+<section-youlike id="wit_guessYouLike">
+	<div class="row" style="margin-top: 15px;width: 1150px;">
+		<div class="guessYouLike">
+			<p>猜你喜欢，看看大家都在学什么？</p>
+		</div>
+		<!-- 猜你喜欢的展示页面 -->
+		<div class="row">
+			<div class="ServiceSkill">
+				<div class="ServiceSkillImage"></div>
+				<div class="ServiceSkillInfo">
+					<div class="skillName">
+						<span style="font-size: 16px;">羽毛球基础训练</span>
+					</div>
+				</div>
+			</div>
+			<div class="ServiceSkill">
+				<div class="ServiceSkillImage"></div>
+				<div class="ServiceSkillInfo">
+					<div class="skillName">
+						<span style="font-size: 16px;">羽毛球基础训练</span>
+					</div>
+				</div>
+			</div>
+			<div class="ServiceSkill">
+				<div class="ServiceSkillImage"></div>
+				<div class="ServiceSkillInfo">
+					<div class="skillName">
+						<span style="font-size: 16px;">羽毛球基础训练</span>
+					</div>
+				</div>
+			</div>
+			<div class="ServiceSkill">
+				<div class="ServiceSkillImage"></div>
+				<div class="ServiceSkillInfo">
+					<div class="skillName">
+						<span style="font-size: 16px;">羽毛球基础训练</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section-youlike>
+<footer id="wit_footer">
+	  <div class="footer-all" style="margin-top: 15px;">
+	  	<div class="text-center">
+	  		<ul>
+	  			<li><a href="about.html">关于我们</a></li>
+	  			<li><a href="about.html">联系我们</a></li>
+	  			<li><a href="about.html">投诉举报</a></li>
+	  			<li><a href="zhaopin.html">诚征英才</a></li>
+	  			<li><a href="yinsi.html">隐私政策</a></li>
+	  			<li><a href="#wit_header">回到顶部</a></li>
+	  		</ul>
+	  	</div>
+	  	<div class="text-center">
+	  		<p class="copyright">©&nbsp;&nbsp;2019&nbsp;&nbsp;witowit.com&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;京&nbsp;ICP&nbsp;备&nbsp;19030437号</p>
+	  	</div>
+	</div>
+</footer>
+
