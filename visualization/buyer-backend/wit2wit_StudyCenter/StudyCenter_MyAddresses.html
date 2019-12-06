@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+        $("header").load("common.html #wit_header");
+        $("section").load("common.html #wit_centers");
+        $("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+        $("footer").load("common.html #wit_footer");
+        $("#sideNav").load("common.html #studyCenter-sideNavbar",
+          function() {
+            $("#myAddresses").addClass("selected");
+            $("#studyCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20);
+          }
+        );
+        $("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+		<div id="studyNav"></div>
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+					<div><strong class="contentMainTitle">常用学习地址</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+					<form style="margin-bottom: 30px">
+						<div class="form-group row">
+							<label for="addAddress" class="col-2 col-form-label ">添加新地址</label>
+							<div class="col-6">
+								<input type="text" class="form-control " id="addAddress">
+							</div>
+						</div>
+
+						<button type="submit" class="btn btn-sm btn-studyCenter" style="margin-left: 15px">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+					</form>
+
+          <div style="width: 90%; margin-left: 15px">
+<!--				地址表头-->
+						<div class="row align-items-center"
+								 style="margin-top: 10px; margin-left: 0; height:40px; background-color: #D8D8D8">
+							<div class="text-left col-9"> 已添加地址</div>
+							<div class="text-center col-2"> 操作	</div>
+						</div>
+
+<!--				一个地址块-->
+						<div class="row align-items-center tableItem">
+              <div class="text-left col-9">北京省北京市海淀区XXX街道XXX路XXX号</div>
+							<div class="text-center col-2">
+                <ul class="options">
+                  <li><a href="#">修改</a></li>
+                  <li><a href="#">删除</a></li>
+                </ul>
+              </div>
+						</div>
+          </div>
+
+        </div>
+      </div>
+			<div id="guessYouLike"></div>
+    </div>
+		<footer></footer>
+	</body>
+
+</html>

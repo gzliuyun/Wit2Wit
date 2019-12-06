@@ -1,0 +1,189 @@
+.redPlaceholder::-webkit-input-placeholder {
+  color: #B91A33;
+}
+.redPlaceholder:-moz-placeholder {/* Firefox 18- */
+  color: #B91A33;
+}
+.redPlaceholder::-moz-placeholder{/* Firefox 19+ */
+ color: #B91A33;
+}
+.redPlaceholder:-ms-input-placeholder {
+  color: #B91A33;
+}
+
+.contentSecondaryTitle {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.btn-studyCenter {
+    border-radius: 0;
+    background-color: #B91A33;
+    color: #FFFFFF;
+}
+.btn-studyCenter:hover{
+    background-color: #A80922;
+    color: #FFFFFF;
+}
+
+.noneShadow:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-tab {
+    border-bottom: solid 3px #B91A33;
+}
+
+.btn-tabChoice{
+    height: 60px;
+    font-size: 21px;
+    background: #B91A33;
+    color: #FFFFFF;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.btn-tabChoice:hover {
+    background-color: #EEEEEE;
+    color: #B91A33;
+}
+
+.btn-tabUnchoice{
+    width: 400px;
+    height: 60px;
+    font-size: 21px;
+    background-color: #FFFFFF;
+    color: #B91A33;
+    border-radius: 0;
+}
+
+.btn-tabUnchoice:hover {
+    background-color: #EEEEEE;
+    color: #B91A33;
+}
+
+.btn-number {
+    font-weight:bold;
+    color: #B91A33;
+}
+
+.btn-number:hover {
+    color: #CA2B44;
+}
+.custom-checkbox .custom-control-input:focus ~.custom-control-label::before{
+    box-shadow: none;
+    border-color: #ADB5BD;
+}
+.custom-checkbox .custom-control-input:checked ~.custom-control-label::before{
+    background-color: #B91A33;
+    border-color: #B91A33;
+    box-shadow: none;
+}
+.custom-checkbox .custom-control-input:active ~.custom-control-label::before {
+    background-color: #B91A33;
+    opacity: 0.5;
+}
+
+.tableItem {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    padding: 10px 0 10px 0;
+    background-color: #FFFFFF;
+}
+.tableItem a:link,
+.tableItem a:visited {
+    color: #554F4F;
+}
+
+.tableItem a:hover {
+    color: #B91A33;
+}
+
+.options {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.shoppingCartGoodsImg {
+    margin-left: -10px;
+    width: 100px;
+}
+.shoppingCartGoodsName {
+    margin-left: 10px;
+    width: 150px;
+    margin-right: -10px;
+}
+
+.shoppingCartGoodsPrice {
+    width:120px
+}
+.shoppingCartGoodsSemester{
+    width: 100px
+}
+.shoppingCartGoodsStudent {
+    width: 90px;
+}
+.shoppingCartGoodsTotalPrice {
+    width: 110px;
+}
+.shoppingCartGoodsOperating {
+    width: 40px;
+}
+
+.myOrderGoods {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    padding: 10px 0 10px 0;
+    background-color: #FFFFFF;
+}
+
+.myOrderGoods a:link,
+.myOrderGoods a:visited {
+    color: #554F4F;
+}
+.myOrderGoods a:hover {
+    color: #B91A33;
+}
+
+.myOrderGoodsImg {
+    margin-left: 10px;
+}
+
+.myOrderGoodsName {
+    margin-left: 10px;
+    width: 150px;
+    margin-right: -10px;
+}
+
+.myOrderGoodsPrice {
+    width:100px
+}
+.myOrderGoodsSemester{
+    width: 90px
+}
+.myOrderGoodsStudent {
+    width: 80px;
+}
+.myOrderGoodsTotalPrice {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    border-left: none;
+}
+
+.myOrderGoodsState {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    border-left: none;
+}
+.myOrderGoodsOperating {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    border-left: none;
+}
+
+@media screen and (max-width: 1920px) {
+    body{
+        width: 1920px;
+    }
+}

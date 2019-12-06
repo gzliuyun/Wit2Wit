@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+    <link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #studyCenter-sideNavbar",     //这里和注释2匹配
+						function() {
+							$("#myOrders").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+							$("#studyCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+			$(function () {
+				let id = "skillOrders";
+				let btns = $("button[name='orderTab']");
+				btns.mousedown(function () {
+					btns.removeClass('btn-tabChoice');
+					btns.addClass('btn-tabUnchoice');
+					$(this).addClass('btn-tabChoice');
+					$(this).removeClass('btn-tabUnchoice');
+
+					id = $(this).attr('id').toString();
+					document.getElementById('name').innerHTML = (id==="skillOrders")?"技能名称":"服务名称";
+					document.getElementById('detail').innerHTML = (id==="skillOrders")?"学习人数":"明细";
+					document.getElementById('number').innerHTML = (id==="skillOrders")?"学习期数":"数量";
+				});
+      });
+
+			$(function() {
+				let height = $('.myOrderGoods').innerHeight();
+				$('.myOrderGoodsTotalPrice').innerHeight(height);
+				$('.myOrderGoodsState').innerHeight(height);
+				$('.myOrderGoodsOperating').innerHeight(height);
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+<!--    注释1：因为是授业者中心，所以下面这里应该load("#wit_studyAndTeachNav")-->
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+
+<!--    注释2：这里应当根据中心不同load不同的sideNavbar-->
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+<!--      注释3：这里根据页面不同更改内容-->
+					<div><strong class="contentMainTitle">我的订单</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+<!--          这里是需要修改的内容-->
+<!--          这里是特定内容-->
+<!--          这里是各个页面不一样的内容-->
+
+<!--					选择订单类型-->
+          <div class="btn-group btn-group-toggle btn-tab"
+							 style="width: 95%" data-toggle="buttons" >
+            <button class="btn btn-tabChoice noneShadow" type="button" name="orderTab"
+										style="width: 45%" id="skillOrders">技&nbsp;能&nbsp;订&nbsp;单</button>
+            <button class="btn btn-tabUnchoice noneShadow" type="button" name="orderTab"
+										style="width: 45%" id="serviceOrders">服&nbsp;务&nbsp;订&nbsp;单</button>
+          </div>
+
+<!--					选择订单状态-->
+					<div style="width: 95%">
+						<div class="row align-items-center"
+							 style="margin-top: 10px; height:40px; background-color: #D8D8D8">
+							<div class="text-center col-2"> 全部订单 </div>
+							<div class="text-center col-2"> 待付款 </div>
+							<div class="text-center col-2"> 待学习	</div>
+							<div class="text-center col-2">	待评价 </div>
+							<div class="text-center col-2"> 中途退款 </div>
+							<div class="text-center col-2"> 取消订单 </div>
+						</div>
+					</div>
+
+					<div style="width: 95%">
+						<div class="row align-items-center"
+								 style="height:40px;">
+							<button class="btn btn-link btn-number noneShadow col-2"> 2 </button>
+							<button class="btn btn-link btn-number noneShadow col-2"> 3 </button>
+							<button class="btn btn-link btn-number noneShadow col-2"> 0	</button>
+							<button class="btn btn-link btn-number noneShadow col-2"> 0 </button>
+							<button class="btn btn-link btn-number noneShadow col-2"> 0 </button>
+							<button class="btn btn-link btn-number noneShadow col-2"> 0 </button>
+						</div>
+					</div>
+
+<!--					订单表头-->
+					<div class="row align-items-center" style="width: 95%; height: 40px; background-color: #D8D8D8">
+						<div class="row align-items-center"
+									 style="width: 67%">
+							<div class="text-center myOrderGoodsName" style="width: 260px" ><span id="name">技能名称</span></div>
+							<div class="text-center myOrderGoodsPrice" ><span id="unitPrice">单价（元）</span></div>
+							<div class="text-center myOrderGoodsSemester"><span id="number">学习期数</span></div>
+							<div class="text-center myOrderGoodsStudent"><span id="detail">学习人数</span></div>
+						</div>
+						<div class="row justify-content-center align-items-center"
+								 style="width: 11%" id="totalPrice">总额</div>
+						<div class="row justify-content-center align-items-center"
+								 style="width: 11%" id="state">交易状态</div>
+						<div class="row justify-content-center align-items-center"
+								 style="width: 11%" id="options">操作</div>
+					</div>
+
+<!--					一个订单块-->
+					<div class="row align-items-center" style="width: 95%">
+						<div class="row align-items-center myOrderGoods"
+								 style="width: 67%">
+							<div class="myOrderGoodsImg">
+								<img src="image/Teemo.jpg" alt="商品图片" width="100">
+							</div>
+							<div class="myOrderGoodsName" > <a href="#">刺绣入门</a>	</div>
+							<div class="text-center myOrderGoodsPrice"> 500.00	</div>
+							<div class="text-center myOrderGoodsSemester">	2	</div>
+							<div class="text-center myOrderGoodsStudent"> 3 </div>
+						</div>
+						<div class="row justify-content-center align-items-center myOrderGoodsTotalPrice"
+								 style="width: 11%">500.00</div>
+						<div class="row justify-content-center align-items-center myOrderGoodsState"
+								 style="width: 11%; font-size: 12px">
+							<ul class="text-center" style="padding-left: 0">
+								<li>交易成功</li>
+								<li><a href="#">订单详情</a></li>
+								<li><a href="#">学习进度</a></li>
+							</ul>
+						</div>
+						<div class="row justify-content-center align-items-center myOrderGoodsOperating"
+								 style="width: 11%; font-size:12px">
+							<ul class="text-center options" >
+								<li><a href="#">确认进度</a></li>
+								<li><a href="#">对进度有异议</a></li>
+								<li><a href="#">评价</a></li>
+								<li><a href="#">投诉</a></li>
+								<li><a href="#">举报</a></li>
+								<li><a href="#">删除</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>
