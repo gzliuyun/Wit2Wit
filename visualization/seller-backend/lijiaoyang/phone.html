@@ -1,52 +1,82 @@
+<!--手机版 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>手机版</title>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
 		<link rel="stylesheet" href="css/bootstrap.css">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
-		<style type="text/css">
-			/* 头部 */
-			a{color: #444444; text-decoration: none;}
-			a:hover{color: #BA1A33;text-decoration: none;}
-		</style>
-	</head>
-	<body style="background-color: #EBEBEB;">
-		<header></header>
-		<div class="container">
-			<div class="row" style="margin-left: 30%; width: 1200px;">
-				<img src="./image/手机版页面logo.png" style="height: 188px;margin-top: 133px;">
-				<span style="font-size: 36px;color: #BA1A33;margin-top: 190px;margin-left: 30px;">汇聚全球一技之长，<br>使访问者人人受益。</span>					
-			</div>
-			<div class="row" style="margin-top: 43px; width: 1300px;">
-				<span class="input-group-btn">
-					<button type="submit"
-					class="btn btn-search" style="box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
-					iPhone版
-					</button>
-					<button type="submit"
-					class="btn btn-search" style="margin-left: 47px; box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
-					Android版
-					</button>
-					<button type="submit"
-					class="btn btn-search" style="margin-left: 47px; box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
-					Winphone版
-					</button>
-				</span>
-			</div>
-			<div class="row" style="width: 500px;margin-left: 30%; margin-top: 116px;font-size: 30px;color: rgb(139,129,129);">
-				该模块正在建设中，敬请期待！
-			</div><br><br><br>
-		</div>
-		<footer></footer>
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/studentCenter.css">
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
 		<script>
-			$(function(){
-				$("header").load("common.html #wit_header");
-				$("footer").load("common.html #wit_footer");
-			})
+			$(function () {
+				$(function(){
+					$("header").load("common.html #wit_header");
+					$("footer").load("common.html #wit_footer");
+				})
+			});
 		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+
+    <div class="container">
+		<div class="row align-items-center"
+				 style="margin:20px 270px 20px; width: 1150px; padding:10px 20px 10px;">		
+			<img src="./image/手机版页面logo.png" style="height: 188px;margin-top: 133px;">
+			<span style="font-size: 36px;color: #BA1A33;margin-top: 190px;margin-left: 30px;">
+				汇聚全球一技之长，<br>使访问者人人受益。
+			</span>					
+		</div>
+		<div class="row align-items-center"
+				 style="margin:20px 0 15px; width: 1150px; padding:10px 20px 10px;">	
+			<span class="input-group-btn">
+				<button type="submit"
+				class="btn btn-search" style="box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
+				iPhone版
+				</button>
+				<button type="submit"
+				class="btn btn-search" style="margin-left: 47px; box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
+				Android版
+				</button>
+				<button type="submit"
+				class="btn btn-search" style="margin-left: 47px; box-shadow: 5px 5px 5px #888888;border-radius: 10px; font-size: 30px; background-color: #BA1A33;color: #FFFFFF;width: 321px;height: 82px;margin-top: 42px;">
+				Winphone版
+				</button>
+			</span>
+		</div>
+		<div style="margin:40px 20px 90px 350px; width: 1150px; padding:10px 20px 10px;font-size: 30px;color: rgb(139,129,129);">	
+			该模块正在建设中，敬请期待！
+		</div>
+
+
+    </div>
+
+
+    <footer></footer>
 	</body>
+
 </html>
