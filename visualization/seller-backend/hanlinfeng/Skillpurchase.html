@@ -5,16 +5,24 @@
     <title>技能购买</title>
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="css/box.css" type="text/css" rel="stylesheet"/>
+    <link href="css/seller-service.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        $(function (){
+        $(function(){
             $("header").load("common.html #wit_header");
-            $("section").load("common.html #wit_search");
+            $("section").load("common.html #wit_centers");
+            $("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
             $("footer").load("common.html #wit_footer");
-        })
+            $("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+                    function() {
+                        $("#teacherAccountManager").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                        $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+                    }
+            );
+            $("#guessYouLike").load("common.html #wit_guessYouLike");
+        });
         function add() {
             $(".text_box1").val(parseInt($(".text_box1").val()) + 1);
         }
@@ -74,6 +82,7 @@
             });
             $("#xinxifenye li").click(function () {
                 var lis=document.getElementById("xinxifenye").getElementsByTagName("li");
+                var lisneirong=document.getElementById("fenyeneirong").getElementsByTagName("li");
                 for(var i=0;i<lis.length;i++) {
                     lis[i].setAttribute("index", i);
                 }
@@ -81,9 +90,11 @@
                     if(this.getAttribute("index")==i){
                         lis[i].children[0].style.borderColor= "rgb(185,26,51)";
                         lis[i].children[0].style.color= "rgb(185,26,51)";
+                        lisneirong[i].style.display="inline";
                     }else{
                         lis[i].children[0].style.borderColor="#DDDDDD";
                         lis[i].children[0].style.color="rgb(85,79,79)";
+                        lisneirong[i].style.display="none";
                     }
                 }
             });
@@ -93,12 +104,13 @@
 <body style="background: #EBEBEB">
 <header></header>
 <section></section>
-<div class="jumbotron jumbotron-fluid" style="color: #FFFFFF; background: #BA1A33; height:50px">
+<div id="studyNav"></div>
+<div class="jumbotron-fluid" style="color: #FFFFFF; background: #BA1A33; height:50px">
   <div class="container">
     <h5 style="padding: 13px 0 0 0; margin-left: -90px">技能名称</h5>
   </div>
 </div>
-<div class="container" style="margin-top: -10px">
+<div class="container" style="margin-top: 10px">
     <div class="row" style="margin-left: -100px; width: 2000px">
         <p style="color: #999999; margin-left: 12px">首页>>技能列表>>推荐技能>>羽毛球>>技能名称</p>
         <p style="color: #CD0000; margin-left: 628px">联系店铺</p>
@@ -111,25 +123,25 @@
         <div class="row" style="margin: 0px 30px 0 40px">
             <div class="col-xl-6" style="margin-top: 40px">
                 <div class="pic">
-                    <a href="#" style="display:block"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
-                    <a href="#"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
-                    <a href="#"><img src="images/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display:block"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display: none"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
+                    <a href="#" style="display: none"><img src="image/gray.png" class="img-responsive" height="625px" width="580px" /></a>
                 </div>
-                <div class="row pic_btn" style="margin: 10px 0 0 -15px">
-                    <ul style="line-height: 20px">
+                <div class="row pic_btn" style="margin: 10px 0 0 -55px">
+                    <ul class="hengxiang" style="line-height: 20px">
                         <li>
                             <div class="col-sm-3">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px" />
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px" />
                             </div>
                         </li>
                         <li style="margin-left: -56px">
                             <div class="col-sm-3" style="margin-left: 34px">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px"/>
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px"/>
                             </div>
                         </li>
                         <li style="margin-left: -56px">
                             <div class="col-sm-3" style="margin-left: 34px">
-                                <img src="images/gray.png" class="img-responsive" height="150px" width="188px"/>
+                                <img src="image/gray.png" class="img-responsive" height="150px" width="188px"/>
                             </div>
                         </li>
                     </ul>
@@ -253,13 +265,13 @@
     <div class="row" style="margin: 0px 30px 0 -100px; width:1370px">
         <div class="col-xl-3">
             <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="350px">
+                <img src="image/gray.png" class="img-responsive" height="210px" width="350px">
                 <div style="position:absolute;left:0;top:0;">
 
                 </div>
             </div>
             <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="150px" width="350px">
+                <img src="image/white1.png" class="img-responsive" height="150px" width="350px">
                 <div style="position:absolute;left:40px;top:15px; font-size: 20px">
                     <p>技能名称：</p>
                     <p>适用人群：</p>
@@ -267,14 +279,29 @@
                 </div>
             </div>
             <br>
-                        <div style="position:relative; margin-left: -45px">
-                <img src="images/gray.png" class="img-responsive" height="210px" width="350px">
+            <div style="position:relative; margin-left: -45px">
+                <img src="image/gray.png" class="img-responsive" height="210px" width="350px">
                 <div style="position:absolute;left:0;top:0;">
 
                 </div>
             </div>
             <div style="position:relative; margin-left: -45px">
-                <img src="images/white.png" class="img-responsive" height="150px" width="350px">
+                <img src="image/white1.png" class="img-responsive" height="150px" width="350px">
+                <div style="position:absolute;left:40px;top:15px; font-size: 20px">
+                    <p>技能名称：</p>
+                    <p>适用人群：</p>
+                    <p>每期价格：</p>
+                </div>
+            </div>
+            <br>
+            <div style="position:relative; margin-left: -45px">
+                <img src="image/gray.png" class="img-responsive" height="210px" width="350px">
+                <div style="position:absolute;left:0;top:0;">
+
+                </div>
+            </div>
+            <div style="position:relative; margin-left: -45px">
+                <img src="image/white1.png" class="img-responsive" height="150px" width="350px">
                 <div style="position:absolute;left:40px;top:15px; font-size: 20px">
                     <p>技能名称：</p>
                     <p>适用人群：</p>
@@ -282,7 +309,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-9" style="background: white;height: 743px">
+        <div class="col-xl-9" style="background: white;height: 1130px">
             <div class="row" style="font-size: 24px; color: rgb(85,79,79);margin: 20px 0 -33px 40px">
                 <ul id="xinxifenye" class="hengxiang">
                     <li>
@@ -297,9 +324,154 @@
                     <li>
                         <p style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #DDDDDD;padding-bottom: 10px; margin-left: 80px; cursor:pointer">举报</p>
                     </li>
+                    <li>
+                        <p style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #DDDDDD;padding-bottom: 10px; margin-left: 200px; cursor:pointer">荣誉值</p>
+                    </li>
+                    <li>
+                        <font title="荣誉值是平台采集用户的已完结订单数量，已完结订单总额，好评数量，差评数量；中途退款率，飞单数量，投诉数，举报数等重要指标进行权重计算后得出的数值，是平台最重要的价值体系指标。" style="padding-bottom: 10px; margin-left: 0px; cursor:pointer;color:rgb(185,26,51);">○</font>
+                    </li>
+                    <li>
+                        <font title="荣誉值是平台采集用户的已完结订单数量，已完结订单总额，好评数量，差评数量；中途退款率，飞单数量，投诉数，举报数等重要指标进行权重计算后得出的数值，是平台最重要的价值体系指标。" style="padding-bottom: 10px; margin: 0 0 0 -15px; cursor:pointer;color:rgb(185,26,51); font-size: 18px">?</font>
+                    </li>
+                    <li>
+                        <p style="padding-bottom: 10px; cursor:pointer;">：</p>
+                    </li>
+                    <li>
+                        <p style="padding-bottom: 10px; cursor:pointer;">100</p>
+                    </li>
                 </ul>
             </div>
             <hr style="margin-top: -16px; width: 900px; margin-left: 40px">
+            <ul id="fenyeneirong">
+                <!--详情介绍-->
+                <li style="display: inline">
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务商名称：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务项目名称：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务编号：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">常驻地：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">自我介绍：</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务具体内容：</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务方式：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">服务具体内容：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">适用人群：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-8">
+                            <p style="margin: 15px 0 0 39px">服务承诺：先试用，后收费，按时保质交付</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">推广促销：</p>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">资质/证书：</p>
+                        </div>
+                        <div class="col-1" style="margin:15px 10px 0 -50px">
+                            <img src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+                        </div>
+                        <div class="col-1" style="margin:15px 10px 0 0px">
+                            <img src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+                        </div>
+                        <div class="col-1" style="margin:15px 10px 0 0px">
+                            <img src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">业绩/作品展示：</p>
+                        </div>
+                        <div class="col-1" style="margin:15px 10px 0 -50px">
+                            <img src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 20px">
+                        <div class="col-3">
+                            <p style="margin: 15px 0 0 39px">视频：</p>
+                        </div>
+                        <div class="col-5" style="margin:15px 10px 0 -50px">
+                            <input type="file" class="form-control-file " id="video">
+                        </div>
+                    </div>
+                </li>
+                <!--评价-->
+                <li style="display: none">
+                    <div class="row" style="background: #DDDDDD; margin: 0 0 0 0px; width: 930px">
+                        <div class="col-2">
+                            <p>累计评价：</p>
+                        </div>
+                        <div class="col-2">
+                            <p>好评（8）</p>
+                        </div>
+                        <div class="col-2">
+                            <p>中评（1）</p>
+                        </div>
+                        <div class="col-2">
+                            <p>差评（1）</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 930px">
+                        <div class="card-header" style="background: #DDDDDD;">留言区</div>
+                        <div class="card-body remark" style="height: 200px;text-align: center;">留言区暂无显示</div>
+                    </div>
+                </li>
+                <!--投诉-->
+                <li style="display: none">
+                    <div class="row" style="background: #DDDDDD; margin: 0 0 0 0px; width: 930px">
+                        <div class="col-3">
+                            <p>累计被投诉次数：0</p>
+                        </div>
+                    </div>
+                </li>
+                <!--举报-->
+                <li style="display: none">
+                    <div class="row" style="background: #DDDDDD; margin: 0 0 0 0px; width: 930px">
+                        <div class="col-3">
+                            <p>累计被举报次数：0</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

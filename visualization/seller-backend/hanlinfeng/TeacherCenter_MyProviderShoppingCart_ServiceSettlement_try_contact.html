@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+				$(function(){
+					$("header").load("common.html #wit_header");
+					$("footer").load("common.html #wit_footer");
+				})
+			});
+		</script>
+		<style type="text/css">
+			/* 联系店铺 */
+			.contactSellers p{margin-left: 45px;}
+		</style>
+	</head>
+
+	<body style="background-color: #F5F5F5;">
+		<!-- 头部 -->
+		<header></header>
+
+		<div class="row" style="height:60px; background-color: #B91A33;">
+			<div class="container">
+				<p style="font-size: 21px; padding: 15px 0">
+					<strong style="color: #F5F5F5">联系店铺</strong>
+				</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row" style="margin-top: 15px; ">
+					<ul class="breadcrumb" id="breadCrumb"
+							style="color: #8B8181; background-color: #F5F5F5">
+						<li class="breadcrumb-item"><a href="#">首页</a></li>
+						<li class="breadcrumb-item"><a href="TeacherCenter_MyProviderShoppingCart.html">我的服务购物车</a></li>
+						<li class="breadcrumb-item"><a href="TeacherCenter_MyProviderShoppingCart_ServiceSettlement.html">结算</a></li>
+						<li class="breadcrumb-item"><a href="TeacherCenter_MyProviderShoppingCart_ServiceSettlement_try.html">试用</a></li>
+						<li class="breadcrumb-item"><a href="#">联系店铺</a></li>
+					</ul>
+			</div>
+
+			<div  style="margin-top: -15px; width:1150px">
+					<div class="contactSellers" style="padding:15px 20px 50px 0; width:1150px; background-color: #FFFFFF">
+						<p>店铺名称：</p>
+						<p>服务商名字：</p>
+						<p>联系方式：</p>
+						<p>常驻地：</p>
+					</div>
+			</div>
+		</div>
+
+		<footer></footer>
+	</body>
+
+</html>

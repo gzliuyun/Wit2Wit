@@ -1,0 +1,84 @@
+.redPlaceholder::-webkit-input-placeholder {
+  color: #B91A33;
+}
+.redPlaceholder:-moz-placeholder {/* Firefox 18- */
+  color: #B91A33;
+}
+.redPlaceholder::-moz-placeholder{/* Firefox 19+ */
+ color: #B91A33;
+}
+.redPlaceholder:-ms-input-placeholder {
+  color: #B91A33;
+}
+
+.contentSecondaryTitle {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.btn-serviceCenter {
+    border-radius: 0;
+    background-color: #B91A33;
+    color: #FFFFFF;
+}
+
+.btn-serviceCenter:hover{
+    background-color: #A80922;
+    color: #FFFFFF;
+}
+
+.btn-serviceCenter a{
+    color: #FFFFFF;
+}
+.btn-serviceCenter a:hover{
+    color: #FFFFFF;
+}
+
+.custom-checkbox {
+    margin-left: 15px;
+}
+.custom-checkbox .custom-control-input:focus ~.custom-control-label::before{
+    box-shadow: none;
+    border-color: #ADB5BD;
+}
+.custom-checkbox .custom-control-input:checked ~.custom-control-label::before{
+    background-color: #B91A33;
+    border-color: #B91A33;
+    box-shadow: none;
+}
+.custom-checkbox .custom-control-input:active ~.custom-control-label::before {
+    background-color: #B91A33;
+    opacity: 0.5;
+}
+
+.noneShadow:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.tableItem {
+    border: solid 1px #D8D8D8;
+    border-top: none;
+    padding: 10px 0 10px 0;
+    background-color: #FFFFFF;
+}
+.tableItem a:link,
+.tableItem a:visited {
+    color: #554F4F;
+}
+
+.tableItem a:hover {
+    color: #B91A33;
+}
+
+.options {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/*展示图片*/
+.showpictures{
+    height: 60px;
+    width: 60px;
+    float: left;
+}

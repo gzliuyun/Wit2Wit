@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+				$(function(){
+					$("header").load("common.html #wit_header");
+					$("footer").load("common.html #wit_footer");
+				})
+			});
+		</script>
+		<style type="text/css">
+			/* 服务的假图片 */
+			.shoppingCartGoodsPicture{
+				width: 100px;
+				height: 80px;
+				background-color: #CCCCCC;
+			}
+			/* 服务名称描述，为了居中 */
+			.shoppingCartGoodsNotion{margin: 27px 0 0 10px;}
+			/* 底部两个按钮 */
+			.serviceSettleButtons{font-size: 18px; background-color: #BA1A33;color: #FFFFFF;width: 160px;height: 40px;margin-top: 30px;border: 1px solid #BA1A33;margin-left: 30px;}
+			.serviceSettleButtons:hover{background-color: #a90922;color: #FFFFFF;}
+		</style>
+	</head>
+
+	<body style="background-color: #F5F5F5;">
+		<!-- 头部 -->
+		<header></header>
+
+		<div class="row" style="height:60px; background-color: #B91A33;">
+			<div class="container">
+				<p style="font-size: 21px; padding: 15px 0">
+					<strong style="color: #F5F5F5">结算</strong>
+				</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row" style="margin-top: 15px; ">
+					<ul class="breadcrumb" id="breadCrumb"
+							style="color: #8B8181; background-color: #F5F5F5">
+						<li class="breadcrumb-item"><a href="#">首页</a></li>
+						<li class="breadcrumb-item"><a href="TeacherCenter_MyProviderShoppingCart.html">我的服务购物车</a></li>
+						<li class="breadcrumb-item"><a href="#">结算</a></li>
+					</ul>
+			</div>
+
+			<div  style="margin-top: -15px; width:1150px">
+					<p style="font-size: 20px;">确认订单信息</p>
+					<span style="margin-left: 45px;">服务店铺:</span>
+						<div class="row align-items-center" style="margin-top: 20px; height:40px; background-color: #FFFFFF">
+							<div class="col-2 shoppingCartGoodsName">服务名称</div>
+							<div class="text-center shoppingCartGoodsPrice"> 单价（元）</div>
+							<div class="text-center shoppingCartGoodsNumber" style="margin-left: -15px;"> 数量 </div>  
+							<!-- margin-left: -15px; 是为了让标题比起下面的列表项居中 -->
+							<div class="text-center shoppingCartGoodsDetail"> 明细	</div>
+							<div class="text-center shoppingCartGoodsDiscountWay">优惠方式</div>
+							<div class="text-center  shoppingCartGoodsTotalPrice" > 总计	</div>
+						</div>
+
+						<div class="row align-items-center shoppingCartGoods">
+							<div class="shoppingCartGoodsName row col-2"  style="margin-left: 45px;"> 
+								<div class="shoppingCartGoodsPicture"></div>
+								<a href="#" class="shoppingCartGoodsNotion">拍视频</a>	
+							</div>
+							<div class="text-center shoppingCartGoodsPrice"> 500.0</div>
+							<div class="text-center shoppingCartGoodsNumber">	2</div>
+							<div class="text-center shoppingCartGoodsDetail"> </div>
+							<div class="text-center shoppingCartGoodsDiscountWay"></div>
+							<div class="text-center shoppingCartGoodsTotalPrice"> <strong style="color: #B91A33">1000.00</strong>	</div>
+						</div>				
+						
+						<div class="row align-items-center shoppingCartGoods">
+							<div class="shoppingCartGoodsName row col-2"  style="margin-left: 45px;"> 
+								<div class="shoppingCartGoodsPicture"></div>
+								<a href="#" class="shoppingCartGoodsNotion">拍视频</a>	
+							</div>
+							<div class="text-center shoppingCartGoodsPrice"> 500.0</div>
+							<div class="text-center shoppingCartGoodsNumber">	2</div>
+							<div class="text-center shoppingCartGoodsDetail"> </div>
+							<div class="text-center shoppingCartGoodsDiscountWay"></div>
+							<div class="text-center shoppingCartGoodsTotalPrice"> <strong style="color: #B91A33">1000.00</strong>	</div>
+						</div>
+
+					<span style="margin-left: 45px;">服务店铺：</span>
+						<div class="row align-items-center" style="margin-top: 20px; height:40px; background-color: #FFFFFF">
+							<div class="col-2 shoppingCartGoodsName">服务名称</div>
+							<div class="text-center shoppingCartGoodsPrice"> 单价（元）</div>
+							<div class="text-center shoppingCartGoodsNumber" style="margin-left: -15px;"> 数量 </div>  
+							<!-- margin-left: -15px; 是为了让标题比起下面的列表项居中 -->
+							<div class="text-center shoppingCartGoodsDetail"> 明细	</div>
+							<div class="text-center shoppingCartGoodsDiscountWay">优惠方式</div>
+							<div class="text-center  shoppingCartGoodsTotalPrice" > 总计	</div>
+						</div>
+
+						<div class="row align-items-center shoppingCartGoods" style="margin-top:5px">
+							<div class="shoppingCartGoodsName row col-2"  style="margin-left: 45px;"> 
+								<div class="shoppingCartGoodsPicture"></div>
+								<a href="#" class="shoppingCartGoodsNotion">拍视频</a>	
+							</div>
+							<div class="text-center shoppingCartGoodsPrice"> 500.0</div>
+							<div class="text-center shoppingCartGoodsNumber">	2</div>
+							<div class="text-center shoppingCartGoodsDetail"> </div>
+							<div class="text-center shoppingCartGoodsDiscountWay"></div>
+							<div class="text-center shoppingCartGoodsTotalPrice"> <strong style="color: #B91A33">1000.00</strong>	</div>
+						</div>	
+
+					<div class="text-right">
+						累计总额：<strong style="color: #B91A33;font-size: 20px;">￥3000.00</strong>元
+						<div style="margin-left: -45px;padding-bottom: 45px;">
+							<button type="submit" class="btn btn-search serviceSettleButtons">提交订单去试用</button>
+							<button type="submit" class="btn btn-search serviceSettleButtons">提交订单去支付</button>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<footer></footer>
+	</body>
+
+</html>

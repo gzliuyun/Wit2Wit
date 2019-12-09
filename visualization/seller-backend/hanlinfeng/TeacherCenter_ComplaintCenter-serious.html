@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/TeacherCenter.css">
+
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			let totalImage = 0;
+			function deleteSelf(self) {
+			    let aim = self.getAttribute("id");
+			    let imageId = "#" + aim;
+				  let inputSelector = "input[name = input" + aim.substr(5) + "]";
+				  $(imageId).parent().remove();
+				  $(inputSelector).remove();
+			  }
+		  function displayImage(content,i) {
+			  let src = window.URL.createObjectURL(content.files[0]); //转成可以在本地预览的格式
+			  let image = "<div class='col-1'>"
+											+ "<button type='button' class='btn btn-upload noneShadow' id='image"
+						+ totalImage.toString() + "' onclick='deleteSelf(this)'>"
+											+ "<img src='" + src + "' alt='添加证据' width='60' height='60'>"
+											+ "</button>"
+											+ "</div>";
+			  totalImage = totalImage+1;
+			  $("#addProof"+i).before(image);
+		  }
+		  function uploadImage(i) {
+			  let inputId = "input" + totalImage.toString();
+			  let input = "<input type='file' id='"+ inputId +"' name='"+ inputId +"' accept='image/*' name='image'"
+						+ " style='display: none' onchange='displayImage(this," + i +")'>";
+			  $("#uploadButton"+i).after(input);
+			  document.getElementById(inputId).click();
+			}
+
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
+						function() {
+							$("#taughtComplaintCenter-serious").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
+                            $("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+<!--    注释1：因为是授业者中心，所以下面这里应该load("#wit_studyAndTeachNav")-->
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+
+<!--    注释2：这里应当根据中心不同load不同的sideNavbar-->
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+<!--      注释3：这里根据页面不同更改内容-->
+					<div><strong class="contentMainTitle">举报中心（严重）</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+<!--          这里是需要修改的内容-->
+<!--          这里是特定内容-->
+<!--          这里是各个页面不一样的内容-->
+					<form id="accountManagerForm">
+
+                        <h4 style="margin: 20px 0 20px 0">举报其他授业者</h4>
+<!--						授业者名称-->
+						<div class="form-group row">
+							<label for="teachername" class="col-3 col-form-label ">授业者名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="teachername"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						原因-->
+						<div class="form-group row">
+							<label for="reason1" class="col-3 col-form-label ">原因</label>
+							<div class="col-8">
+								<input type="text" class="form-control redPlaceholder" id="reason1"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						上传证据-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="evidence1" class="col-form-label " style="float: left">上传证据</label>
+							</div>
+							<div class="col-1" id="addProof0">
+								<button type="button" class="btn btn-upload noneShadow"
+																onclick="uploadImage('0')" id="uploadButton0">
+								  <img id="evidence1" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+								</button>
+							</div>
+						</div>
+
+						<div style="margin-left: 15px">
+							<button type="button" class="btn btn-teacherCenter noneShadow btn-sm" style="width: 160px">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+						</div>
+
+                        <br>
+
+                        <h4 style="margin: 20px 0 20px 0">举报服务商</h4>
+<!--						服务商名称-->
+						<div class="form-group row">
+							<label for="serviceprovidername" class="col-3 col-form-label ">服务商名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="serviceprovidername"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						原因-->
+						<div class="form-group row">
+							<label for="reason2" class="col-3 col-form-label ">原因</label>
+							<div class="col-8">
+								<input type="text" class="form-control redPlaceholder" id="reason2"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						上传证据-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="evidence2" class="col-form-label " style="float: left">上传证据</label>
+							</div>
+							<div class="col-1" id="addProof1">
+								<button type="button" class="btn btn-upload noneShadow"
+																onclick="uploadImage('1')" id="uploadButton1">
+								  <img id="evidence2" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+								</button>
+							</div>
+						</div>
+
+						<div style="margin-left: 15px">
+							<button type="button" class="btn btn-teacherCenter noneShadow btn-sm" style="width: 160px">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+						</div>
+
+                        <br>
+
+                        <h4 style="margin: 20px 0 20px 0">举报学习者</h4>
+<!--						学习者名称-->
+						<div class="form-group row">
+							<label for="studentname" class="col-3 col-form-label ">用户名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="studentname"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						原因-->
+						<div class="form-group row">
+							<label for="reason3" class="col-3 col-form-label ">原因</label>
+							<div class="col-8">
+								<input type="text" class="form-control redPlaceholder" id="reason3"
+											 placeholder="">
+							</div>
+						</div>
+
+<!--						上传证据-->
+						<div class="form-group row">
+							<div class="col-3">
+								<label for="evidence3" class="col-form-label " style="float: left">上传证据</label>
+							</div>
+							<div class="col-1" id="addProof2">
+								<button type="button" class="btn btn-upload noneShadow"
+																onclick="uploadImage('2')" id="uploadButton2">
+								  <img id="evidence3" src="image/white.png" class="showpictures" style="border:1px rgb(139,129,129) solid;">
+								</button>
+							</div>
+						</div>
+
+						<div style="margin-left: 15px">
+							<button type="button" class="btn btn-teacherCenter noneShadow btn-sm" style="width: 160px">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+						</div>
+
+                        <br>
+
+                        <h4 style="margin: 160px 0 20px 0">举报平台工作人员</h4>
+                        <p class="remark">举报平台工作人员请通过平台首页底部公布的投诉举报邮箱提交</p>
+					</form>
+
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>
