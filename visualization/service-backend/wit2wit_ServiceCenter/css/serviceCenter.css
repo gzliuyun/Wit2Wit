@@ -75,3 +75,10 @@
     padding-left: 0;
     margin-bottom: 0;
 }
+
+/*展示图片*/
+.showpictures{
+    height: 60px;
+    width: 60px;
+    float: left;
+}
