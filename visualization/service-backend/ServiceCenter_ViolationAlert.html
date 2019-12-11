@@ -15,6 +15,7 @@
 
 		<!-- 你自己的样式或其他文件 -->
 		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/serviceCenter.css">
 
 		<!-- 引入JavaScript文件	-->
 		<script src="js/jquery.min.js" ></script>
@@ -22,26 +23,24 @@
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 
 		<!-- 引入插件	-->
-		<script type='text/javascript' src='https://ykf-webchat.7moor.com/javascripts/7moorInit.js?accessId=af39f720-1b1b-11ea-8d91-d1e7abc6cfdb&autoShow=true&language=ZHCN' async='async'>
-		</script>
+
 		<!--站点图标-->
 		<link rel="shortcut icon" href="" type="image/x-icon">
 
 		<script>
-			$(function(){
-				$("header").load("common.html #wit_header");
-				$("section").load("common.html #wit_centers");
-				$("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
-				$("footer").load("common.html #wit_footer");
-				$("#sideNav").load("common.html #teacherCenter-sideNavbar",     //这里和注释2匹配
-						function() {
-							$("#teacherViolationAlert").addClass("selected");         //这里根据当前页面不同修改选择器名字，demo为授业者的账户管理
-							$("#teacherCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20); //同第37行load的id名
-						}
-				);
-				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			$(function () {
+        $("header").load("common.html #wit_header");
+        $("section").load("common.html #wit_centers");
+        $("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+        $("footer").load("common.html #wit_footer");
+        $("#sideNav").load("common.html #serviceCenter-sideNavbar",
+          function() {
+            $("#serviceViolationAlert").addClass("selected");
+            $("#serviceCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20);
+          }
+        );
+        $("#guessYouLike").load("common.html #wit_guessYouLike");
 			});
-
 		</script>
 	</head>
 
@@ -50,23 +49,20 @@
 		<header></header>
     <section></section>
 		<div id="studyNav"></div>
-
     <div class="container">
       <div class="row" style=" width:1150px">
-
 				<div id="sideNav"></div>
 				<div id="contentMain" class="contentBackground" >
 					<div><strong class="contentMainTitle">违规提醒</strong></div>
 					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
-					<p >违规事项及原因</p>
-					<p >违规处罚历史记录</p>
-
+          
+          <div class="contentSecondaryTitle">违规事项及原因</div>
+          <div class="contentSecondaryTitle">违规处罚历史记录</div>
+          
 				</div>
       </div>
-
 			<div id="guessYouLike"></div>
     </div>
-
 		<footer></footer>
 	</body>
 

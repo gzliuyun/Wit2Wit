@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/serviceCenter.css">
+  
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function(){
+				$("header").load("common.html #wit_header");
+				$("section").load("common.html #wit_centers");
+				$("#studyNav").load("common.html #wit_studyAndTeachNav");
+				$("footer").load("common.html #wit_footer");
+				$("#sideNav").load("common.html #serviceCenter-sideNavbar",
+						function() {
+							$("#serviceApplication").addClass("selected");
+							$("#serviceCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20);
+						}
+				);
+				$("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+		<div id="studyNav"></div>
+
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+					<div><strong class="contentMainTitle">授业服务申请</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+
+					<form id="accountManagerForm">
+<!--						真实名称-->
+						<div class="form-group row">
+							<label for="realName" class="col-3 col-form-label ">真实名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="realName"
+											 placeholder="（必填）">
+							</div>
+						</div>
+
+<!--						身份证号-->
+						<div class="form-group row">
+							<label for="identityNumber" class="col-3 col-form-label ">身份证号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="identityNumber"
+											 placeholder="（社交必填）">
+							</div>
+						</div>
+
+<!--						统一社会信用代码(Uniform Social Credit Code)-->
+						<div class="form-group row">
+							<label for="USCC" class="col-3 col-form-label ">统一社会信用代码</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="USCC"
+											 placeholder="（机构代表社交必填）">
+							</div>
+						</div>
+
+<!--						常驻地-->
+						<div class="form-group row">
+							<label for="city" class="col-3 col-form-label ">常驻地</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="city"
+											 placeholder="（详细到路、街道或村，必填）">
+							</div>
+						</div>
+
+<!--						服务内容-->
+						<div class="form-group row">
+							<label for="serviceContent" class="col-3 col-form-label ">服务内容</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="serviceContent" rows="3"
+													style="max-width: 100%" placeholder="（500字以内，必填）"></textarea>
+							</div>
+						</div>
+            
+<!--            资质/证书/业绩/作品展示-->
+            <div class="form-group row">
+              <label for="display" class="col-3 col-form-label "
+                     style="padding-right: 0;">
+                资质&nbsp;&frasl;&nbsp;证书&nbsp;&frasl;&nbsp;业绩&nbsp;&frasl;&nbsp;作品展示
+              </label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="display"
+											 placeholder="（若有）">
+							</div>
+						</div>
+      
+<!--            收款人名称-->
+            <div class="form-group row">
+              <label for="receiveName" class="col-3 col-form-label ">收款人名称</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="receiveName">
+							</div>
+						</div>
+
+<!--            开户银行-->
+            <div class="form-group row">
+              <label for="depositBank" class="col-3 col-form-label ">开户银行</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="depositBank"
+                       placeholder="（具体到支行）">
+							</div>
+						</div>
+      
+<!--            银行账号-->
+            <div class="form-group row">
+              <label for="bankAccount" class="col-3 col-form-label ">银行账号</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="bankAccount">
+							</div>
+						</div>
+      
+<!--            自我介绍-->
+						<div class="form-group row">
+							<label for="selfInstruction" class="col-3 col-form-label ">自我介绍</label>
+							<div class="col-4">
+								<textarea class="form-control redPlaceholder" id="selfInstruction" rows="3"
+													style="max-width: 100%" placeholder="（500字以内，必填）"></textarea>
+							</div>
+						</div>
+
+<!--            邮箱-->
+            <div class="form-group row">
+              <label for="email" class="col-3 col-form-label ">邮箱</label>
+							<div class="col-4">
+								<input type="text" class="form-control redPlaceholder" id="email">
+							</div>
+						</div>
+
+<!--            平台协议-->
+            <div class="form-group row">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agree">
+                <label class="custom-control-label" for="agree" style="font-size: 16px"></label>
+                <a href="#">《平台入驻协议》</a>
+              </div>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="button" class="btn btn-serviceCenter noneShadow"
+											style="width: 150px; margin-left: 15px">提&nbsp;&nbsp;交&nbsp;&nbsp;申&nbsp;&nbsp;请</button>
+						</div>
+						<div style="margin-bottom: 10px">
+							<button type="submit" class="btn btn-serviceCenter noneShadow"
+											style="width:150px; margin-left: 15px">保存且暂不提交</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-serviceCenter noneShadow"
+											style="width:150px; margin-left: 15px">变更申请资料</button>
+						</div>
+					</form>
+
+
+				</div>
+      </div>
+
+			<div id="guessYouLike"></div>
+    </div>
+
+		<footer></footer>
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>学技能，就上慧师搜网</title>
+		<!-- 标签图标 -->
+		<link rel="icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 收藏夹显示图标 -->
+		<link rel="shortcut icon" href="image/witowit.ico" type="image/x-icon">
+
+		<!-- 引入Bootstrap核心样式文件（必须） -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<!-- 你自己的样式或其他文件 -->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/serviceCenter.css">
+
+		<!-- 引入JavaScript文件	-->
+		<script src="js/jquery.min.js" ></script>
+		<script src="js/popper-1.14.7.js" ></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入插件	-->
+
+		<!--站点图标-->
+		<link rel="shortcut icon" href="" type="image/x-icon">
+
+		<script>
+			$(function () {
+        $("header").load("common.html #wit_header");
+        $("section").load("common.html #wit_centers");
+        $("#studyNav").load("common.html #wit_studyAndTeachNav");				// 这里和注释1匹配
+        $("footer").load("common.html #wit_footer");
+        $("#sideNav").load("common.html #serviceCenter-sideNavbar",
+          function() {
+            $("#serviceCommentCenter").addClass("selected");
+            $("#serviceCenter-sideNavbar").innerHeight($("#contentMain").innerHeight()+20);
+          }
+        );
+        $("#guessYouLike").load("common.html #wit_guessYouLike");
+			});
+		</script>
+	</head>
+
+	<body style="background-color: #EBEBEB;">
+		<!-- 头部 -->
+		<header></header>
+    <section></section>
+		<div id="studyNav"></div>
+    <div class="container">
+      <div class="row" style=" width:1150px">
+				<div id="sideNav"></div>
+				<div id="contentMain" class="contentBackground" >
+					<div><strong class="contentMainTitle">评价中心</strong></div>
+					<div style="margin-left:-10px; padding-right:20px"><hr/></div>
+          
+          <form>
+						<div class="contentSecondaryTitle" >评价购买者</div>
+						<div class="form-group row">
+							<label for="teacher" class="col-2 col-form-label ">购买者名称:</label>
+							<div class="col-5">
+								<input type="text" class="form-control " id="teacher">
+							</div>
+						</div>
+						<div class="form-group row" style="margin-bottom: 40px">
+							<label for="teacherContent" class="col-2 col-form-label ">评价:</label>
+							<div class="col-5">
+									<textarea class="form-control " id="teacherContent" rows="3"
+														style="max-width: 100%" ></textarea>
+								</div>
+						</div>
+            <button type="submit" class="btn btn-serviceCenter noneShadow" style="margin-left: 15px" >
+              提&nbsp;&nbsp;&nbsp;&nbsp;交
+            </button>
+					</form>
+     
+				</div>
+      </div>
+			<div id="guessYouLike"></div>
+    </div>
+		<footer></footer>
+	</body>
+
+</html>

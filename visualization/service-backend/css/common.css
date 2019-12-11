@@ -115,6 +115,16 @@ dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
     border-radius: 5px;
     padding-left:30px;
     padding-top:30px;
-    padding-bottom:30px;
     margin-left:15px;
+    padding-bottom: 20px;
+}
+
+.contentBackground .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-upload {
+    border: solid 1px #D8D8D8;
+    padding: 0;
 }

@@ -67,12 +67,19 @@ dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
 }
 .my3centers{margin-top: 35px;margin-left: 25px;}
 /* 猜你喜欢 */
-.guessYouLike{color: #BA1A33;width: 100%; height: 55px;border: 1px solid #BA1A33;background-color: #BA1A33;border-radius: 10px 10px 0 0;}
+.guessYouLike{
+    color: #BA1A33;
+    width: 1145px;
+    height: 55px;
+    border: 1px solid #BA1A33;
+    background-color: #BA1A33;
+    border-radius: 10px 10px 0 0;
+}
 .guessYouLike p{font-size: 21px;color: #FFFFFF;margin-top: 10px;margin-left: 45px;}
 /* 猜你喜欢 技能列表 */
-.ServiceSkill{padding-right: 3px;margin-left: 15px;margin-top: 10px;}
-.ServiceSkillImage{border: 1px solid #D8D8D8;width: 270px;height: 210px;background-color: #D8D8D8;}
-.ServiceSkillInfo{border: 1px solid #FFFFFF;width: 270px;height: 75px;background-color: #FFFFFF;}
+.ServiceSkill{padding-right: 3px;width: 276px; margin-left: 15px;margin-top: 10px;}
+.ServiceSkillImage{border: 1px solid #D8D8D8;height: 210px;background-color: #D8D8D8;}
+.ServiceSkillInfo{border: 1px solid #FFFFFF;height: 75px;background-color: #FFFFFF;}
 .skillName{margin-left: 10px;margin-top: 15px;}
 
 /*三个中心侧边栏*/
@@ -115,6 +122,16 @@ dl dt {color:  #BA1A33; cursor: pointer; font-size: 20px;}
     border-radius: 5px;
     padding-left:30px;
     padding-top:30px;
-    padding-bottom:30px;
+    padding-bottom:20px;
     margin-left:15px;
+}
+
+.contentBackground .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-upload {
+    border: solid 1px #D8D8D8;
+    padding: 0;
 }
