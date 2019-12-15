@@ -116,19 +116,19 @@
 }
 
 .shoppingCartGoodsPrice {
-    width:120px
+    width: 80px;
 }
 .shoppingCartGoodsSemester{
-    width: 100px
+    width: 80px;
 }
 .shoppingCartGoodsStudent {
-    width: 90px;
+    width: 80px;
 }
 .shoppingCartGoodsTotalPrice {
-    width: 110px;
+    width: 120px;
 }
 .shoppingCartGoodsOperating {
-    width: 40px;
+    width: 80px;
 }
 
 .myOrderGoods {
