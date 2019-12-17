@@ -282,8 +282,26 @@
 						<div class="form-group row">
                             <div class="col-3">
                                 <label class="btn btn-default" style="margin-left: -11px">
-                                    <input type="checkbox" name="face-to-facelocation"> 《平台入驻协议》
+                                    <input type="checkbox" name="face-to-facelocation"> <a href="#" data-toggle="modal" data-target="#settlementAgreement">《平台入驻协议》</a>
                                 </label>
+								<div class="modal fade" id="settlementAgreement" tabindex="-1" role="dialog" aria-labelledby="settlementAgreementTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="settlementAgreementTitle">平台入驻协议</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<object  type="text/x-scriptlet" data="files/平台入驻协议.htm" width=100% height="600px"></object>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-serviceCenter noneShadow" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
                             </div>
                             <div class="col-8" style="margin-top: 5px">
                                 <p class="text_btn">必选</p>
