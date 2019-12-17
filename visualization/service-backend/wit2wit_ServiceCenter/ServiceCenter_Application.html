@@ -43,7 +43,6 @@
 				);
 				$("#guessYouLike").load("common.html #wit_guessYouLike");
 			});
-
 		</script>
 	</head>
 
@@ -165,9 +164,29 @@
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="agree">
                 <label class="custom-control-label" for="agree" style="font-size: 16px"></label>
-                <a href="#">《平台入驻协议》</a>
+                <a href="#" data-toggle="modal" data-target="#settlementAgreement">《平台入驻协议》</a>
               </div>
+							<div class="modal fade" id="settlementAgreement" tabindex="-1" role="dialog" aria-labelledby="settlementAgreementTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="settlementAgreementTitle">平台入驻协议</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<object  type="text/x-scriptlet" data="files/平台入驻协议.htm" width=100% height="600px"></object>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-serviceCenter noneShadow" data-dismiss="modal">关闭</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+
+<!--						底部按钮-->
 						<div style="margin-bottom: 10px">
 							<button type="button" class="btn btn-serviceCenter noneShadow"
 											style="width: 150px; margin-left: 15px">提&nbsp;&nbsp;交&nbsp;&nbsp;申&nbsp;&nbsp;请</button>
@@ -180,6 +199,7 @@
 							<button type="button" class="btn btn-serviceCenter noneShadow"
 											style="width:150px; margin-left: 15px">变更申请资料</button>
 						</div>
+
 					</form>
 
 
