@@ -4,7 +4,7 @@ aliyun-python-sdk-ecs==4.16.11
 amqp==1.4.9
 anyjson==0.3.3
 billiard==3.3.0.23
-celery==3.1.25
+celery==5.2.2
 certifi==2019.6.16
 chardet==3.0.4
 Django==1.8.2
