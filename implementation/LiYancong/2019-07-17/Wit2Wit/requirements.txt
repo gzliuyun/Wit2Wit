@@ -17,7 +17,7 @@ jieba==0.39
 jmespath==0.9.4
 kombu==3.0.37
 mutagen==1.42.0
-Pillow==6.1.0
+Pillow==9.0.0
 pycryptodome==3.8.2
 PyMySQL==0.9.3
 pytz==2019.1
